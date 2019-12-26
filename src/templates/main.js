@@ -5,11 +5,14 @@ import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
+import Pagination from "../components/Pagination"
+
 class BlogIndex extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, pageContext } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
@@ -36,6 +39,7 @@ class BlogIndex extends React.Component {
             </article>
           )
         })}
+        <Pagination pageContext={pageContext} />
       </Layout>
     )
   }

@@ -4,10 +4,11 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import Pagination from "../components/Pagination"
 
 class BlogTagsTemplate extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, pageContext } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
@@ -37,6 +38,7 @@ class BlogTagsTemplate extends React.Component {
             </article>
           )
         })}
+        <Pagination pageContext={pageContext} />
       </Layout>
     )
   }

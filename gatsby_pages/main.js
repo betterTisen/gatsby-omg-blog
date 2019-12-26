@@ -3,7 +3,7 @@
  */
 const path = require(`path`)
 
-const postsPerPage = 8 // 单页最大文章数
+const postsPerPage = 1 // 单页最大文章数
 
 const Main = async (graphql, createPage) => {
   const result = await graphql(
@@ -50,7 +50,6 @@ const Main = async (graphql, createPage) => {
         totalPage: numPages, // 总页数
         limit: postsPerPage, // 每页最大文章数
         skip: i * postsPerPage, // 跳过的文章数
-        postsPerPage: posts.length
       }
     })
   })

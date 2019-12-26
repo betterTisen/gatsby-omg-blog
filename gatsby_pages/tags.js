@@ -91,7 +91,6 @@ const Tags = async (graphql, createPage) => {
           totalPage: numPages,
           limit: postsPerPage,
           skip: i * postsPerPage,
-          postsPerPage: tag_length,
           tag
         }
       })
