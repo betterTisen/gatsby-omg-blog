@@ -8,7 +8,7 @@ class Pagination extends Component {
     const { totalPage, currentPage } = this.props.pageContext
 
     return (
-      <div>
+      <div className={"Pagination-class"}>
         <ul>
           {currentPage - skipNum - 1 >= 1 && (
             <li>

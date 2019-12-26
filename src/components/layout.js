@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 
 class Layout extends React.Component {
   render() {
-    const { title, children } = this.props
+    const { title, children,location } = this.props
+    console.log(location)
     let header = (
       <h3
         style={{
