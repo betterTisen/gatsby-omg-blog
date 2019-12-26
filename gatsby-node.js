@@ -1,10 +1,14 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const { Main } = require("./gatsby_pages/main")
 const { Post } = require("./gatsby_pages/post")
+const { Tags } = require("./gatsby_pages/tags")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   await Post(graphql, createPage)
+  await Main(graphql, createPage)
+  await Tags(graphql, createPage)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

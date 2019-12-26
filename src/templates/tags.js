@@ -4,9 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import { rhythm } from "../utils/typography"
 
-class BlogIndex extends React.Component {
+class BlogTagsTemplate extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -21,11 +20,7 @@ class BlogIndex extends React.Component {
           return (
             <article key={node.fields.slug}>
               <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
+                <h3>
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
@@ -35,7 +30,7 @@ class BlogIndex extends React.Component {
               <section>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
+                    __html: node.frontmatter.description || node.excerpt
                   }}
                 />
               </section>
@@ -47,16 +42,21 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default BlogTagsTemplate
 
 export const pageQuery = graphql`
-  query {
+  query($skip: Int!, $limit: Int!, $tag: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           excerpt
