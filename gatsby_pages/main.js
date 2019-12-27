@@ -15,9 +15,6 @@ const Main = async (graphql, createPage) => {
         ) {
           edges {
             node {
-              fields {
-                slug
-              }
               frontmatter {
                 title
                 tags

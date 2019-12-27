@@ -15,9 +15,6 @@ const Tags = async (graphql, createPage) => {
         ) {
           edges {
             node {
-              fields {
-                slug
-              }
               frontmatter {
                 title
                 tags
@@ -60,9 +57,6 @@ const Tags = async (graphql, createPage) => {
           ) {
             edges {
               node {
-                fields {
-                  slug
-                }
                 frontmatter {
                   title
                   tags

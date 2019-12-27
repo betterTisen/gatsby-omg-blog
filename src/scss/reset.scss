@@ -2,7 +2,7 @@
     HTML, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
     pre, form, fieldset, table, th, td {
         border:none;
-        font-family:"微软雅黑","黑体","宋体";
+        font-family:"Source Sans Pro","Hiragino Sans GB","Microsoft Yahei";
         font-size:14px;
         margin:0px;
         padding:0px;
@@ -19,16 +19,16 @@
         text-decoration:none;
     }
     a:link{
-        color:#fff;
+        color:#666;
     }
     a:visited{
-        color:#fff;
+        color:#666;
     }
     a:hover{
-        color:#fff;
+        color:#666;
     }
     a:active{
-        color:#fff;
+        color:#666;
     }
     input::-ms-clear{
         display:none;

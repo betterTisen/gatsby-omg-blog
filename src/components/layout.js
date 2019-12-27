@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 
 class Layout extends React.Component {
   render() {
-    const { title, children,location } = this.props
-    console.log(location)
+    const { title, children, location } = this.props
     let header = (
       <h3
         style={{
@@ -33,7 +32,13 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main
+          className={
+            location.pathname.substr(0, 6) === "/post/" ? "" : "reset-style"
+          }
+        >
+          {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
