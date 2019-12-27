@@ -1,0 +1,11 @@
+$sidebarWidth: 220px;
+
+.Sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding-top: $headerHeight;
+  width: $sidebarWidth;
+  background-color: skyblue;
+  z-index: 100;
+}

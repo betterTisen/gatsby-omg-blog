@@ -1,9 +1,11 @@
+$containerWidth: 1080px;
+
 @import "./reset.scss";
 
-@import "./components/index.scss"; 
+@import "./components/index.scss";
 
 $backgroundColor: #e6e6e6;
 
 body {
-    background-color: $backgroundColor;
+  background-color: $backgroundColor;
 }

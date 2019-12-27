@@ -1,49 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import Header from "./Header"
+import Sidebar from "./Sidebar"
+import Footer from "./Footer"
 
 class Layout extends React.Component {
   render() {
     const { title, children, location } = this.props
-    let header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    )
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          width: "750px"
-        }}
-      >
-        <header>{header}</header>
-        <main
+      <div className={"Layout"}>
+        <Header title={title} />
+        <Sidebar />
+        <section
           className={
             location.pathname.substr(0, 6) === "/post/" ? "" : "reset-style"
           }
         >
-          {children}
-        </main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+          <main>{children}</main>
+          <Footer />
+        </section>
       </div>
     )
   }

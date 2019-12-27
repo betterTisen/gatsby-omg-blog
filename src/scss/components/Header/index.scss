@@ -1,0 +1,10 @@
+$headerHeight: 50px;
+
+.Header {
+  position: fixed;
+  top: 0;
+  width: $containerWidth;
+  background: yellowgreen;
+  height: $headerHeight;
+  z-index: 101;
+}
