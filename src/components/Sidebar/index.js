@@ -5,8 +5,7 @@ import Bio from './Bio';
 class Sidebar extends Component {
   render() {
     return (
-      <div className={"Sidebar"}>
-        i am sidebar
+      <div className={"Sidebar-class"}>
         <Bio />
       </div>
     );

@@ -32,18 +32,16 @@ const Bio = () => {
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
-        style={{
+        imgStyle={{
           marginBottom: 0,
           minWidth: 60,
-          borderRadius: `100%`
-        }}
-        imgStyle={{
+          borderRadius: `100%`,
           borderRadius: `50%`
         }}
       />
       <p>
         Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Francisco building useful things
       </p>
     </div>
   )

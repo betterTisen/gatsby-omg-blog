@@ -7,22 +7,28 @@ class Pagination extends Component {
 
     const { totalPage, currentPage } = this.props.pageContext
 
+    const hrefPath = this.props.path
+
     return (
       <div className={"Pagination-class"}>
         <ul>
           {currentPage - skipNum - 1 >= 1 && (
             <li>
-              <Link to="/">1</Link>
+              <Link to={`${hrefPath}`}>1</Link>
             </li>
           )}
-          {currentPage - skipNum - 1 > 1 && <li><span>...</span></li>}
+          {currentPage - skipNum - 1 > 1 && (
+            <li>
+              <span>...</span>
+            </li>
+          )}
 
           {Array.from({ length: skipNum }).map((_, i) => {
             const current = currentPage - skipNum + i
             return (
               current >= 1 && (
-                <li key={`/${current}`}>
-                  <Link to={current === 1 ? `/` : `/${current}`}>
+                <li key={`${hrefPath}${current}`}>
+                  <Link to={current === 1 ? `${hrefPath}` : `${hrefPath}${current}`}>
                     {current}
                   </Link>
                 </li>
@@ -36,17 +42,21 @@ class Pagination extends Component {
             const current = currentPage + i + 1
             return (
               current <= totalPage && (
-                <li key={`/${current}`}>
-                  <Link to={`/${current}`}>{current}</Link>
+                <li key={`${hrefPath}${current}`}>
+                  <Link to={`${hrefPath}${current}`}>{current}</Link>
                 </li>
               )
             )
           })}
 
-          {currentPage + skipNum + 1 < totalPage && <li><span>...</span></li>}
+          {currentPage + skipNum + 1 < totalPage && (
+            <li>
+              <span>...</span>
+            </li>
+          )}
           {currentPage + skipNum + 1 <= totalPage && (
             <li>
-              <Link to={`/${totalPage}`}>{totalPage}</Link>
+              <Link to={`${hrefPath}${totalPage}`}>{totalPage}</Link>
             </li>
           )}
         </ul>

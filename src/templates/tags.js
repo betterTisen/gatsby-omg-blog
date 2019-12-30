@@ -36,7 +36,7 @@ class BlogTagsTemplate extends React.Component {
             </article>
           )
         })}
-        <Pagination pageContext={pageContext} />
+        <Pagination path={`/tags/${pageContext.tag}/`} pageContext={pageContext} />
       </Layout>
     )
   }

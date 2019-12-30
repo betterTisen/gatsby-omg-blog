@@ -78,7 +78,7 @@ const Tags = async (graphql, createPage) => {
       length: numPages
     }).forEach((_, i) => {
       createPage({
-        path: `/tags/${tag}/${i + 1}`,
+        path: i === 0 ? `/tags/${tag}/` : `/tags/${tag}/${i + 1}`,
         component: path.resolve("./src/templates/tags.js"),
         context: {
           currentPage: i + 1,

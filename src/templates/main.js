@@ -37,7 +37,7 @@ class BlogIndex extends React.Component {
             </article>
           )
         })}
-        <Pagination pageContext={pageContext} />
+        <Pagination path="/" pageContext={pageContext} />
       </Layout>
     )
   }
