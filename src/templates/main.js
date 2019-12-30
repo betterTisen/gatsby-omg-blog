@@ -18,13 +18,25 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
+            <article
+              key={node.fields.slug}
+              style={{
+                marginBottom: `35px`
+              }}
+            >
               <header>
-                <h3>
+                <div>
                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                     {title}
                   </Link>
-                </h3>
+                </div>
+                <div>
+                  {node.frontmatter.tags
+                    ? node.frontmatter.tags.map(tag => {
+                        return `|${tag}`
+                      })
+                    : "没有标签"}
+                </div>
                 <small>{node.frontmatter.date}</small>
               </header>
               <section>
@@ -67,6 +79,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

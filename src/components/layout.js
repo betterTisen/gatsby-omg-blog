@@ -2,7 +2,8 @@ import React from "react"
 
 import Header from "./Header"
 import Sidebar from "./Sidebar"
-import Footer from "./Footer"
+import MainHead from "./Main/MainHead"
+import Footer from "./Main/Footer"
 
 class Layout extends React.Component {
   render() {
@@ -11,12 +12,15 @@ class Layout extends React.Component {
       <div className={"Layout"}>
         <Header title={title} />
         <Sidebar />
-        <section
-          className={
-            location.pathname.substr(0, 6) === "/post/" ? "" : "reset-style"
-          }
-        >
-          <main>{children}</main>
+        <section>
+          <MainHead title="" details="" />
+          <main
+            className={
+              location.pathname.substr(0, 6) === "/post/" ? "" : "reset-style"
+            }
+          >
+            {children}
+          </main>
           <Footer />
         </section>
       </div>
