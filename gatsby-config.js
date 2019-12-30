@@ -3,6 +3,12 @@ module.exports = {
     title: `Gatsby OMG Blog`,
     author: `Byeguo`,
     description: `A personal blog used by gatsby`,
+
+    qq: ``,
+    wx:``,
+    weibo:``,
+    github: ``,
+    mail: ``
   },
   plugins: [
     {

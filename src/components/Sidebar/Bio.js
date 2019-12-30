@@ -28,21 +28,10 @@ const Bio = () => {
 
   const { author } = data.site.siteMetadata
   return (
-    <div>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        imgStyle={{
-          marginBottom: 0,
-          minWidth: 60,
-          borderRadius: `100%`,
-          borderRadius: `50%`
-        }}
-      />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things
-      </p>
+    <div className={`Bio-class`}>
+      <div className={`head-img`}>
+        <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+      </div>
     </div>
   )
 }

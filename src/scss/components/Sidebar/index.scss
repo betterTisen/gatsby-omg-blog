@@ -1,11 +1,42 @@
 $sidebarWidth: 220px;
 
+$sidebarFootHeight: 60px;
+
+@import "./Bio.scss";
+@import "./Nav.scss";
+
 .Sidebar-class {
   position: fixed;
   top: 0;
   bottom: 0;
-  padding-top: $headerHeight;
+  padding: $headerHeight 0 $sidebarFootHeight;
   width: $sidebarWidth;
   background-color: #f3f3f3;
   z-index: 100;
+  .sidebar-foot {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    width: $sidebarWidth;
+    height: $sidebarFootHeight;
+    list-style: none;
+    background-color: #fcfcfc;
+    font-family: $iconfont;
+    font-size: 22px;
+    transition: all 0.3s ease;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      color: #777;
+      transition: 0.3s color ease;
+      cursor: pointer;
+      &:hover {
+        color: yellowgreen;
+      }
+    }
+  }
 }
