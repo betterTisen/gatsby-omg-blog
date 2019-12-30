@@ -10,12 +10,14 @@
     font-weight: bold;
     box-shadow: 1px 2px 2px #ddd;
     li {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      a {
+      font-size: 13px;
+      a,
+      span {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,11 +26,13 @@
         height: 15px;
         transition: width 0.15s, height 0.15s;
       }
-      &:hover a {
+      &:hover a,
+      &:hover span {
         width: 100%;
         height: 100%;
         color: white;
         background: #333333;
+        cursor: pointer;
       }
     }
     .center {

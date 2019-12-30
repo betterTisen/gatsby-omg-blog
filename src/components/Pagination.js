@@ -15,7 +15,7 @@ class Pagination extends Component {
               <Link to="/">1</Link>
             </li>
           )}
-          {currentPage - skipNum - 1 > 1 && <li><a href='javascript:;'>...</a></li>}
+          {currentPage - skipNum - 1 > 1 && <li><span>...</span></li>}
 
           {Array.from({ length: skipNum }).map((_, i) => {
             const current = currentPage - skipNum + i
@@ -43,7 +43,7 @@ class Pagination extends Component {
             )
           })}
 
-          {currentPage + skipNum + 1 < totalPage && <li><a href='javascript:;'>...</a></li>}
+          {currentPage + skipNum + 1 < totalPage && <li><span>...</span></li>}
           {currentPage + skipNum + 1 <= totalPage && (
             <li>
               <Link to={`/${totalPage}`}>{totalPage}</Link>
