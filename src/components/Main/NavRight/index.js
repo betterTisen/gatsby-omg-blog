@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+
 function NavRight() {
   const data = useStaticQuery(graphql`
     {
@@ -21,10 +22,17 @@ function NavRight() {
   const new_posts = data.allMarkdownRemark.edges.splice(0, 4)
   return (
     <div className={`NavRight-class`}>
-      <span>最新文章</span>
+      <span className='news'>最新文章</span>
       <ul>
         {new_posts.map(({ node }) => {
-          return <li key={node.fields.slug}>{node.frontmatter.title}</li>
+          return <li key={node.fields.slug}>
+            <img src="/static/4-50469011d76fe140a9878b490c4a4cb3.png" alt="文章配图" className='textImg'/>
+            <span className='textTitle'>{node.frontmatter.title}</span>
+            <div className='comment'>
+              <laber>&#xe606;</laber>
+              <span>112</span>
+            </div>
+          </li>
         })}
       </ul>
     </div>
