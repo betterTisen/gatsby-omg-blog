@@ -13,6 +13,8 @@
     &:hover {
       transform: rotate(1turn) scale(1.15);
     }
+    &:focus {
+      outline: none;
+    }
   }
-
 }

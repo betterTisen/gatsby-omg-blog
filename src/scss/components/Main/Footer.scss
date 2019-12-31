@@ -1,0 +1,17 @@
+.Footer-class {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 22px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 12.5px;
+  color: #666;
+  background-color: rgba(220, 228, 187, 0.52);
+  & a {
+    box-shadow: 0 1px 0 0 currentColor;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $hoverColor;
+    }
+  }
+}

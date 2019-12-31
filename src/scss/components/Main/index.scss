@@ -1,0 +1,16 @@
+@import "./MainHead.scss";
+@import "./NavRight/index.scss";
+@import "./Footer.scss";
+
+.Main-class {
+  padding-top: $headerHeight;
+  padding-left: $sidebarWidth;
+
+  .main-container{
+    display: flex;
+  }
+
+  .main{
+    flex: 1;
+  }
+}

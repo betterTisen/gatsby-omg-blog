@@ -23,7 +23,7 @@
         line-height: 45px;
         box-shadow: none;
         transition: background-color 0.2s ease;
-        &:hover {
+        &:hover,&:focus {
           background-color: rgba(0, 0, 0, 0.05);
           & > span {
             padding-left: 20px;

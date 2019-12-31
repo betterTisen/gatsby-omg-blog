@@ -6,6 +6,8 @@ import SEO from "../components/SEO"
 
 import Pagination from "../components/Pagination"
 
+import { toGetRandomHeadImage } from "../utils/random"
+
 class BlogIndex extends React.Component {
   render() {
     const { data, pageContext } = this.props
@@ -15,41 +17,49 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article
-              key={node.fields.slug}
-              style={{
-                marginBottom: `35px`
-              }}
-            >
-              <header>
-                <div>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </div>
-                <div>
-                  {node.frontmatter.tags
-                    ? node.frontmatter.tags.map(tag => {
-                        return `|${tag}`
-                      })
-                    : "没有标签"}
-                </div>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
-        <Pagination path="/" pageContext={pageContext} />
+        <div>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+
+            const rdm = toGetRandomHeadImage()
+
+            return (
+              <article key={node.fields.slug} className={`Main-list-class`}>
+                <header>
+                  <div>
+                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </div>
+                  <div>
+                    {node.frontmatter.tags
+                      ? node.frontmatter.tags.map(tag => {
+                          return `|${tag}`
+                        })
+                      : "没有标签"}
+                  </div>
+                  <small>{node.frontmatter.date}</small>
+                  <img
+                    src={
+                      node.frontmatter.top_img
+                        ? require(`../../content/assets/top_image/${node.frontmatter.top_img}`)
+                        : `${rdm}`
+                    }
+                    alt=""
+                  />
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt
+                    }}
+                  />
+                </section>
+              </article>
+            )
+          })}
+          <Pagination path="/" pageContext={pageContext} />
+        </div>
       </Layout>
     )
   }
@@ -80,6 +90,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            top_img
           }
         }
       }

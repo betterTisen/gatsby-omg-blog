@@ -14,9 +14,11 @@ function MainHead({ title, details }) {
   `)
   const { author, notice } = data.site.siteMetadata
   return (
-    <div>
-      <div>{title ? title : author}</div>
-      <div>{details ? details : notice}</div>
+    <div className={`MainHead-class`}>
+      <span>{title ? title : author}</span>
+      <p>
+        {details ? details : notice}
+      </p>
     </div>
   )
 }

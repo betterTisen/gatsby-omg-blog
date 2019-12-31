@@ -1,1 +1,10 @@
 @import "./post.scss";
+
+.Main-list-class{
+  margin-bottom: 35px;
+  img{
+    display: block;
+    margin: 0;
+    width: 300px;
+  }
+}

@@ -24,18 +24,18 @@ $sidebarFootHeight: 60px;
     list-style: none;
     background-color: #fcfcfc;
     font-family: $iconfont;
-    font-size: 22px;
     transition: all 0.3s ease;
     li {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0;
+      font-size: 22px;
       color: #777;
       transition: 0.3s color ease;
       cursor: pointer;
       &:hover {
-        color: yellowgreen;
+        color: $hoverColor;
       }
     }
   }

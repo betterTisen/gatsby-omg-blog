@@ -3,7 +3,8 @@ $headerHeight: 50px;
 .Header {
   position: fixed;
   top: 0;
-  width: $containerWidth;
+  max-width: $containerWidth;
+  width: 100%;
   background: yellowgreen;
   height: $headerHeight;
   z-index: 101;

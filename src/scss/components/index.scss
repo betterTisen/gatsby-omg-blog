@@ -1,15 +1,12 @@
 @import "./Header/index.scss";
 @import "./Sidebar/index.scss";
+@import "./Main/index.scss";
 
 @import "./Pagination.scss";
 
 .Layout {
   position: relative;
   margin: 0 auto;
-  width: $containerWidth;
+  max-width: $containerWidth;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
-  & > section {
-    padding-top: $headerHeight;
-    padding-left: $sidebarWidth;
-  }
 }
