@@ -1,6 +1,10 @@
 .Main-list-class {
   padding: 20px;
   background-color: $mainBackgroundColor;
+
+  .main-no-img{
+    grid-template-columns:none!important;
+  }
   .main-img-left-layout {
     display: grid;
     grid-template-columns: 40% 60%;

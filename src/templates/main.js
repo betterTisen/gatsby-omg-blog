@@ -25,20 +25,13 @@ class BlogIndex extends React.Component {
 
             return (
               <Link
-                className={`main-img-left-layout`}
+                className={`main-img-left-layout${node.frontmatter.top_img ? '' : ` main-no-img`}`}
                 to={node.fields.slug}
                 key={node.fields.slug}
               >
-                <div className="left-img">
-                  <img
-                    src={
-                      node.frontmatter.top_img
-                        ? require(`../../content/assets/top_image/${node.frontmatter.top_img}`)
-                        : `${rdm}`
-                    }
-                    alt=""
-                  />
-                </div>
+                {node.frontmatter.top_img ? <div className="left-img">
+                  <img src={require(`../../content/assets/top_image/${node.frontmatter.top_img}`)} alt=""/>
+                </div> : ''}
                 <header>{title}</header>
                 <p
                   dangerouslySetInnerHTML={{
@@ -49,8 +42,8 @@ class BlogIndex extends React.Component {
                   <span>
                     {node.frontmatter.tags
                       ? node.frontmatter.tags.map(tag => {
-                          return <i key={tag}>{tag}</i>
-                        })
+                        return <i key={tag}>{tag}</i>
+                      })
                       : "没有标签"}
                   </span>
                   <small>{node.frontmatter.date}</small>
