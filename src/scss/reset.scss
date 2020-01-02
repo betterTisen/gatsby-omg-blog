@@ -55,6 +55,7 @@ td {
   font-size: 14px;
   margin: 0px;
   padding: 0px;
+  font-style:normal;
 }
 html,
 body {
@@ -125,4 +126,8 @@ ul,
 ol,
 li {
   list-style-type: none;
+}
+
+i{
+  font-style: normal;
 }

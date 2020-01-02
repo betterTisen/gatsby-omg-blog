@@ -3,7 +3,7 @@
  */
 const path = require(`path`)
 
-const postsPerPage = 4 // 单页最大文章数
+const postsPerPage = 8 // 单页最大文章数
 
 const Tags = async (graphql, createPage) => {
   const result = await graphql(

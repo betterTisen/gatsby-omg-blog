@@ -11,7 +11,7 @@
     overflow: hidden;
     transition: 0.3s all ease;
     &:hover {
-      transform: rotate(1turn) scale(1.15);
+      transform: scale(1.15);
     }
     &:focus {
       outline: none;

@@ -1,34 +1,14 @@
+@import "./News.scss";
+@import "./NavTags.scss";
+
 .NavRight-class {
-  padding: 20px;
+  padding: 20px 15px;
   width: 225px;
   background-color: #f3f3f3;
   color: #999999;
-  .news {
-    font-size: 20px;
-  }
-  li {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: center;
-    margin-bottom: 30px;
-    .imgBox {
-      width: 60px;
-      height: 60px;
-      border-radius: 10px;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      overflow: hidden;
-      margin: 0;
-    }
-    .textTitle {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      font-size: 10px;
-    }
-   
+
+  .navRight-container {
+    padding: 20px 0;
+    font-size: 15px;
   }
 }

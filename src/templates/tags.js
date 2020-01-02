@@ -21,38 +21,45 @@ class BlogTagsTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={`${pageContext.tag}`} />
-        <div>
+        <div className="Main-list-class">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
             const rdm = toGetRandomHeadImage()
 
             return (
-              <article key={node.fields.slug} className={`Main-list-class`}>
-                <header>
-                  <div>
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </div>
-                  <div>
+              <Link
+                className={`main-img-left-layout`}
+                to={node.fields.slug}
+                key={node.fields.slug}
+              >
+                <div className="left-img">
+                  <img
+                    src={
+                      node.frontmatter.top_img
+                        ? require(`../../content/assets/top_image/${node.frontmatter.top_img}`)
+                        : `${rdm}`
+                    }
+                    alt=""
+                  />
+                </div>
+                <header>{title}</header>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+                <div className="main-nav">
+                  <span>
                     {node.frontmatter.tags
                       ? node.frontmatter.tags.map(tag => {
-                          return `|${tag}`
+                          return <i key={tag}>{tag}</i>
                         })
                       : "没有标签"}
-                  </div>
+                  </span>
                   <small>{node.frontmatter.date}</small>
-                  <img src={`${rdm}`} alt="" />
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt
-                    }}
-                  />
-                </section>
-              </article>
+                </div>
+              </Link>
             )
           })}
           <Pagination

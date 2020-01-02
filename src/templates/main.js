@@ -17,28 +17,19 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <div>
+        <div className="Main-list-class">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
             const rdm = toGetRandomHeadImage()
 
             return (
-              <article key={node.fields.slug} className={`Main-list-class`}>
-                <header>
-                  <div>
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </div>
-                  <div>
-                    {node.frontmatter.tags
-                      ? node.frontmatter.tags.map(tag => {
-                          return `|${tag}`
-                        })
-                      : "没有标签"}
-                  </div>
-                  <small>{node.frontmatter.date}</small>
+              <Link
+                className={`main-img-left-layout`}
+                to={node.fields.slug}
+                key={node.fields.slug}
+              >
+                <div className="left-img">
                   <img
                     src={
                       node.frontmatter.top_img
@@ -47,15 +38,24 @@ class BlogIndex extends React.Component {
                     }
                     alt=""
                   />
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt
-                    }}
-                  />
-                </section>
-              </article>
+                </div>
+                <header>{title}</header>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+                <div className="main-nav">
+                  <span>
+                    {node.frontmatter.tags
+                      ? node.frontmatter.tags.map(tag => {
+                          return <i key={tag}>{tag}</i>
+                        })
+                      : "没有标签"}
+                  </span>
+                  <small>{node.frontmatter.date}</small>
+                </div>
+              </Link>
             )
           })}
           <Pagination path="/" pageContext={pageContext} />

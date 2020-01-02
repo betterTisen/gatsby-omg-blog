@@ -13,32 +13,36 @@ $headerHeight: 50px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  
+
   .headLogo {
     width: 200px;
     height: 100%;
     margin: 0;
+    padding-left: 40px;
   }
 
   .searchBox {
-    width: 200px;
+    // width: 200px;
     height: 30px;
     background-color: white;
     border-radius: 50px;
     margin-right: 25px;
     overflow: hidden;
-    & > laber {
-      font-family: $iconfont;
+    & > label {
       transition: padding 0.2s ease;
-      margin-left: 20px;
-    }
-    input{
-      width: 150px;
-      height: 30px;
-      font-size: 14px;
-      color: #999999;
-      border:none;
-      padding-left: 15px;
+      input {
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+        color: #999999;
+        border: none;
+        padding-left:15px;
+      }
+      span {
+        display: inline-block;
+        font-family: $iconfont;
+        padding: 0 10px;
+      }
     }
   }
 }

@@ -3,13 +3,15 @@ $iconfont: "iconfont"; //icon-font name
 $containerWidth: 1200px;
 $hoverColor: yellowgreen;
 
+$backgroundColor: #e6e6e6;
+$mainBackgroundColor: #efefef;
+
 @import "./reset.scss";
 
 @import "./components/index.scss";
 
 @import "./pages/index.scss";
 
-$backgroundColor: #e6e6e6;
 
 body {
   background-color: $backgroundColor;

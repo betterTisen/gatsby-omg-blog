@@ -16,9 +16,7 @@ function MainHead({ title, details }) {
   return (
     <div className={`MainHead-class`}>
       <span>{title ? title : author}</span>
-      <p>
-        {details ? details : notice}
-      </p>
+      <p>{details ? details : notice}</p>
     </div>
   )
 }

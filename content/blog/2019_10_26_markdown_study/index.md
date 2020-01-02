@@ -1,0 +1,136 @@
+---
+title: markdown在hexo中的渲染效果展示
+date: 2019-10-26 16:26:53
+tags:
+  - markdown
+  - hexo
+categories: hexo
+---
+
+本文仅为 hexo-markdown 引擎渲染效果测试，方便日后博客编写
+
+# 标题
+
+```markdown
+## 这是二级标题
+
+### 这是三级标题
+
+#### 这是四级标题
+
+##### 这是五级标题
+
+###### 这是六级标题
+```
+
+## 这是二级标题
+
+### 这是三级标题
+
+#### 这是四级标题
+
+##### 这是五级标题
+
+###### 这是六级标题
+
+# 字体
+
+```markdown
+**加粗**
+_斜体_
+~~删除线~~
+**_~~全家桶~~_**
+```
+
+**加粗**
+_斜体_
+~~删除线~~
+**_~~全家桶~~_**
+
+# 列表
+
+```markdown
+- 无序列表
+- 无序列表
+
+1. 有序列表
+2. 有序列表
+```
+
+- 无序列表
+- 无序列表
+
+1. 有序列表
+2. 有序列表
+
+# 分割线
+
+```markdown
+---
+```
+
+---
+
+# 表格
+
+```markdown
+<!-- 第二行为表内对齐方式 -->
+
+| 表   | 表啊 | 我是表 |
+| ---- | :--: | -----: |
+| 1111 | 123  |    345 |
+| 2222 | 123  |    567 |
+```
+
+| 表   | 表啊 | 我是表 |
+| ---- | :--: | -----: |
+| 1111 | 123  |    345 |
+| 2222 | 123  |    567 |
+
+# 文本块
+
+```markdown
+<div class="note primary">小紫</div>
+<div class="note success">小绿</div>
+<div class="note info">小蓝</div>
+<div class="note warning">小黄</div>
+<div class="note danger">小红</div>
+<div class="note danger no-icon">没有图标的小红</div>
+```
+
+<div class="note primary">小紫</div>
+<div class="note success">小绿</div>
+<div class="note info">小蓝</div>
+<div class="note warning">小黄</div>
+<div class="note danger">小红</div>
+<div class="note danger no-icon">没有图标的小红</div>
+
+# 引用
+
+```markdown
+> 123
+>
+> > 123
+```
+
+> 123
+>
+> > 123
+
+# 表单
+
+```markdown
+- [ ] 不勾选
+- [x] 勾选
+```
+
+- [ ] 不勾选
+- [x] 勾选
+
+# 插入图片
+
+```markdown
+![插百度](https://www.baidu.com/img/bd_logo1.png)
+```
+
+![插百度](https://www.baidu.com/img/bd_logo1.png)

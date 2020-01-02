@@ -4,6 +4,7 @@ module.exports = {
     author: `Byeguo`,
     notice:`代码的价值在于产品，产品的价值在于用户`,
     description: `A personal blog used by gatsby`,
+    siteUrl:`https://www.byeguo.cn`,
     qq: ``,
     wx:``,
     weibo:``,

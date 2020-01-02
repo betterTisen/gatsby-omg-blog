@@ -16,25 +16,25 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <div>
+        <div className="Post-page-class">
           <article>
             <header>
               <h1
                 style={{
-                  marginBottom: 0
+                  marginBottom: 0,
                 }}
               >
                 {post.frontmatter.title}
               </h1>
               <p
                 style={{
-                  display: `block`
+                  display: `block`,
                 }}
               >
                 {post.frontmatter.date}
               </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            <section className="omg-markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr />
             <footer></footer>
           </article>
@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
                 flexWrap: `wrap`,
                 justifyContent: `space-between`,
                 listStyle: `none`,
-                padding: 0
+                padding: 0,
               }}
             >
               <li>
