@@ -5,8 +5,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Pagination from "../components/Pagination"
 
-import { toGetRandomHeadImage } from "../utils/random"
-
 // 同main页面的区别
 // 查询语句
 // SEO title={`${pageContext.tag}`}
@@ -19,30 +17,30 @@ class BlogTagsTemplate extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} mainHeadTitle="">
         <SEO title={`${pageContext.tag}`} />
         <div className="Main-list-class">
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
-            const rdm = toGetRandomHeadImage()
-
             return (
               <Link
-                className={`main-img-left-layout`}
+                className={`main-img-left-layout${
+                  node.frontmatter.top_img ? "" : ` main-no-img`
+                }`}
                 to={node.fields.slug}
                 key={node.fields.slug}
               >
-                <div className="left-img">
-                  <img
-                    src={
-                      node.frontmatter.top_img
-                        ? require(`../../content/assets/top_image/${node.frontmatter.top_img}`)
-                        : `${rdm}`
-                    }
-                    alt=""
-                  />
-                </div>
+                {node.frontmatter.top_img ? (
+                  <div className="left-img">
+                    <img
+                      src={require(`../../content/assets/top_image/${node.frontmatter.top_img}`)}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  ""
+                )}
                 <header>{title}</header>
                 <p
                   dangerouslySetInnerHTML={{
@@ -51,11 +49,9 @@ class BlogTagsTemplate extends React.Component {
                 />
                 <div className="main-nav">
                   <span>
-                    {node.frontmatter.tags
-                      ? node.frontmatter.tags.map(tag => {
-                          return <i key={tag}>{tag}</i>
-                        })
-                      : "没有标签"}
+                    {node.frontmatter.tags.map(tag => {
+                      return <i key={tag}>{tag}</i>
+                    })}
                   </span>
                   <small>{node.frontmatter.date}</small>
                 </div>

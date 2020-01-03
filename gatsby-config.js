@@ -2,29 +2,29 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby OMG Blog`,
     author: `Byeguo`,
-    notice:`代码的价值在于产品，产品的价值在于用户`,
+    notice: `代码的价值在于产品，产品的价值在于用户`,
     description: `A personal blog used by gatsby`,
-    siteUrl:`https://www.byeguo.cn`,
+    siteUrl: `https://www.byeguo.cn`,
     qq: ``,
-    wx:``,
-    weibo:``,
+    wx: ``,
+    weibo: ``,
     github: ``,
-    mail: ``
+    mail: ``,
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`
-      }
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`
-      }
+        name: `assets`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -33,20 +33,21 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590
-            }
+              maxWidth: 590,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
-        ]
-      }
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -54,7 +55,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      }
+      },
     },
     `gatsby-plugin-feed`,
     {
@@ -66,17 +67,17 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`
-      }
+        icon: `content/assets/gatsby-icon.png`,
+      },
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
-    "gatsby-plugin-sass"
-  ]
+    "gatsby-plugin-sass",
+  ],
 }

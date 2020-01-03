@@ -6,13 +6,15 @@ import Main from "./Main"
 
 class Layout extends React.Component {
   render() {
-    const { title, children } = this.props
+    const { title, children, mainHeadData} = this.props
 
     return (
       <div className={"Layout"}>
         <Header title={title} />
         <Sidebar />
-        <Main>{children}</Main>
+        <Main mainHeadData={mainHeadData}>
+          {children}
+        </Main>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-function MainHead({ title, details }) {
+function MainHead({ mainHeadData }) {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -13,10 +13,17 @@ function MainHead({ title, details }) {
     }
   `)
   const { author, notice } = data.site.siteMetadata
+
+  if (!mainHeadData) {
+    mainHeadData = {}
+  }
+
+  const { title = author, details = notice } = mainHeadData
+
   return (
     <div className={`MainHead-class`}>
-      <span>{title ? title : author}</span>
-      <p>{details ? details : notice}</p>
+      <span>{title}</span>
+      <p>{details}</p>
     </div>
   )
 }

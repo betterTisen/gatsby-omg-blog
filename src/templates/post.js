@@ -10,61 +10,52 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
+    console.log()
+
+    // head info
+    const mainHeadData = {
+      title: post.frontmatter.title,
+      details: post.frontmatter.date,
+    }
+
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        mainHeadData={mainHeadData}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
         <div className="Post-page-class">
           <article>
-            <header>
-              <h1
-                style={{
-                  marginBottom: 0,
-                }}
-              >
-                {post.frontmatter.title}
-              </h1>
-              <p
-                style={{
-                  display: `block`,
-                }}
-              >
-                {post.frontmatter.date}
-              </p>
-            </header>
-            <section className="omg-markdown" dangerouslySetInnerHTML={{ __html: post.html }} />
-            <hr />
-            <footer></footer>
+            <section
+              className="omg-markdown"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
           </article>
 
-          <nav>
-            <ul
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `space-between`,
-                listStyle: `none`,
-                padding: 0,
-              }}
-            >
-              <li>
-                {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </li>
-            </ul>
+          <nav className="post-href-nav">
+            <div>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  上一篇
+                  {/* {previous.frontmatter.title} */}
+                </Link>
+              )}
+            </div>
+            <div>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  下一篇
+                  {/* {next.frontmatter.title} */}
+                </Link>
+              )}
+            </div>
           </nav>
+
+          <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         </div>
       </Layout>
     )
@@ -84,10 +75,12 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

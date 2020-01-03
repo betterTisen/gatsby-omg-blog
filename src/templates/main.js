@@ -6,8 +6,6 @@ import SEO from "../components/SEO"
 
 import Pagination from "../components/Pagination"
 
-import { toGetRandomHeadImage } from "../utils/random"
-
 class BlogIndex extends React.Component {
   render() {
     const { data, pageContext } = this.props
@@ -21,17 +19,24 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
 
-            const rdm = toGetRandomHeadImage()
-
             return (
               <Link
-                className={`main-img-left-layout${node.frontmatter.top_img ? '' : ` main-no-img`}`}
+                className={`main-img-left-layout${
+                  node.frontmatter.top_img ? "" : ` main-no-img`
+                }`}
                 to={node.fields.slug}
                 key={node.fields.slug}
               >
-                {node.frontmatter.top_img ? <div className="left-img">
-                  <img src={require(`../../content/assets/top_image/${node.frontmatter.top_img}`)} alt=""/>
-                </div> : ''}
+                {node.frontmatter.top_img ? (
+                  <div className="left-img">
+                    <img
+                      src={require(`../../content/assets/top_image/${node.frontmatter.top_img}`)}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  ""
+                )}
                 <header>{title}</header>
                 <p
                   dangerouslySetInnerHTML={{
@@ -40,11 +45,13 @@ class BlogIndex extends React.Component {
                 />
                 <div className="main-nav">
                   <span>
-                    {node.frontmatter.tags
-                      ? node.frontmatter.tags.map(tag => {
+                    {node.frontmatter.tags ? (
+                      node.frontmatter.tags.map(tag => {
                         return <i key={tag}>{tag}</i>
                       })
-                      : "没有标签"}
+                    ) : (
+                      <i>no tags</i>
+                    )}
                   </span>
                   <small>{node.frontmatter.date}</small>
                 </div>

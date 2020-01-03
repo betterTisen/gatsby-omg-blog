@@ -1,35 +1,30 @@
 .Post-page-class {
   padding: 25px;
   background: $mainBackgroundColor;
-  .omg-markdown {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 30px 0 10px 0;
-      font-weight: 360;
-      line-height: 1.4;
-      color: #555;
-    }
-    h1 {
-      font-size: 26px;
-    }
-    h2 {
-      font-size: 24px;
-    }
-    h3 {
-      font-size: 22px;
-    }
-    h4 {
-      font-size: 20px;
-    }
-    h5 {
-      font-size: 18px;
-    }
-    h6 {
-      font-size: 16px;
+  article {
+    padding: 5px 25px;
+    background: #fff;
+    box-shadow: 1px 1px 5px #dfdfdf;
+    border-radius: 8px;
+  }
+
+  .post-href-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 10px;
+    list-style: none;
+    a {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: #fff;
+      font-size: 13px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 3px #eee;
+      transition: 0.3s all ease;
+      &:hover {
+        box-shadow: 1px 1px 3px #d3d3d3;
+      }
     }
   }
 }

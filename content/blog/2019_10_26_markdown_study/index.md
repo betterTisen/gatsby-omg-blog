@@ -4,7 +4,7 @@ date: 2019-10-26 16:26:53
 tags:
   - markdown
   - hexo
-categories: hexo
+top_img: "1.png"
 ---
 
 本文仅为 hexo-markdown 引擎渲染效果测试，方便日后博客编写
@@ -59,6 +59,8 @@ _斜体_
 
 - 无序列表
 - 无序列表
+
+---
 
 1. 有序列表
 2. 有序列表
