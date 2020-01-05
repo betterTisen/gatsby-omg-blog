@@ -14,7 +14,8 @@ $mainBackgroundColor: #efefef;
 
 @import "./pages/index.scss";
 
-
 body {
   background-color: $backgroundColor;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
