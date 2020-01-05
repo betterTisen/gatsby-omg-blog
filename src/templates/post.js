@@ -10,8 +10,6 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
-    console.log()
-
     // head info
     const mainHeadData = {
       title: post.frontmatter.title,
@@ -23,6 +21,7 @@ class BlogPostTemplate extends React.Component {
         location={this.props.location}
         title={siteTitle}
         mainHeadData={mainHeadData}
+        mainCatalogueData={post.tableOfContents}
       >
         <SEO
           title={post.frontmatter.title}
@@ -55,7 +54,6 @@ class BlogPostTemplate extends React.Component {
             </div>
           </nav>
 
-          <div dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         </div>
       </Layout>
     )

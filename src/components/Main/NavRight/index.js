@@ -3,12 +3,14 @@ import React from "react"
 
 import NavRightNews from "./News"
 import NavRightTags from "./NavTags"
+import Catalogue from "./Catalogue"
 
-function NavRight() {
+function NavRight({ mainCatalogueData }) {
   return (
     <div className={`NavRight-class`}>
       <NavRightNews />
       <NavRightTags />
+      <Catalogue data={mainCatalogueData} />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import MainHead from "./MainHead"
 import NavRight from "./NavRight"
 import Footer from "./Footer"
 
-function Main({ children, mainHeadData }) {
+function Main({ children, mainHeadData, mainCatalogueData }) {
   return (
     <section className={"Main-class"}>
       <div className={`main-container`}>
@@ -12,7 +12,7 @@ function Main({ children, mainHeadData }) {
           <MainHead mainHeadData={mainHeadData} />
           {children}
         </main>
-        <NavRight />
+        <NavRight mainCatalogueData={mainCatalogueData} />
       </div>
       <Footer />
     </section>
