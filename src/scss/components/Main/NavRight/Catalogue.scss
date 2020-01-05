@@ -1,3 +1,23 @@
-.Catalogue-class{
-  background: #0ff;
+.Catalogue-class {
+  position: sticky;
+  top: 50px;
+  .catalogTitle{
+    font-size: 16px;
+    color: #999999;
+  }
+  .catalogContent{
+    background-color: white;
+  }
+  li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    p{
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+    a{
+      padding-left: 20px;
+    }
+  }
 }
