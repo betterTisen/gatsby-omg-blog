@@ -1,30 +1,65 @@
 .Catalogue-class {
   position: sticky;
   top: 50px;
-  .catalogTitle {
+  .CatalogueTitle {
     font-size: 16px;
-    color: #999999;
+    color: #666666;
+    margin-bottom: 10px;
   }
-  .catalogContent {
-    background-color: white;
-    padding-bottom: 20px;
+  ul {
+    border-radius: 5px;
   }
   li {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     padding-right: 10px;
+    background-color: white;
+    transition:background-color 0.4s;
+    &:hover {
+      background-color: #eee;
+    }
     p {
       margin-top: 20px;
     }
     a {
-      padding-left: 20px;
+      display: block;
+      padding: 12px 20px;
+      font-size: 12.5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
-  .catalogue-active {
+  li[data-depth="1"] {
     a {
-      color: red !important;
+      font-size: 13.5px;
     }
+  }
+  li[data-depth="2"] {
+    a {
+      padding-left: 25px;
+    }
+  }
+  li[data-depth="3"] {
+    a {
+      padding-left: 30px;
+    }
+  }
+  li[data-depth="4"] {
+    a {
+      padding-left: 35px;
+    }
+  }
+  li[data-depth="5"] {
+    a {
+      padding-left: 40px;
+    }
+  }
+  li[data-depth="6"] {
+    a {
+      padding-left: 45px;
+    }
+  }
+  .catalogue-active {
+    background-color: #eee !important;
   }
 }
