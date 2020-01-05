@@ -10,7 +10,7 @@ function NavRight({ mainCatalogueData }) {
     <div className={`NavRight-class`}>
       <NavRightNews />
       <NavRightTags />
-      <Catalogue data={mainCatalogueData} />
+      {mainCatalogueData ? <Catalogue data={mainCatalogueData} /> : ""}
     </div>
   )
 }

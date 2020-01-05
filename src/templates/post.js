@@ -21,7 +21,7 @@ class BlogPostTemplate extends React.Component {
         location={this.props.location}
         title={siteTitle}
         mainHeadData={mainHeadData}
-        mainCatalogueData={post.tableOfContents}
+        mainCatalogueData={post.headings}
       >
         <SEO
           title={post.frontmatter.title}
