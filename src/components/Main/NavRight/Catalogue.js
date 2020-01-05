@@ -13,7 +13,13 @@ class Catalogue extends Component {
         <ul>
           {this.state.links.map(item => {
             return (
-              <li key={item.id} data-depth={item.depth}>
+              <li
+                className={
+                  this.state.active === item.id ? "catalogue-active" : ""
+                }
+                key={item.id}
+                data-depth={item.depth}
+              >
                 <a href={`#${item.id}`}>{item.value}</a>
               </li>
             )
