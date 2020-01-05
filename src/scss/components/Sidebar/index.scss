@@ -12,12 +12,11 @@ $sidebarFootHeight: 60px;
   padding: $headerHeight 0 $sidebarFootHeight;
   width: $sidebarWidth;
   background-color: #f3f3f3;
-  transition: transform 0.3s ease;
   z-index: 100;
 
   @media (max-width: $sm) {
     transform: translate3d(-100%, 0, 0);
-    display: block;
+    transition: transform 0.3s ease;
   }
 
   .sidebar-foot {
