@@ -2,12 +2,12 @@
   padding: 20px;
   background-color: $mainBackgroundColor;
 
-  .main-no-img{
-    grid-template-columns:none!important;
+  .main-no-img {
+    grid-template-columns: none !important;
   }
   .main-img-left-layout {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 35% 65%;
     grid-template-rows: 50px 90px 50px;
     margin-bottom: 22px;
     background-color: #fff;
@@ -38,9 +38,14 @@
 
     header {
       font-size: 19px;
-      justify-self: center;
       align-self: flex-end;
+      padding: 0 5px;
+      width: 100%;
+      text-align: center;
       color: #555;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     p {
@@ -61,6 +66,13 @@
       font-size: 13px;
       color: #aaa;
       border-top: 1px solid rgba(222, 229, 231, 0.45);
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      span{
+        padding-right:10px;
+      }
       i {
         &::before {
           content: "\e6e3";

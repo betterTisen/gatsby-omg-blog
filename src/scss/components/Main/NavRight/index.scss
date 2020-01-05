@@ -4,10 +4,12 @@
 
 .NavRight-class {
   padding: 20px 15px;
-  max-width: 225px;
-  min-width: 225px;
+  width: 225px;
   background-color: #f3f3f3;
   color: #999999;
+  @media (max-width: $md) {
+    width: 100%;
+  }
 
   .navRight-container {
     padding: 20px 0;

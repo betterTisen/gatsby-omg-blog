@@ -3,7 +3,7 @@ $headerHeight: 50px;
 .Header {
   position: fixed;
   top: 0;
-  max-width: $containerWidth;
+  max-width: $lg;
   width: 100%;
   background-color: #f3f3f3;
   height: $headerHeight;
@@ -13,6 +13,16 @@ $headerHeight: 50px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $lg) {
+    max-width: $md;
+  }
+  @media (max-width: $md) {
+    max-width: $sm;
+  }
+  @media (max-width: $sm) {
+    max-width: 100%;
+  }
 
   .headLogo {
     height: 100%;
