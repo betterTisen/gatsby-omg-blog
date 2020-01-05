@@ -53,7 +53,6 @@ class BlogPostTemplate extends React.Component {
               )}
             </div>
           </nav>
-
         </div>
       </Layout>
     )
@@ -74,6 +73,10 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       tableOfContents
+      headings {
+        value
+        depth
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
