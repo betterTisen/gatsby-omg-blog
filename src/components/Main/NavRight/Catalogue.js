@@ -1,6 +1,7 @@
 import React from "react"
 
 function Catalogue({ data }) {
+  console.log(data)
   const dom = data ? (
     <div className="Catalogue-class">
       <div className='catalogTitle'>文章目录</div>
