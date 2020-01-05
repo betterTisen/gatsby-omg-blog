@@ -5,7 +5,6 @@ tags:
   - python
   - coolq
   - nonebot
-
 ---
 
 # 概述
@@ -156,11 +155,11 @@ kill -9 <进程号PID>
 
 ## 装饰器
 
-### `on_command` (命令配置):
+### on_command (命令配置):
 
 将函数装饰为命令函数
 
-#### `args_parser`:
+#### args_parser:
 
 将函数装饰为命令层面的参数解析器，将在命令实际处理函数之前被运行。接受的参数为`CommandSession`
 
@@ -195,14 +194,14 @@ kill -9 <进程号PID>
     pass
 ```
 
-### `on_message`（收到消息）:
+### on_message（收到消息）:
 
 将函数装饰为消息事件的处理函数
 
 - `private`: 私聊消息
 - `group`: 群消息
 
-### `on_notice`（群、讨论组变动等通知类事件）:
+### on_notice（群、讨论组变动等通知类事件）:
 
 将函数装饰为通知事件的处理函数
 
@@ -211,7 +210,7 @@ kill -9 <进程号PID>
 - `group_increase`：群成员增加
 - `friend_add`：好友添加（官方文档说是好友添加的相应事件，可是本人测试发现无效）
 
-### `on_request`（加好友请求、加群请求／邀请）:
+### on_request（加好友请求、加群请求／邀请）:
 
 将函数装饰为请求事件的处理函数
 
@@ -220,16 +219,12 @@ kill -9 <进程号PID>
 
 ## CQ 码（表情）
 
-### qq 自带表情: [CQ:face,id=表情 id]
+### qq 自带表情
 
-![对照表](https://imgc.cqp.me/forum/201802/20/071731w7dmsh57712i3r57.jpg)
+[CQ:face,id=表情 id]
+qq 自带表情对照表点击[这里 👈](https://cqp.cc/t/36910)
 
-### emoji 表情: [CQ:emoji,id=表情 id]
+### emoji 表情
 
-![对照表](https://imgc.cqp.me/forum/201409/21/213218r51es6b9lba55q58.png)
-
-### 链接
-
-如果图片无法查看可以通过下面链接进行访问
-qq 自带表情点击[这里 👈](https://cqp.cc/t/36910)
-emoji 表情点击[这里 👈](https://cqp.cc/t/15827)
+[CQ:emoji,id=表情 id]
+emoji 表情对照表点击[这里 👈](https://cqp.cc/t/15827)

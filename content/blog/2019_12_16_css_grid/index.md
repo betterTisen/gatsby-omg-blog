@@ -19,7 +19,7 @@ tags:
 ![假装模拟的博客post页面](http://cdn.byeguo.cn/blog/post/2019-12-16/1.png)
 如果你想查看代码可以[点击这里 👈](https://jsbin.com/licigal/4/edit?html,css,output)
 
-## grid 容器、子项、行线、列线
+## grid 容器 子项 行线 列线
 
 采用 grid 布局的盒子被称为`容器（container）`，其子元素即为`子项（item）`。
 而容器通过设定的参数，将盒子分为多个单元格，分割盒子的水平线即为`行线（row）`，垂直线即为`列线（column）`。
@@ -30,7 +30,7 @@ tags:
 
 # 容器常用属性
 
-## grid-template-rows,grid-template-columns
+## grid-template-rows grid-template-columns
 
 grid-template-rows 意为设定每条行线的间距。grid-template-columns 意为设定每条列线的间距
 
@@ -47,7 +47,7 @@ grid-template-rows 意为设定每条行线的间距。grid-template-columns 意
 - column dense：某些元素位置被固定时，剩下的元素先列后行
   ![如图所示](http://cdn.byeguo.cn/blog/post/2019-12-16/4.png)
 
-## justify-items, align-items,place-items
+## justify-items align-items place-items
 
 这里的属性是容器内子元素在单元格内的对齐方式
 justify-items 和 align-items 的可选属性有
@@ -57,7 +57,7 @@ justify-items 和 align-items 的可选属性有
 - end：与单元格结束位置对其
 - center：在单元格内居中对其
 
-## grid-auto-columns,grid-auto-rows
+## grid-auto-columns grid-auto-rows
 
 这两个属性用于设置 未设置 但却存在的网格 的宽高。
 
@@ -91,7 +91,7 @@ justify-items 和 align-items 的可选属性有
 
 ![如图所示](http://cdn.byeguo.cn/blog/post/2019-12-16/5.png)
 
-## justify-items,align-items,place-items和 justify-self,align-self,place-self
+## justify-items align-items place-items和 justify-self align-self place-self
 
 这六个属性用于设置单元格内的对其方式。和 flex 中的用法一致，只有当子项的宽高固定时才有效，故用的不多。
 不同的是前三者是整体的对齐方式，应用于容器。后三者是针对于特殊子项调整对齐方式，故应用于子项。

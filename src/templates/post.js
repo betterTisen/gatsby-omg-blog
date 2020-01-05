@@ -61,6 +61,7 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
+// 可通过 markdownRemark.tableOfContents 直接获取目录html字符串
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
@@ -72,7 +73,6 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
-      tableOfContents
       headings {
         value
         depth
