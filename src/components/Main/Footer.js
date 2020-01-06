@@ -7,9 +7,11 @@ class Footer extends Component {
         <span>
           © {new Date().getFullYear()}{" "}
           <a href="https://www.gatsbyjs.org">Powered by Gatsby</a>｜
-          <a href="https://github.com/betterTisen/gatsby-omg-blog">Theme by omg</a>
+          <a href="https://github.com/betterTisen/gatsby-omg-blog">
+            Theme by omg
+          </a>
         </span>
-        <span>皖ICP备19018433号</span>
+        <span className="beian">皖ICP备19018433号</span>
       </div>
     )
   }

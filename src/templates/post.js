@@ -37,16 +37,16 @@ class BlogPostTemplate extends React.Component {
 
           <nav className="post-href-nav">
             <div>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+              {next && (
+                <Link to={next.fields.slug} rel="prev">
                   上一篇
                   {/* {previous.frontmatter.title} */}
                 </Link>
               )}
             </div>
             <div>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
+              {previous && (
+                <Link to={previous.fields.slug} rel="next">
                   下一篇
                   {/* {next.frontmatter.title} */}
                 </Link>

@@ -18,6 +18,8 @@ $mainBackgroundColor: #efefef;
 
 @import "./pages/index.scss";
 
+@import "./media.scss";
+
 body {
   background-color: $backgroundColor;
   -webkit-font-smoothing: antialiased;

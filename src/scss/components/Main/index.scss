@@ -5,16 +5,9 @@
 .Main-class {
   padding-top: $headerHeight;
   padding-left: $sidebarWidth;
-  
-  @media (max-width: $sm) {
-    padding-left: 0;
-  }
 
   .main-container {
     display: flex;
-    @media (max-width: $md) {
-      flex-direction: column;
-    }
   }
 
   .main {

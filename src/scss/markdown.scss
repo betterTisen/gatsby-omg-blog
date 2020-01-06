@@ -28,6 +28,7 @@
 
   strong,
   b {
+    font-weight: bold;
     color: #bf360c;
   }
 
@@ -152,6 +153,7 @@
     font: inherit;
     border: 0;
     margin: 0 auto;
+    table-layout: fixed;
   }
 
   tbody {

@@ -10,11 +10,25 @@ class Sidebar extends Component {
         <Bio />
         <Nav />
         <ul className={"sidebar-foot"}>
-          <li>&#xe601;</li>
-          <li>&#xe6f3;</li>
-          <li>&#xe610;</li>
-          <li>&#xe600;</li>
-          <li>&#xe8b6;</li>
+          {/* <li>
+            <a
+              name="qq"
+              href="http://wpa.qq.com/msgrd?v=3&uin=2445408174&site=qq&menu=yes"
+              target="view_window"
+            >
+              &#xe601;
+            </a>
+          </li> */}
+          <li>
+            <a name="github" href="https://github.com/betterTisen">
+              &#xe600;
+            </a>
+          </li>
+          {/* <li>
+            <a name="邮箱" href="mailto:song5516023@gmail.com">
+              &#xe8b6;
+            </a>
+          </li> */}
         </ul>
       </div>
     )

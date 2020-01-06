@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
             return (
               <Link
                 className={`main-img-left-layout${
-                  node.frontmatter.top_img ? "" : ` main-no-img`
+                  node.frontmatter.top_img ? " main-have-img" : " main-no-img"
                 }`}
                 to={node.fields.slug}
                 key={node.fields.slug}
