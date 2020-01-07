@@ -45,12 +45,16 @@
     }
 
     .search-box {
-      input {
-        display: none;
+      label {
+        input {
+          padding-left: 0;
+          width: 0;
+        }
+        span {
+          display: none !important;
+        }
       }
-      span {
-        display: none !important;
-      }
+
       .mobile-search {
         display: flex !important;
       }
@@ -66,11 +70,19 @@
     }
   }
 
+  .Post-page-class {
+    padding: 0;
+  }
+
   .Main-class {
     padding-left: 0;
   }
-
+  
   .Main-list-class {
+    padding: 0;
+    .main-img-left-layout {
+      border-radius: 0;
+    }
     .main-have-img {
       grid-template-columns: none;
       grid-template-rows: 180px 40px 75px 40px;

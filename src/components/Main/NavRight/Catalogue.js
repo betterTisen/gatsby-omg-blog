@@ -3,10 +3,6 @@ import React, { Component } from "react"
 import { easeInOutCubic, getCurrentScrollTop } from "../../../utils/anim"
 
 class Catalogue extends Component {
-  constructor(props) {
-    super(props)
-    this.getCurrentAnchor.bind(this)
-  }
 
   render() {
     return (

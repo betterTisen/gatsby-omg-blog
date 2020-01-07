@@ -12,7 +12,7 @@ class Nav extends Component {
               <span>&#xeb8e;</span> 首页
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/">
               <span>&#xe603;</span> 仓库
             </Link>
@@ -21,9 +21,9 @@ class Nav extends Component {
             <Link to="/">
               <span>&#xe606;</span> 留言
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link to="/">
+            <Link to="/about">
               <span>&#xe609;</span> 关于我
             </Link>
           </li>
