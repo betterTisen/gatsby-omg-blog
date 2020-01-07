@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Jan 2020 09:47:44 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Jan 2020 10:03:16 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h1 id=&quot;定义&quot;&gt;定义&lt;/h1&gt;
 &lt;h2 id=&quot;什么是-grid&quot;&gt;什么是 grid&lt;/h2&gt;
 &lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
@@ -564,7 +564,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg&quot;
+    href=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -577,13 +577,13 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chinese Salty Egg&quot;
         title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg&quot;
-        srcset=&quot;/blog/static/8058f3f26913fea3b6a89a73344fe94a/7237a/salty_egg.jpg 148w,
-/blog/static/8058f3f26913fea3b6a89a73344fe94a/0cfdf/salty_egg.jpg 295w,
-/blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg 590w,
-/blog/static/8058f3f26913fea3b6a89a73344fe94a/77d57/salty_egg.jpg 885w,
-/blog/static/8058f3f26913fea3b6a89a73344fe94a/5a917/salty_egg.jpg 1180w,
-/blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg 2048w&quot;
+        src=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg&quot;
+        srcset=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/7237a/salty_egg.jpg 148w,
+/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/0cfdf/salty_egg.jpg 295w,
+/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg 590w,
+/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/77d57/salty_egg.jpg 885w,
+/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/5a917/salty_egg.jpg 1180w,
+/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
