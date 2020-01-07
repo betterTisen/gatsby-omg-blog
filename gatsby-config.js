@@ -11,6 +11,7 @@ module.exports = {
     github: ``,
     mail: ``,
   },
+  pathPrefix: "/gatsby-omg-blog/",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,13 +1,12 @@
 ---
-title: markdown在hexo中的渲染效果展示
+title: markdown在omg中的渲染效果展示
 date: 2019-10-26 16:26:53
 tags:
   - markdown
-  - hexo
 top_img: "1.png"
 ---
 
-本文仅为 hexo-markdown 引擎渲染效果测试，方便日后博客编写
+本文仅为 omg-markdown 引擎渲染效果测试，方便日后博客编写
 
 # 标题
 
@@ -88,24 +87,6 @@ _斜体_
 | ---- | :--: | -----: |
 | 1111 | 123  |    345 |
 | 2222 | 123  |    567 |
-
-# 文本块
-
-```markdown
-<div class="note primary">小紫</div>
-<div class="note success">小绿</div>
-<div class="note info">小蓝</div>
-<div class="note warning">小黄</div>
-<div class="note danger">小红</div>
-<div class="note danger no-icon">没有图标的小红</div>
-```
-
-<div class="note primary">小紫</div>
-<div class="note success">小绿</div>
-<div class="note info">小蓝</div>
-<div class="note warning">小黄</div>
-<div class="note danger">小红</div>
-<div class="note danger no-icon">没有图标的小红</div>
 
 # 引用
 
