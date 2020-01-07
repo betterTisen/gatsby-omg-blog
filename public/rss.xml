@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Jan 2020 09:19:15 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h1 id=&quot;定义&quot;&gt;定义&lt;/h1&gt;
+&lt;h2 id=&quot;什么是-grid&quot;&gt;什么是 grid&lt;/h2&gt;
+&lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
+本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid 的区别，以及其分别适用于的场景。
+最后是 gird 的当前兼容性情况，如有需要可以拉到屏幕最底部查看～&lt;/p&gt;
+&lt;p&gt;下面是我使用 grid 布局简单模拟的本博客 post 页面布局。
+&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/1.png&quot; alt=&quot;假装模拟的博客post页面&quot;&gt;
+如果你想查看代码可以&lt;a href=&quot;https://jsbin.com/licigal/4/edit?html,css,output&quot;&gt;点击这里 👈&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;grid-容器-子项-行线-列线&quot;&gt;grid 容器 子项 行线 列线&lt;/h2&gt;
+&lt;p&gt;采用 grid 布局的盒子被称为&lt;code class=&quot;language-text&quot;&gt;容器（container）&lt;/code&gt;，其子元素即为&lt;code class=&quot;language-text&quot;&gt;子项（item）&lt;/code&gt;。
+而容器通过设定的参数，将盒子分为多个单元格，分割盒子的水平线即为&lt;code class=&quot;language-text&quot;&gt;行线（row）&lt;/code&gt;，垂直线即为&lt;code class=&quot;language-text&quot;&gt;列线（column）&lt;/code&gt;。
+&lt;strong&gt;注意：子项是容器的子元素，并不是容器分割的每一个区域都是它的子项&lt;/strong&gt;
+下面是通过一张图片解释什么容器、子项、行线、列线的关系
+如图可见，容器即为最大的&lt;strong&gt;蓝色 div&lt;/strong&gt;，下面的三个&lt;strong&gt;粉色 div&lt;/strong&gt;分别为容器的三个子项。容器一共有 6 个单元格，分别是由 3 条&lt;strong&gt;绿色&lt;/strong&gt;行线和 4 条&lt;strong&gt;棕色&lt;/strong&gt;列线组成。
+&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/2.png&quot; alt=&quot;画的不好见谅哈&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;容器常用属性&quot;&gt;容器常用属性&lt;/h1&gt;
+&lt;h2 id=&quot;grid-template-rows-grid-template-columns&quot;&gt;grid-template-rows grid-template-columns&lt;/h2&gt;
+&lt;p&gt;grid-template-rows 意为设定每条行线的间距。grid-template-columns 意为设定每条列线的间距&lt;/p&gt;
+&lt;p&gt;即前者用于设定子项的行高，后者用于设定子项的行宽
+&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/3.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;grid-auto-flow&quot;&gt;grid-auto-flow&lt;/h2&gt;
+&lt;p&gt;用于设置子元素的排列顺序。其默认顺序为先行后列。即优先填满第一行后才会换行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;row（default）：先行后列&lt;/li&gt;
+&lt;li&gt;column：先列后行&lt;/li&gt;
+&lt;li&gt;row dense：某些元素位置被固定时，剩下的元素先行后列&lt;/li&gt;
+&lt;li&gt;column dense：某些元素位置被固定时，剩下的元素先列后行
+&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/4.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;justify-items-align-items-place-items&quot;&gt;justify-items align-items place-items&lt;/h2&gt;
+&lt;p&gt;这里的属性是容器内子元素在单元格内的对齐方式
+justify-items 和 align-items 的可选属性有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;stretch（default）：占满单元格&lt;/li&gt;
+&lt;li&gt;start：与单元格起始位置对齐&lt;/li&gt;
+&lt;li&gt;end：与单元格结束位置对其&lt;/li&gt;
+&lt;li&gt;center：在单元格内居中对其&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;grid-auto-columns-grid-auto-rows&quot;&gt;grid-auto-columns grid-auto-rows&lt;/h2&gt;
+&lt;p&gt;这两个属性用于设置 未设置 但却存在的网格 的宽高。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 50px 50px 50px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 50px 50px 50px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-auto-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-auto-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;比如你只设置了 3*3 的单元格，但却有 10 个子元素。此时。多出来的元素按照顺序排在第四行第一位。已知第一位的宽为 50px，但是高并没有在&lt;code class=&quot;language-text&quot;&gt;grid-template-rows&lt;/code&gt;中设置，所以会找到&lt;code class=&quot;language-text&quot;&gt;grid-auto-rows&lt;/code&gt;。最后&lt;strong&gt;第十个子元素的宽为 50px,高为 100px&lt;/strong&gt;。&lt;/p&gt;
+&lt;h1 id=&quot;常用子项属性&quot;&gt;常用子项属性&lt;/h1&gt;
+&lt;h2 id=&quot;grid-column-start-grid-column-end-grid-row-start-grid-row-end-和-grid-column-grid-row&quot;&gt;grid-column-start, grid-column-end, grid-row-start, grid-row-end 和 grid-column, grid-row&lt;/h2&gt;
+&lt;p&gt;该属性用于设定子项 所占据的单元格在哪条边线。
+&lt;code class=&quot;language-text&quot;&gt;grid-column-start&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;grid-column-end&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;grid-row-start&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;grid-row-end&lt;/code&gt; 为四边边线的位置，&lt;code class=&quot;language-text&quot;&gt;grid-column&lt;/code&gt;,&lt;code class=&quot;language-text&quot;&gt;grid-row&lt;/code&gt;是前面四个属性的简写&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-column-start&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-column-end&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 4&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/* 等同于 */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-column&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 2 / 4&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/5.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;justify-items-align-items-place-items和-justify-self-align-self-place-self&quot;&gt;justify-items align-items place-items和 justify-self align-self place-self&lt;/h2&gt;
+&lt;p&gt;这六个属性用于设置单元格内的对其方式。和 flex 中的用法一致，只有当子项的宽高固定时才有效，故用的不多。
+不同的是前三者是整体的对齐方式，应用于容器。后三者是针对于特殊子项调整对齐方式，故应用于子项。
+&lt;code class=&quot;language-text&quot;&gt;place-*&lt;/code&gt;则是对前面对其属性的简写。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* place-*的写法 */&lt;/span&gt;
+&lt;span class=&quot;token property&quot;&gt;place-self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &amp;lt;align-self&gt; &amp;lt;justify-self&gt;&lt;span class=&quot;token selector&quot;&gt;;
+
+.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;justify-self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; start | end | center | &lt;span class=&quot;token function&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;default&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;align-self&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; start | end | center | &lt;span class=&quot;token function&quot;&gt;stretch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;default&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;常用关键字&quot;&gt;常用关键字&lt;/h1&gt;
+&lt;h2 id=&quot;fr-单位&quot;&gt;fr 单位&lt;/h2&gt;
+&lt;h2 id=&quot;repeatnt&quot;&gt;repeat(n,t)&lt;/h2&gt;
+&lt;p&gt;接受两个参数，n：重复次数。t：需要重复的内容&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 10px 20px 50px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于 grid-template-columns: 10px 20px 50px 10px 20px 50px; */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 100px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于grid-template-rows:100px 100px 100px; */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;minmaxminmax&quot;&gt;minmax(min,max)&lt;/h2&gt;
+&lt;p&gt;接受两个参数，min：最小宽度。max：最大宽度&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1fr &lt;span class=&quot;token function&quot;&gt;minmax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;50px&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 1fr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;auto-fill-与-auto-fit&quot;&gt;auto-fill 与 auto-fit&lt;/h2&gt;
+&lt;p&gt;当视口宽度不固定时，用于设定自动填充单元格。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auto-fit&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 100px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;auto-fill&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;auto-fit&lt;/code&gt;在此处作用相同。
+二者的区别在于：
+&lt;code class=&quot;language-text&quot;&gt;auto-fill&lt;/code&gt;倾向于在现有行中容纳更多的列。而&lt;code class=&quot;language-text&quot;&gt;auto-fit&lt;/code&gt;倾向于使用最少列占满当前行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;关键字组合使用&quot;&gt;关键字组合使用&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auto-fit&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;minmax&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;50px&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 1fr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里代码的意思为这个 comtainer 列单元格&lt;strong&gt;&lt;em&gt;最小为 50px，最大为 1fr （minmax）&lt;/em&gt;&lt;/strong&gt;，且&lt;strong&gt;&lt;em&gt;自动 (repeat)&lt;/em&gt;&lt;/strong&gt;以&lt;strong&gt;&lt;em&gt;尽量多(auto-fit)&lt;/em&gt;&lt;/strong&gt;的单元格填充满整个容器&lt;/p&gt;
+&lt;p&gt;看效果可以 &lt;a href=&quot;https://jsbin.com/huvoyag/8/edit?html,css,output&quot;&gt;👉 点击这里 👈&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;span&quot;&gt;span&lt;/h2&gt;
+&lt;p&gt;该关键字意为跳过多少条 行/列 线。常用于设定子项占据单元格&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-column&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1 / span 2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 其等价于 grid-column: 1 / 3; */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-row&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1 / span 2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 其等价于 grid-row: 1 / 3; */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;对比-flex&quot;&gt;对比 flex&lt;/h1&gt;
+&lt;h2 id=&quot;flex-与-grid-的区别&quot;&gt;flex 与 grid 的区别&lt;/h2&gt;
+&lt;p&gt;flex：简单的一维布局，当你需要在一个盒子中无需即可完成布局时，即可使用 flex
+grid：二维布局。可以更好的处理复杂的业务场景&lt;/p&gt;
+&lt;h2 id=&quot;flex-与-grid-的适用场景&quot;&gt;flex 与 grid 的适用场景&lt;/h2&gt;
+&lt;p&gt;拿最初的图片举例。
+第一个 grid：显然是一个二维布局。此时使用 grid 最为简洁
+而第二个和第三个 gird，可以使用 grid 布局，但是使用 flex 会更为方便
+总体来说在页面的整体布局时建议使用 grid。在开发单个组件的样式布局时建议使用 flex
+&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/1.png&quot; alt=&quot;我又回来了&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;兼容性&quot;&gt;兼容性&lt;/h1&gt;
+&lt;h2 id=&quot;pc-web&quot;&gt;pc web&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;chrome&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;opera&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;firefox&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;ie&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;edge&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;safari&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;57+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;44+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;52+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;11+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;16+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;10.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;mobile&quot;&gt;mobile&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;ios&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;android webview&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;android chrome&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;android firefox&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;center&quot;&gt;10.3&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;57+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;57+&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;52+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&quot;参考文章&quot;&gt;参考文章&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout&quot;&gt;MDN web docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html&quot;&gt;阮一峰大神的个人日志&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[NoneBot 开发记录]]></title><description><![CDATA[概述 NoneBot 的 github 地址 👈 什么是 NoneBot NoneBot 是一个基于 CoolQ HTTP API 的 python 异步机器人框架。 示意图 酷 Qdocker+CoolQ HTTP API 安装教程 windows…]]></description><link>https://www.byeguo.cn/post/2019_11_14_nonebot_api/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_11_14_nonebot_api/</guid><pubDate>Thu, 14 Nov 2019 11:52:49 GMT</pubDate><content:encoded>&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+&lt;p&gt;NoneBot 的 &lt;a href=&quot;https://github.com/richardchien/nonebot&quot;&gt;github 地址 👈&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;什么是-nonebot&quot;&gt;什么是 NoneBot&lt;/h2&gt;
+&lt;p&gt;NoneBot 是一个基于 CoolQ HTTP API 的 python 异步机器人框架。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/richardchien/nonebot/master/diagram.png&quot; alt=&quot;示意图&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;note success no-icon&quot;&gt;
+  &lt;h3 style=&quot;margin-top:0&quot;&gt;官方解释：&lt;/h3&gt;
+  &lt;p&gt;提供极其简洁易懂的 API，使你可以毫无压力地开始验证你的绝佳创意，只需编写最少量的代码，即可实现丰富的功能。&lt;/p&gt;
+  &lt;p&gt;精心设计的消息处理流程及强大的 API 使得你可以很方便地将最简单的原型变为具有大量实用功能的完整聊天机器人，并持续保证扩展性。&lt;/p&gt;
+  &lt;p&gt;基于时下流行的 asyncio 模块，利用 WebSocket 进行通信，以获得极高的性能；同时，支持使用多个机器人账号来负载均衡用户消息，减少业务宕机的可能。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;酷-qdockercoolq-http-api-安装教程&quot;&gt;酷 Qdocker+CoolQ HTTP API 安装教程&lt;/h2&gt;
+&lt;p&gt;windows 在&lt;a href=&quot;https://cqp.cc/t/23253&quot;&gt;官网 👈&lt;/a&gt;下载安装包即可完成安装
+&lt;a href=&quot;https://www.ihewro.com/archives/979/&quot;&gt;mac OS/linux👈&lt;/a&gt;的安装教程点这里&lt;/p&gt;
+&lt;h2 id=&quot;文档&quot;&gt;文档&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://cqhttp.cc/&quot;&gt;CoolQ HTTP API 4.12 的文档 👈&lt;/a&gt;
+&lt;a href=&quot;https://nonebot.cqp.moe/&quot;&gt;NoneBot 文档 👈&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;nonebot-在云主机-centos7-部署&quot;&gt;NoneBot 在云主机 CentOS7 部署&lt;/h1&gt;
+&lt;h2 id=&quot;安装-docker-镜像&quot;&gt;安装 docker 镜像&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;#1. 安装docker&lt;/span&gt;
+yum &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; docker
+
+&lt;span class=&quot;token comment&quot;&gt;#2. 安装酷Q+http插件集成镜像&lt;/span&gt;
+docker pull richardchien/cqhttp:latest
+
+&lt;span class=&quot;token comment&quot;&gt;#3. 在docker中启动coolq&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#  ~/coolq 为你的文件镜像容器所在的位置&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 4399为你登陆VNC后台的端口，地址即为 &amp;lt;云主机ip&gt;：4399&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 12345678为你的VNC后台登陆密码&lt;/span&gt;
+docker run --name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;coolq --rm -p &lt;span class=&quot;token number&quot;&gt;4399&lt;/span&gt;:9000 -v ~/coolq:/home/user/coolq -e &lt;span class=&quot;token assign-left variable&quot;&gt;VNC_PASSWD&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;12345678&lt;/span&gt; -e &lt;span class=&quot;token assign-left variable&quot;&gt;COOLQ_ACCOUNT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;123456&lt;/span&gt; coolq/wine-coolq
+
+&lt;span class=&quot;token comment&quot;&gt;# 上面的方式为前台启动，如需后台启动，只需要将--rm换成-d即可。&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 然后输入&lt;/span&gt;
+docker start coolq
+&lt;span class=&quot;token comment&quot;&gt;# 退出后台服务&lt;/span&gt;
+docker stop coolq&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;下载及配置-coolq-http-api-包&quot;&gt;下载及配置 CoolQ Http API 包&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;点击&lt;a href=&quot;https://github.com/richardchien/coolq-http-api/releases&quot;&gt;这里 👈&lt;/a&gt;下载 cpk 文件&lt;/li&gt;
+&lt;li&gt;然后将其放入 ~/coolq/app 中&lt;/li&gt;
+&lt;li&gt;在浏览器中输入 &amp;#x3C;云主机 ip&gt;：4399 启动后开启 coolq http api 插件&lt;/li&gt;
+&lt;li&gt;找到 ~/coolq/data/app/io.github.richardchien.coolqhttpapi/config/ 中的 json 文件，修改里面的三项配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 端口可以改，但是 务必和后面nonebot启动的端口保持一致&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 这个操作就是让「CoolQ HTTP API 插件」把接收信息和发送的信息借给noneboot 模块来接管。&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;ws_reverse_api_url&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ws://&amp;lt;云主机ip&gt;:9999/ws/api/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;ws_reverse_event_url&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ws://&amp;lt;云主机ip&gt;:9999/ws/event/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;use_ws_reverse&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;下载-nonebot&quot;&gt;下载 NoneBot&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;建议先在本机熟悉 nonebot 相关知识并成功启动服务。点击&lt;a href=&quot;https://nonebot.cqp.moe/guide/&quot;&gt;这里 👈&lt;/a&gt;查看文档&lt;/li&gt;
+&lt;li&gt;这是我的 requirements.txt 文件，环境为 python3.7。各位可自行拷贝。然后通过 pip install -r requirements.txt 进行安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre class=&quot;language-txt&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;aiocache==0.11.1
+aiocqhttp==0.6.8
+aiofiles==0.4.0
+aiohttp==3.6.2
+APScheduler==3.6.3
+async-timeout==3.0.1
+attrs==19.3.0
+blinker==1.4
+certifi==2019.9.11
+chardet==3.0.4
+Click==7.0
+h11==0.9.0
+h2==3.1.1
+hpack==3.0.0
+Hypercorn==0.5.4
+hyperframe==5.2.0
+idna==2.8
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+msgpack==0.6.2
+multidict==4.5.2
+nonebot==1.3.1
+pytoml==0.1.21
+pytz==2019.3
+Quart==0.6.15
+six==1.13.0
+sortedcontainers==2.1.0
+typing-extensions==3.7.4.1
+tzlocal==2.0.0
+ujson==1.35
+wsproto==0.15.0
+yarl==1.3.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;编写-py-文件&quot;&gt;编写 py 文件&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# bot.py文件&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; nonebot
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; os &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; path
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; __name__ &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;__main__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    nonebot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    nonebot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;load_plugins&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dirname&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__file__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;plugins&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;plugins&apos;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    nonebot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;run&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;host&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;0.0.0.0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; port&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9999&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;服务部署&quot;&gt;服务部署&lt;/h2&gt;
+&lt;h3 id=&quot;前台部署&quot;&gt;前台部署&lt;/h3&gt;
+&lt;p&gt;通过命令 &lt;code class=&quot;language-text&quot;&gt;python bot.py&lt;/code&gt; 即可成功启动前台服务（断开 ssh 后则会失效）&lt;/p&gt;
+&lt;h3 id=&quot;后台部署&quot;&gt;后台部署&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 使用nohup命令今可进行后台部署，断开ssh后仍然有效&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 此时在bot.py的同级文件下，会生成生成一个nohup.out文件记录日志&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;nohup&lt;/span&gt; python bot.py &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 查看启动的服务，并找到对应的pid&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;ps&lt;/span&gt; -ax &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;grep&lt;/span&gt; python
+&lt;span class=&quot;token comment&quot;&gt;# 停止服务&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;kill&lt;/span&gt; -9 &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;进程号PID&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&quot;nonebot-常用-api&quot;&gt;NoneBot 常用 Api&lt;/h1&gt;
+&lt;p&gt;因为最近的 bot 开发选用了此框架。故在此进行了实用 api 的记录和整理，为以后进行开发做一个记录，同时也方便其他刚接触此框架的小伙伴快速上手。&lt;/p&gt;
+&lt;h2 id=&quot;装饰器&quot;&gt;装饰器&lt;/h2&gt;
+&lt;h3 id=&quot;on_command-命令配置&quot;&gt;on_command (命令配置):&lt;/h3&gt;
+&lt;p&gt;将函数装饰为命令函数&lt;/p&gt;
+&lt;h4 id=&quot;args_parser&quot;&gt;args_parser:&lt;/h4&gt;
+&lt;p&gt;将函数装饰为命令层面的参数解析器，将在命令实际处理函数之前被运行。接受的参数为&lt;code class=&quot;language-text&quot;&gt;CommandSession&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&quot;commandsession-常用参数&quot;&gt;CommandSession 常用参数:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;state&lt;/code&gt;: 属性本身只读，但属性中的内容可读写。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;读&lt;/strong&gt;: session.state.get(‘xxx’)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;写&lt;/strong&gt;: session.state[‘xxx’]=‘xxxx’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;is_first_run&lt;/code&gt;: 是否是第一次运行&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;current_arg_text&lt;/code&gt;: 属性的纯文本部分（不包含 CQ 码），各部分使用空格连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;命令权限&quot;&gt;命令权限&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;PRIVATE_FRIEND(0x0001): 好友私聊&lt;/li&gt;
+&lt;li&gt;PRIVATE_GROUP(0x0002): 群临时私聊&lt;/li&gt;
+&lt;li&gt;PRIVATE_DISCUSS(0x0004): 讨论组临时私聊&lt;/li&gt;
+&lt;li&gt;PRIVATE_OTHER(0x0008): 其它私聊&lt;/li&gt;
+&lt;li&gt;PRIVATE(0x000F): 任何私聊&lt;/li&gt;
+&lt;li&gt;DISCUSS(0x00F0): 讨论组&lt;/li&gt;
+&lt;li&gt;GROUP_MEMBER(0x0100): 群成员&lt;/li&gt;
+&lt;li&gt;GROUP_ADMIN(0x0200): 群管理员&lt;/li&gt;
+&lt;li&gt;GROUP_OWNER(0x0400): 群主&lt;/li&gt;
+&lt;li&gt;GROUP(0x0F00): 任何群成员&lt;/li&gt;
+&lt;li&gt;SUPERUSER(0xF000): 超级用户&lt;/li&gt;
+&lt;li&gt;EVERYBODY(0xFFFF): 任何人&lt;/li&gt;
+&lt;li&gt;IS_NOBODY(0x0000): 禁止任何人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; nonebot &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; permission
+  @nonebot&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;on_command&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;hello&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; permission&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;permission&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;PRIVATE &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; permission&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;GROUP_ADMIN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;session&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;pass&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;on_message（收到消息）&quot;&gt;on_message（收到消息）:&lt;/h3&gt;
+&lt;p&gt;将函数装饰为消息事件的处理函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;private&lt;/code&gt;: 私聊消息&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt;: 群消息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;on_notice（群、讨论组变动等通知类事件）&quot;&gt;on_notice（群、讨论组变动等通知类事件）:&lt;/h3&gt;
+&lt;p&gt;将函数装饰为通知事件的处理函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;group_upload&lt;/code&gt;：群文件上传&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;group_decrease&lt;/code&gt;：群成员减少&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;group_increase&lt;/code&gt;：群成员增加&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;friend_add&lt;/code&gt;：好友添加（官方文档说是好友添加的相应事件，可是本人测试发现无效）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;on_request（加好友请求、加群请求／邀请）&quot;&gt;on_request（加好友请求、加群请求／邀请）:&lt;/h3&gt;
+&lt;p&gt;将函数装饰为请求事件的处理函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;friend&lt;/code&gt;:有人发送添加好友请求时触发&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt;:有人发送加入群请求时触发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;cq-码（表情）&quot;&gt;CQ 码（表情）&lt;/h2&gt;
+&lt;h3 id=&quot;qq-自带表情&quot;&gt;qq 自带表情&lt;/h3&gt;
+&lt;p&gt;[CQ:face,id=表情 id]
+qq 自带表情对照表点击&lt;a href=&quot;https://cqp.cc/t/36910&quot;&gt;这里 👈&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;emoji-表情&quot;&gt;emoji 表情&lt;/h3&gt;
+&lt;p&gt;[CQ:emoji,id=表情 id]
+emoji 表情对照表点击&lt;a href=&quot;https://cqp.cc/t/15827&quot;&gt;这里 👈&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[markdown在hexo中的渲染效果展示]]></title><description><![CDATA[本文仅为 hexo-markdown 引擎渲染效果测试，方便日后博客编写 标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 字体 加粗
+斜体
+删除线
+全家桶 列表 无序列表 无序列表 有序列表 有序列表 分割线 表格 表 表啊 我是表 1111 12…]]></description><link>https://www.byeguo.cn/post/2019_10_26_markdown_study/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_10_26_markdown_study/</guid><pubDate>Sat, 26 Oct 2019 16:26:53 GMT</pubDate><content:encoded>&lt;p&gt;本文仅为 hexo-markdown 引擎渲染效果测试，方便日后博客编写&lt;/p&gt;
+&lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 这是二级标题&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;###&lt;/span&gt; 这是三级标题&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 这是四级标题&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;#####&lt;/span&gt; 这是五级标题&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;######&lt;/span&gt; 这是六级标题&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;这是二级标题&quot;&gt;这是二级标题&lt;/h2&gt;
+&lt;h3 id=&quot;这是三级标题&quot;&gt;这是三级标题&lt;/h3&gt;
+&lt;h4 id=&quot;这是四级标题&quot;&gt;这是四级标题&lt;/h4&gt;
+&lt;h5 id=&quot;这是五级标题&quot;&gt;这是五级标题&lt;/h5&gt;
+&lt;h6 id=&quot;这是六级标题&quot;&gt;这是六级标题&lt;/h6&gt;
+&lt;h1 id=&quot;字体&quot;&gt;字体&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;加粗&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;斜体&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token strike&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;~~&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;删除线&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;~~&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;&lt;span class=&quot;token strike&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;~~&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;全家桶&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;~~&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;_&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;
+&lt;em&gt;斜体&lt;/em&gt;
+&lt;del&gt;删除线&lt;/del&gt;
+&lt;strong&gt;&lt;em&gt;&lt;del&gt;全家桶&lt;/del&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;列表&quot;&gt;列表&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 无序列表
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 无序列表
+
+&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; 有序列表
+&lt;span class=&quot;token list punctuation&quot;&gt;2.&lt;/span&gt; 有序列表&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;有序列表&lt;/li&gt;
+&lt;li&gt;有序列表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;分割线&quot;&gt;分割线&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;表格&quot;&gt;表格&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- 第二行为表内对齐方式 --&gt;&lt;/span&gt;
+
+| 表   | 表啊 | 我是表 |
+| ---- | :--: | -----: |
+| 1111 | 123  |    345 |
+| 2222 | 123  |    567 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;表&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;表啊&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;我是表&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1111&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;123&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;345&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2222&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;123&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;567&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&quot;文本块&quot;&gt;文本块&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note primary&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;小紫&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note success&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;小绿&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;小蓝&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note warning&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;小黄&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note danger&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;小红&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;note danger no-icon&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;没有图标的小红&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;note primary&quot;&gt;小紫&lt;/div&gt;
+&lt;div class=&quot;note success&quot;&gt;小绿&lt;/div&gt;
+&lt;div class=&quot;note info&quot;&gt;小蓝&lt;/div&gt;
+&lt;div class=&quot;note warning&quot;&gt;小黄&lt;/div&gt;
+&lt;div class=&quot;note danger&quot;&gt;小红&lt;/div&gt;
+&lt;div class=&quot;note danger no-icon&quot;&gt;没有图标的小红&lt;/div&gt;
+&lt;h1 id=&quot;引用&quot;&gt;引用&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt;&lt;/span&gt; 123
+&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt; &gt;&lt;/span&gt; 123&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;123&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;123&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;表单&quot;&gt;表单&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; [ ] 不勾选
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; [x] 勾选&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 不勾选&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 勾选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;插入图片&quot;&gt;插入图片&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;![&lt;span class=&quot;token content&quot;&gt;插百度&lt;/span&gt;](https://www.baidu.com/img/bd_logo1.png)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.baidu.com/img/bd_logo1.png&quot; alt=&quot;插百度&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://www.byeguo.cn/post/new-beginnings/</link><guid isPermaLink="false">https://www.byeguo.cn/post/new-beginnings/</guid><pubDate>Thu, 28 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean. A small river named
+Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
+&lt;h2 id=&quot;on-deer-horse-aboard-tritely-yikes-and-much&quot;&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This however showed weasel&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Well uncritical so misled&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this is very interesting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
+view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
+&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
+Lane. Pityful a rhetoric question ran over her cheek, then she continued her
+way. On her way she met a copy.&lt;/p&gt;
+&lt;h5 id=&quot;overlaid-the-jeepers-uselessly-much-excluding&quot;&gt;Overlaid the jeepers uselessly much excluding&lt;/h5&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with
+&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
+they abused her for their projects again and again. And if she hasn’t been
+rewritten, then they are still using her.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
+mouth. Even the all-powerful Pointing has no control about the blind texts it is
+an almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
+&lt;h3 id=&quot;according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot;&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
+&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
+Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
+didn’t listen. She packed her seven versalia, put her initial into the belt and
+made herself on the way.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;So baboon this&lt;/li&gt;
+&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
+&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
+&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
+impassive fruitlessly shut&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
+back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
+Village and the subline of her own road, the Line Lane. Pityful a rhetoric
+question ran over her cheek, then she continued her way. On her way she met a
+copy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and
+return to its own, safe country.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
+few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
+and dragged her into their agency, where they abused her for their projects
+again and again. And if she hasn’t been rewritten, then they are still using
+her. Far far away, behind the word mountains, far from the countries Vokalia and
+Consonantia, there live the blind texts.&lt;/p&gt;
+&lt;h4 id=&quot;silent-delightfully-including-because-before-one-up-barring-chameleon&quot;&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
+&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
+large language ocean. A small river named Duden flows by their place and
+supplies it with the necessary regelialia. It is a paradisematic country, in
+which roasted parts of sentences fly into your mouth.&lt;/p&gt;
+&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
+almost unorthographic life One day however a small line of blind text by the
+name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
+advised her not to do so, because there were thousands of bad Commas, wild
+Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
+&lt;h5 id=&quot;wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot;&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
+&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
+the way. When she reached the first hills of the Italic Mountains, she had a
+last view back on the skyline of her hometown Bookmarksgrove, the headline of
+Alphabet Village and the subline of her own road, the Line Lane. Pityful a
+rhetoric question ran over her cheek, then she continued her way. On her way she
+met a copy.&lt;/p&gt;
+&lt;h6 id=&quot;slapped-cozy-a-that-lightheartedly-and-far&quot;&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
+&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
+been rewritten a thousand times and everything that was left from its origin
+would be the word “and” and the Little Blind Text should turn around and return
+to its own, safe country. But nothing the copy said could convince her and so it
+didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
+with Longe and Parole and dragged her into their agency, where they abused her
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the…]]></description><link>https://www.byeguo.cn/post/my-second-post/</link><guid isPermaLink="false">https://www.byeguo.cn/post/my-second-post/</guid><pubDate>Wed, 06 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
+&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the taste and texture will be somewhat different, and the
+egg yolk will be less rich.”?
+(&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://www.byeguo.cn/post/hello-world/</link><guid isPermaLink="false">https://www.byeguo.cn/post/hello-world/</guid><pubDate>Fri, 01 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
+&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
+eggs in brine, or packing each egg in damp, salted charcoal. In Asian
+supermarkets, these eggs are sometimes sold covered in a thick layer of salted
+charcoal paste. The eggs may also be sold with the salted paste removed,
+wrapped in plastic, and vacuum packed. From the salt curing process, the
+salted duck eggs have a briny aroma, a gelatin-like egg white and a
+firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAbEAADAQADAQAAAAAAAAAAAAABESEAMUGBof/aAAgBAQABPyGxNMfrLHmCDZmAzzvJJDjEQCHv/9oADAMBAAIAAwAAABDIL//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxARhylZv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAxIWFBcYHh/9oACAEBAAE/EEbMLQ0fMHDVaPIXyI4pk4JUnWacNCtO8ojDE9TGIYES7/Jn/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Chinese Salty Egg&quot;
+        title=&quot;Chinese Salty Egg&quot;
+        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg&quot;
+        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/7237a/salty_egg.jpg 148w,
+/static/8058f3f26913fea3b6a89a73344fe94a/0cfdf/salty_egg.jpg 295w,
+/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg 590w,
+/static/8058f3f26913fea3b6a89a73344fe94a/77d57/salty_egg.jpg 885w,
+/static/8058f3f26913fea3b6a89a73344fe94a/5a917/salty_egg.jpg 1180w,
+/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg 2048w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
