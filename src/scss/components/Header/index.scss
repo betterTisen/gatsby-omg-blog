@@ -25,6 +25,10 @@ $headerInput: 150px;
     transition: transform 0.3s ease;
     cursor: pointer;
   }
+  .hamburgerActive {
+    transform: rotate(-90deg);
+  }
+
   .headLogo {
     display: flex;
     justify-content: center;
@@ -94,7 +98,8 @@ $headerInput: 150px;
         & + li {
           border-top: 1px solid #f3f3f3;
         }
-        a,span {
+        a,
+        span {
           display: inline-block;
           width: 100%;
           height: 100%;

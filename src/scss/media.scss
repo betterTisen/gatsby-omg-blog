@@ -70,6 +70,10 @@
     }
   }
 
+  .Siderbar-show {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
   .Post-page-class {
     padding: 0;
   }
@@ -77,7 +81,7 @@
   .Main-class {
     padding-left: 0;
   }
-  
+
   .Main-list-class {
     padding: 0;
     .main-img-left-layout {

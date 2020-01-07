@@ -1,8 +1,35 @@
 import React from "react"
+import { connect } from "react-redux"
+
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
 import Search from "./Search"
+
+const Hamburger = ({ hambState, blogStatusChange }) => (
+  <i
+    className={`hamburger ${hambState ? "hamburgerActive" : ""}`}
+    onClick={blogStatusChange}
+    onKeyDown={() => {}}
+    role="button"
+    tabIndex={0}
+  >
+    &#xe63f;
+  </i>
+)
+
+const mapStateToProps = ({ hambState }) => {
+  return { hambState }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { blogStatusChange: () => dispatch({ type: `OPEN_MOBILE_SIDEBAR` }) }
+}
+
+const ConnectedHamburger = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Hamburger)
 
 function Header({ title }) {
   const data = useStaticQuery(graphql`
@@ -23,13 +50,9 @@ function Header({ title }) {
     }
   `)
 
-  const handleHamb = () => {
-    console.log(1)
-  }
-
   return (
     <div className={"Header"}>
-      <i
+      {/* <i
         className="hamburger"
         onClick={handleHamb}
         onKeyDown={() => {}}
@@ -37,7 +60,8 @@ function Header({ title }) {
         tabIndex={0}
       >
         &#xe63f;
-      </i>
+      </i> */}
+      <ConnectedHamburger />
 
       <Link className="headLogo" to="/">
         <img src={require("../../../content/assets/logo.png")} alt={title} />
