@@ -4,7 +4,7 @@ date: 2019-12-16 17:35:49
 tags:
   - web
   - css
-
+description: ""
 ---
 
 # 定义
@@ -16,7 +16,7 @@ tags:
 最后是 gird 的当前兼容性情况，如有需要可以拉到屏幕最底部查看～
 
 下面是我使用 grid 布局简单模拟的本博客 post 页面布局。
-![假装模拟的博客post页面](http://cdn.byeguo.cn/blog/post/2019-12-16/1.png)
+![假装模拟的博客post页面](1.png)
 如果你想查看代码可以[点击这里 👈](https://jsbin.com/licigal/4/edit?html,css,output)
 
 ## grid 容器 子项 行线 列线
@@ -26,7 +26,7 @@ tags:
 **注意：子项是容器的子元素，并不是容器分割的每一个区域都是它的子项**
 下面是通过一张图片解释什么容器、子项、行线、列线的关系
 如图可见，容器即为最大的**蓝色 div**，下面的三个**粉色 div**分别为容器的三个子项。容器一共有 6 个单元格，分别是由 3 条**绿色**行线和 4 条**棕色**列线组成。
-![画的不好见谅哈](http://cdn.byeguo.cn/blog/post/2019-12-16/2.png)
+![画的不好见谅哈](2.png)
 
 # 容器常用属性
 
@@ -35,7 +35,7 @@ tags:
 grid-template-rows 意为设定每条行线的间距。grid-template-columns 意为设定每条列线的间距
 
 即前者用于设定子项的行高，后者用于设定子项的行宽
-![如图所示](http://cdn.byeguo.cn/blog/post/2019-12-16/3.png)
+![如图所示](3.png)
 
 ## grid-auto-flow
 
@@ -45,7 +45,7 @@ grid-template-rows 意为设定每条行线的间距。grid-template-columns 意
 - column：先列后行
 - row dense：某些元素位置被固定时，剩下的元素先行后列
 - column dense：某些元素位置被固定时，剩下的元素先列后行
-  ![如图所示](http://cdn.byeguo.cn/blog/post/2019-12-16/4.png)
+  ![如图所示](4.png)
 
 ## justify-items align-items place-items
 
@@ -89,7 +89,7 @@ justify-items 和 align-items 的可选属性有
 }
 ```
 
-![如图所示](http://cdn.byeguo.cn/blog/post/2019-12-16/5.png)
+![如图所示](5.png)
 
 ## justify-items align-items place-items和 justify-self align-self place-self
 
@@ -186,7 +186,7 @@ grid：二维布局。可以更好的处理复杂的业务场景
 第一个 grid：显然是一个二维布局。此时使用 grid 最为简洁
 而第二个和第三个 gird，可以使用 grid 布局，但是使用 flex 会更为方便
 总体来说在页面的整体布局时建议使用 grid。在开发单个组件的样式布局时建议使用 flex
-![我又回来了](http://cdn.byeguo.cn/blog/post/2019-12-16/1.png)
+![我又回来了](1.png)
 
 # 兼容性
 
