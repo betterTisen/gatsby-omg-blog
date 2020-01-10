@@ -52,15 +52,6 @@ function Header({ title }) {
 
   return (
     <div className={"Header"}>
-      {/* <i
-        className="hamburger"
-        onClick={handleHamb}
-        onKeyDown={() => {}}
-        role="button"
-        tabIndex={0}
-      >
-        &#xe63f;
-      </i> */}
       <ConnectedHamburger />
 
       <Link className="headLogo" to="/">
