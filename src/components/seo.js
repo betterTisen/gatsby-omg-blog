@@ -68,6 +68,13 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      script={[
+        {
+          src:
+            "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",
+          async: true,
+        },
+      ]}
     />
   )
 }
