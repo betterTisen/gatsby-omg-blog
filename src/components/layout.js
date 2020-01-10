@@ -3,6 +3,7 @@ import React from "react"
 import Header from "./Header"
 import Sidebar from "./Sidebar"
 import Main from "./Main"
+import Masking from "./Masking"
 
 class Layout extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class Layout extends React.Component {
         <Main mainHeadData={mainHeadData} mainCatalogueData={mainCatalogueData}>
           {children}
         </Main>
+        <Masking />
       </div>
     )
   }
