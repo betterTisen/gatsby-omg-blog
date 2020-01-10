@@ -6,6 +6,9 @@ const MaskingComponent = ({ hambState, blogStatusChange }) => (
     {hambState && (
       <div
         onClick={blogStatusChange}
+        onKeyDown={() => {}}
+        role="button"
+        tabIndex={0}
         style={{
           position: "fixed",
           top: 0,
