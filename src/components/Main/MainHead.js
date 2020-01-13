@@ -23,7 +23,14 @@ function MainHead({ mainHeadData }) {
   return (
     <div className={`MainHead-class`}>
       <span>{title}</span>
-      <p>{details}</p>
+      <p>
+        <span>{details}</span>
+        {mainHeadData.details && (
+          <div>
+            阅读量 <span id="busuanzi_value_page_pv"></span>
+          </div>
+        )}
+      </p>
     </div>
   )
 }

@@ -29,8 +29,6 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
 
-        本文总阅读量
-        <span id="busuanzi_value_page_pv"></span>次
 
         <div className="Post-page-class">
           <article>

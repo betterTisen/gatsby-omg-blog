@@ -20,7 +20,7 @@ function NavRightTags() {
   const tagsInfo = data.allMarkdownRemark.group
   return (
     <div className="NavTags-class navRight-container">
-      <span>标签栏</span>
+      <span className="item-title">标签栏</span>
       <ul>
         {tagsInfo.map(({ fieldValue, totalCount }) => {
           return (

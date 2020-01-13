@@ -7,7 +7,7 @@ class Catalogue extends Component {
   render() {
     return (
       <div className="Catalogue-class">
-        <div className='CatalogueTitle'>文章目录</div>
+        <div className="item-title">文章目录</div>
         <ul>
           {this.state.links.map(item => {
             return (

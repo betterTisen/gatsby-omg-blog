@@ -8,12 +8,12 @@ class Statistics extends Component {
         <span className="item-title">博客信息</span>
         <ul>
           <li>
-            <span>总访问量:</span>
-            <span id="busuanzi_value_site_pv"></span>
-          </li>
-          <li>
             <span>访客数:</span>
             <span id="busuanzi_value_site_uv"></span>
+          </li>
+          <li>
+            <span>总访问量:</span>
+            <span id="busuanzi_value_site_pv"></span>
           </li>
         </ul>
       </div>

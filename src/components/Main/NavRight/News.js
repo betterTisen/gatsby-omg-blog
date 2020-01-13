@@ -21,7 +21,7 @@ function NavRightNews() {
   const new_posts = data.allMarkdownRemark.edges.slice(0, 4)
   return (
     <div className="News-class navRight-container">
-      <span>最新文章</span>
+      <span className="item-title">最新文章</span>
       <ul>
         {new_posts.map(({ node }, i) => {
           const imgUrl = require(`../../../../content/assets/new_posts/${i +

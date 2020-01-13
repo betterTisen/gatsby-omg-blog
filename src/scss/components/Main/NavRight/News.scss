@@ -1,8 +1,9 @@
 .News-class {
-
   li {
-    margin-top: 12px;
     padding-left: 8px;
+    & + li {
+      margin-top: 12px;
+    }
     a {
       display: grid;
       grid-template-columns: 35% 65%;
