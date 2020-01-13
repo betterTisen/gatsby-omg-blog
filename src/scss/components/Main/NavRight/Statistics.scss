@@ -7,10 +7,10 @@
     li {
       display: flex;
       justify-content: space-between;
-      padding: 15px 12px;
+      padding: 15px;
       font-size: 13.5px;
-      span{
-        &:nth-of-type(2){
+      span {
+        &:nth-of-type(2) {
           font-size: 12.8px;
         }
       }

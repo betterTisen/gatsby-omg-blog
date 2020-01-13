@@ -26,9 +26,9 @@ function MainHead({ mainHeadData }) {
       <p>
         <span>{details}</span>
         {mainHeadData.details && (
-          <div>
+          <span>
             阅读量 <span id="busuanzi_value_page_pv"></span>
-          </div>
+          </span>
         )}
       </p>
     </div>

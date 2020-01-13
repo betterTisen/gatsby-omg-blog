@@ -14,7 +14,7 @@ const Hamburger = ({ hambState, blogStatusChange }) => (
     role="button"
     tabIndex={0}
   >
-    &#xe63f;
+    &#xe602;
   </i>
 )
 
