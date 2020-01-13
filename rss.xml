@@ -1,11 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Jan 2020 10:05:31 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jan 2020 09:55:33 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h1 id=&quot;定义&quot;&gt;定义&lt;/h1&gt;
 &lt;h2 id=&quot;什么是-grid&quot;&gt;什么是 grid&lt;/h2&gt;
 &lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid 的区别，以及其分别适用于的场景。
 最后是 gird 的当前兼容性情况，如有需要可以拉到屏幕最底部查看～&lt;/p&gt;
 &lt;p&gt;下面是我使用 grid 布局简单模拟的本博客 post 页面布局。
-&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/1.png&quot; alt=&quot;假装模拟的博客post页面&quot;&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.37037037037038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsSAAALEgHS3X78AAABiUlEQVQoz43OXU/iQBSA4f5344UJhsSEhRk6xXaLYDsQQ11kKaDEGBM/SDQK8iHLUqXt1G4XVGhBWweM0XhhPHkyOefiTYbpZo8uxcKZUKiLxQtcKWQ2T+TciaxQNbxdy2xXFVzN44oiHefyD03bs93pyPXuxrPJlOkpvx01dJ5cJvnVfjFd40FbAC0BNnlwGFmlGslYIwkuhUgX88O2Y5HgYeTbuu9NAkbbKbnVcAevDMthsyTpLGchQBCkbmD0FkYtFCdUHNhJwbm26v9H2uix6dzfT2dMP68+7oZb0opTDOuqpCFkcEDnIGUm4tTrPmBjZEMY92wveH7yn7znmR/4jFYoufuhK2lpWA6ZlXlscsDg4Cf6Ip70/gXz8RdvwHRktZViTxGoi6gt4wHHGt+PDTHXj8EBSmgQDdZ5+s/3Bi18EZONrMmumeiHiSJERMY6NBLgFeEheTt1FCVp3v37KcYHJKWQ9A5J/bIypTmsEqza2XKH3/rzM0cXelpy8W5rb9wdBh/mBU01pphWBvYTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;假装模拟的博客post页面&quot;
+        title=&quot;假装模拟的博客post页面&quot;
+        src=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;
 如果你想查看代码可以&lt;a href=&quot;https://jsbin.com/licigal/4/edit?html,css,output&quot;&gt;点击这里 👈&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;grid-容器-子项-行线-列线&quot;&gt;grid 容器 子项 行线 列线&lt;/h2&gt;
 &lt;p&gt;采用 grid 布局的盒子被称为&lt;code class=&quot;language-text&quot;&gt;容器（container）&lt;/code&gt;，其子元素即为&lt;code class=&quot;language-text&quot;&gt;子项（item）&lt;/code&gt;。
@@ -13,12 +35,69 @@
 &lt;strong&gt;注意：子项是容器的子元素，并不是容器分割的每一个区域都是它的子项&lt;/strong&gt;
 下面是通过一张图片解释什么容器、子项、行线、列线的关系
 如图可见，容器即为最大的&lt;strong&gt;蓝色 div&lt;/strong&gt;，下面的三个&lt;strong&gt;粉色 div&lt;/strong&gt;分别为容器的三个子项。容器一共有 6 个单元格，分别是由 3 条&lt;strong&gt;绿色&lt;/strong&gt;行线和 4 条&lt;strong&gt;棕色&lt;/strong&gt;列线组成。
-&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/2.png&quot; alt=&quot;画的不好见谅哈&quot;&gt;&lt;/p&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 495px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.34343434343434%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAAByklEQVQoz1WRWXPaMBDH+f5foy99SQqhM8BLmpYGYyxjUow5DD5kMNjm8CUjX1JlPIVUs6v5azW/3ZW2QSklZZmnKf23yjyjhNQaJ4jcNCkKZvT/1SC05DbeNwB7M7cjH7ozpy3Bzszpyk6lgcGCPcVrSlv7FDIg/5SkwfwZ2JPXkT1dmpM5lBSVGxvCFFZ6XmlJOXwor29/Bht/YicKJGu7IllDFdwTd8eFWp+ZJ5JYWrDOnSJUVhf5nJsCMwxTgnP2yk+VvwvQVlYMTIsiL7LzZIwW8/R0TD3Xh+bVc6m3l35Lgu5T5JcBortz/SkV3OI1KCsZLVCGE5y4kuiLQgBGARDc9/5FGKXjEXif8PqFYoSjKIujR+WOuPUWm1vbVb6Q53NdJzEiQZjsD0UQ0sCf9j9EM/S0jb83I8d4wF1gHZfrOxwNucJx6j/B+FreJqXwMtD9Ezp5cbyPggf8Amw4lLBmRKqGVM3tDwJZia1dbFrHxSo0rAKawg9xpAfn5OxF4T68POCfS+crp7eB1RJgC1jPw3WTWzcH1f70Nm0O1Da/+fJrNdue79094DzFaZaxyTNjU4hjlJdlfYyYJoQFrxhnGNfwnf8LOxFeOVM1ffkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;画的不好见谅哈&quot;
+        title=&quot;画的不好见谅哈&quot;
+        src=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/00d96/2.png 148w,
+/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/0b23c/2.png 295w,
+/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png 495w&quot;
+        sizes=&quot;(max-width: 495px) 100vw, 495px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;容器常用属性&quot;&gt;容器常用属性&lt;/h1&gt;
 &lt;h2 id=&quot;grid-template-rows-grid-template-columns&quot;&gt;grid-template-rows grid-template-columns&lt;/h2&gt;
 &lt;p&gt;grid-template-rows 意为设定每条行线的间距。grid-template-columns 意为设定每条列线的间距&lt;/p&gt;
 &lt;p&gt;即前者用于设定子项的行高，后者用于设定子项的行宽
-&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/3.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/p&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.46153846153846%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAABX0lEQVQY03WRW0/CQBCF+/9NSEis1lhpje8++EAk3KlFNAIpikowIHIrpRdK2e522+3YYsKDCZPz8GWSmTmZwymfVmu0bQ4ddWDuwVYH1tNoqwws00UAEMdwrLhMEQk1xpcJX/LPalECpyVfqLOTAlJ649V86mzco8PnNSKrIClMalD5EaSHBMKbFvBV0h7qi9nEmC5hhxnCMY3iIDyI7TDHl5HUiMQqFsvoqh6KlRTkBssW3I+Zk6xnfhCu7FC3mefHNExX0HQ4cnecUKdyE3JKlKtTSYVcI4XrJvAVrL6O3980d20zyyMTnS7M0NiEaycyXYZItPG4bAnlVLioBUIFXyogVIhQJaIKmSLWJvZu6xAPwcEtoYzQOKDJ8cQRl+8sb5ujYs8odBZ3L7Ny37zvLgqake/qcyN91f9nx39K2xzxve/RV4B9y9C77ecowK617r9q+vxnn9PxoAB+AaOArZeH7F8qAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;如图所示&quot;
+        title=&quot;如图所示&quot;
+        src=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/00d96/3.png 148w,
+/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/0b23c/3.png 295w,
+/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png 590w,
+/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/2a3d6/3.png 885w,
+/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/ae92f/3.png 1180w,
+/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png 1612w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;grid-auto-flow&quot;&gt;grid-auto-flow&lt;/h2&gt;
 &lt;p&gt;用于设置子元素的排列顺序。其默认顺序为先行后列。即优先填满第一行后才会换行。&lt;/p&gt;
 &lt;ul&gt;
@@ -26,7 +105,37 @@
 &lt;li&gt;column：先列后行&lt;/li&gt;
 &lt;li&gt;row dense：某些元素位置被固定时，剩下的元素先行后列&lt;/li&gt;
 &lt;li&gt;column dense：某些元素位置被固定时，剩下的元素先列后行
-&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/4.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/li&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.73607038123167%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAA9UlEQVQY022QyY6EMAxE+f8v5AYHEPvOQHb3C2lNt0YTRcg4Va5yZfJ1QhDn39cHWdd1mqZlWSiUUvM8L8+heRwH+CzRQP9osU6UFWXkNqKtGGPAVVUF1Huvtd62rWkaZvH0IVsvh4ojIF9arkgO9IEWRXGeZ4KN41iWJRYemyH7YxtZ4x5ZFzvgUL6uKwH4hYz+f2SJq6aFb2WQHYYBtbZtcQ6Tou97Ol3X7fuepZBM2tZGTf0U1gUWYz3Qzjl02Bk+46h5opkhcqp4CWy73/xbR3FrCSyiky8CJz/sJM+fwL53fgKPb8jmeY7JhIZW1/VvWnxfUpnPwbrBcRYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;如图所示&quot;
+        title=&quot;如图所示&quot;
+        src=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/00d96/4.png 148w,
+/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/0b23c/4.png 295w,
+/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png 590w,
+/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/2a3d6/4.png 885w,
+/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/ae92f/4.png 1180w,
+/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png 1364w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;justify-items-align-items-place-items&quot;&gt;justify-items align-items place-items&lt;/h2&gt;
 &lt;p&gt;这里的属性是容器内子元素在单元格内的对齐方式
@@ -57,7 +166,37 @@ justify-items 和 align-items 的可选属性有&lt;/p&gt;
   &lt;span class=&quot;token comment&quot;&gt;/* 等同于 */&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;grid-column&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 2 / 4&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/5.png&quot; alt=&quot;如图所示&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36.36363636363637%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAA5UlEQVQY032QwW6EMAxE+f+fKyBYhAqUlbhUKlJZICSO7alhxZZeajmRE834xUkAOB8DsQ88r9GTTAttQaaVhBUEKMBAvOxnJLYCiaqyqHns6IlV4QKr6TzwCUzYu9DhDICcZhFd3A7cAj8u5O+FmHRXd8A70AIfwPjXfDxboqiRVm+t8HDMgvVFjoeaj5TzeDEbkI08uxhZbHKKMjubWZT0mULyKixszN+Z7Wt2uCmAdTOyhvgU/BdJjLGu6zRNm6axoizLr3G83/vbrez7viiKqqrsMs/zruvatk3f0izLhmEw8w9+jJYO6K6NNAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;如图所示&quot;
+        title=&quot;如图所示&quot;
+        src=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/00d96/5.png 148w,
+/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/0b23c/5.png 295w,
+/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png 590w,
+/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/2a3d6/5.png 885w,
+/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/ae92f/5.png 1180w,
+/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png 1188w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;justify-items-align-items-place-items和-justify-self-align-self-place-self&quot;&gt;justify-items align-items place-items和 justify-self align-self place-self&lt;/h2&gt;
 &lt;p&gt;这六个属性用于设置单元格内的对其方式。和 flex 中的用法一致，只有当子项的宽高固定时才有效，故用的不多。
 不同的是前三者是整体的对齐方式，应用于容器。后三者是针对于特殊子项调整对齐方式，故应用于子项。
@@ -117,7 +256,37 @@ grid：二维布局。可以更好的处理复杂的业务场景&lt;/p&gt;
 第一个 grid：显然是一个二维布局。此时使用 grid 最为简洁
 而第二个和第三个 gird，可以使用 grid 布局，但是使用 flex 会更为方便
 总体来说在页面的整体布局时建议使用 grid。在开发单个组件的样式布局时建议使用 flex
-&lt;img src=&quot;http://cdn.byeguo.cn/blog/post/2019-12-16/1.png&quot; alt=&quot;我又回来了&quot;&gt;&lt;/p&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.37037037037038%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsSAAALEgHS3X78AAABiUlEQVQoz43OXU/iQBSA4f5344UJhsSEhRk6xXaLYDsQQ11kKaDEGBM/SDQK8iHLUqXt1G4XVGhBWweM0XhhPHkyOefiTYbpZo8uxcKZUKiLxQtcKWQ2T+TciaxQNbxdy2xXFVzN44oiHefyD03bs93pyPXuxrPJlOkpvx01dJ5cJvnVfjFd40FbAC0BNnlwGFmlGslYIwkuhUgX88O2Y5HgYeTbuu9NAkbbKbnVcAevDMthsyTpLGchQBCkbmD0FkYtFCdUHNhJwbm26v9H2uix6dzfT2dMP68+7oZb0opTDOuqpCFkcEDnIGUm4tTrPmBjZEMY92wveH7yn7znmR/4jFYoufuhK2lpWA6ZlXlscsDg4Cf6Ip70/gXz8RdvwHRktZViTxGoi6gt4wHHGt+PDTHXj8EBSmgQDdZ5+s/3Bi18EZONrMmumeiHiSJERMY6NBLgFeEheTt1FCVp3v37KcYHJKWQ9A5J/bIypTmsEqza2XKH3/rzM0cXelpy8W5rb9wdBh/mBU01pphWBvYTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;我又回来了&quot;
+        title=&quot;我又回来了&quot;
+        src=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
+        srcset=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
+/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;兼容性&quot;&gt;兼容性&lt;/h1&gt;
 &lt;h2 id=&quot;pc-web&quot;&gt;pc web&lt;/h2&gt;
 &lt;table&gt;
@@ -433,146 +602,4 @@ emoji 表情对照表点击&lt;a href=&quot;https://cqp.cc/t/15827&quot;&gt;这�
 &lt;/ul&gt;
 &lt;h1 id=&quot;插入图片&quot;&gt;插入图片&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token url&quot;&gt;![&lt;span class=&quot;token content&quot;&gt;插百度&lt;/span&gt;](https://www.baidu.com/img/bd_logo1.png)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.baidu.com/img/bd_logo1.png&quot; alt=&quot;插百度&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://www.byeguo.cn/post/new-beginnings/</link><guid isPermaLink="false">https://www.byeguo.cn/post/new-beginnings/</guid><pubDate>Thu, 28 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
-&lt;h2 id=&quot;on-deer-horse-aboard-tritely-yikes-and-much&quot;&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;This however showed weasel&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Well uncritical so misled&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;this is very interesting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
-view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
-&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.&lt;/p&gt;
-&lt;h5 id=&quot;overlaid-the-jeepers-uselessly-much-excluding&quot;&gt;Overlaid the jeepers uselessly much excluding&lt;/h5&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
-&lt;h3 id=&quot;according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot;&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;So baboon this&lt;/li&gt;
-&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
-&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
-&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
-impassive fruitlessly shut&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and
-return to its own, safe country.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.&lt;/p&gt;
-&lt;h4 id=&quot;silent-delightfully-including-because-before-one-up-barring-chameleon&quot;&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
-&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.&lt;/p&gt;
-&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
-&lt;h5 id=&quot;wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot;&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
-&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.&lt;/p&gt;
-&lt;h6 id=&quot;slapped-cozy-a-that-lightheartedly-and-far&quot;&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the…]]></description><link>https://www.byeguo.cn/post/my-second-post/</link><guid isPermaLink="false">https://www.byeguo.cn/post/my-second-post/</guid><pubDate>Wed, 06 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
-&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich.”?
-(&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://www.byeguo.cn/post/hello-world/</link><guid isPermaLink="false">https://www.byeguo.cn/post/hello-world/</guid><pubDate>Fri, 01 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAbEAADAQADAQAAAAAAAAAAAAABESEAMUGBof/aAAgBAQABPyGxNMfrLHmCDZmAzzvJJDjEQCHv/9oADAMBAAIAAwAAABDIL//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxARhylZv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAxIWFBcYHh/9oACAEBAAE/EEbMLQ0fMHDVaPIXyI4pk4JUnWacNCtO8ojDE9TGIYES7/Jn/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg&quot;
-        srcset=&quot;/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/7237a/salty_egg.jpg 148w,
-/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/0cfdf/salty_egg.jpg 295w,
-/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg 590w,
-/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/77d57/salty_egg.jpg 885w,
-/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/5a917/salty_egg.jpg 1180w,
-/gatsby-omg-blog/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;img src=&quot;https://www.baidu.com/img/bd_logo1.png&quot; alt=&quot;插百度&quot;&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
