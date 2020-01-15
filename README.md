@@ -1,6 +1,6 @@
 一套基于 gatsby-starter-blog 的个人博客主题
 
-![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v0.2-5FCF80.svg?style=plastic)
+![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v0.3-5FCF80.svg?style=plastic)
 
 预览：
 
@@ -25,5 +25,9 @@
 - 文章评论功能（基于valine）
 
 点击[这里](https://bettertisen.github.io/gatsby-omg-blog/)查看效果
+
+目标：
+
+分离配置项
 
 
