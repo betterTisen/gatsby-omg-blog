@@ -8,3 +8,5 @@ import "./src/scss/index.scss"
 
 import wrapWithProvider from "./wrap-with-provider"
 export const wrapRootElement = wrapWithProvider
+
+window.AV = require("leancloud-storage")

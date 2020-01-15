@@ -1,11 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Comment from "../components/Comment"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 class BlogPostTemplate extends React.Component {
-
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -15,6 +15,7 @@ class BlogPostTemplate extends React.Component {
     const mainHeadData = {
       title: post.frontmatter.title,
       details: post.frontmatter.date,
+      readNumState: true,
     }
 
     return (
@@ -28,7 +29,6 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-
 
         <div className="Post-page-class">
           <article>
@@ -56,10 +56,12 @@ class BlogPostTemplate extends React.Component {
               )}
             </div>
           </nav>
+          <Comment />
         </div>
       </Layout>
     )
   }
+
 }
 
 export default BlogPostTemplate

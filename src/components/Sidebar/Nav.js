@@ -17,12 +17,12 @@ class Nav extends Component {
             <Link onClick={handleHamb} to="/">
               <span>&#xe603;</span> 仓库
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link onClick={handleHamb} to="/">
+            <Link onClick={handleHamb} to="/message">
               <span>&#xe606;</span> 留言
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link onClick={handleHamb} to="/about">
               <span>&#xe609;</span> 关于我

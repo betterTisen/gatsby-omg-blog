@@ -1,4 +1,16 @@
 @import "./main.scss";
 @import "./post.scss";
 
-@import "./options/about.scss"
+@import "./options/about.scss";
+@import "./options/message.scss";
+
+// option页结构样式
+.Option-class {
+  padding: 0 20px 20px;
+  background: #efefef;
+  .Option-container {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,56 @@
+.Comment-class {
+  padding-bottom: 25px;
+  .comment-title {
+    display: block;
+    padding: 20px 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+  }
+  .vcomment {
+    // 评论输入框
+    .vwrap {
+      background-color: #fff;
+      box-shadow: 1px 1px 5px #f0f0f0;
+      .vinput {
+        &:focus {
+          border-bottom-color: #8fd421 !important;
+        }
+      }
+    }
+    .vbtn {
+      font-size: 12.5px;
+      &:hover {
+        color: #34a219;
+        border-color: #34a219;
+      }
+    }
+    // 评论列表
+    .vlist {
+      .vcard {
+        .vhead {
+          .vnick {
+            color: #666;
+            &:hover{
+              color: #666;
+            }
+            &::before{
+              background-color: yellowgreen;
+            }
+          }
+        }
+        .vh {
+          .vmeta {
+            .vat {
+              color: yellowgreen;
+            }
+          }
+        }
+      }
+    }
+    // 底部信息
+    .info {
+      display: none;
+    }
+  }
+}
