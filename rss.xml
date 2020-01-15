@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jan 2020 09:55:33 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Jan 2020 07:29:10 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h1 id=&quot;定义&quot;&gt;定义&lt;/h1&gt;
 &lt;h2 id=&quot;什么是-grid&quot;&gt;什么是 grid&lt;/h2&gt;
 &lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
@@ -197,7 +197,7 @@ justify-items 和 align-items 的可选属性有&lt;/p&gt;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;justify-items-align-items-place-items和-justify-self-align-self-place-self&quot;&gt;justify-items align-items place-items和 justify-self align-self place-self&lt;/h2&gt;
+&lt;h2 id=&quot;justify-items-align-items-place-items-和-justify-self-align-self-place-self&quot;&gt;justify-items align-items place-items 和 justify-self align-self place-self&lt;/h2&gt;
 &lt;p&gt;这六个属性用于设置单元格内的对其方式。和 flex 中的用法一致，只有当子项的宽高固定时才有效，故用的不多。
 不同的是前三者是整体的对齐方式，应用于容器。后三者是针对于特殊子项调整对齐方式，故应用于子项。
 &lt;code class=&quot;language-text&quot;&gt;place-*&lt;/code&gt;则是对前面对其属性的简写。&lt;/p&gt;
@@ -214,8 +214,14 @@ justify-items 和 align-items 的可选属性有&lt;/p&gt;
 &lt;p&gt;接受两个参数，n：重复次数。t：需要重复的内容&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; grid&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 10px 20px 50px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于 grid-template-columns: 10px 20px 50px 10px 20px 50px; */&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 100px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于grid-template-rows:100px 100px 100px; */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    10px 20px 50px
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于 grid-template-columns: 10px 20px 50px 10px 20px 50px; */&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    3&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    100px
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* 等价于grid-template-rows:100px 100px 100px; */&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;minmaxminmax&quot;&gt;minmax(min,max)&lt;/h2&gt;
 &lt;p&gt;接受两个参数，min：最小宽度。max：最大宽度&lt;/p&gt;
