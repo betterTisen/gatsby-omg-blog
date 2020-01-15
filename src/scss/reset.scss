@@ -1,11 +1,12 @@
 @font-face {
   font-family: $iconfont;
-  src: url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.eot');
-  src: url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.eot?#iefix') format('embedded-opentype'),
-  url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.woff2') format('woff2'),
-  url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.woff') format('woff'),
-  url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.ttf') format('truetype'),
-  url('https://at.alicdn.com/t/font_1589053_s5gdq8hojy.svg#iconfont') format('svg');
+  src: url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.eot");
+  src: url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.woff2") format("woff2"),
+    url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.woff") format("woff"),
+    url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.ttf") format("truetype"),
+    url("https://at.alicdn.com/t/font_1589053_7kfzhldz5as.svg#iconfont") format("svg");
 }
 
 body {
@@ -52,7 +53,7 @@ td {
   font-size: 14px;
   margin: 0px;
   padding: 0px;
-  font-style:normal;
+  font-style: normal;
 }
 html,
 body {
@@ -124,7 +125,7 @@ li {
   list-style-type: none;
 }
 
-i{
+i {
   font-style: normal;
   outline: none;
 }

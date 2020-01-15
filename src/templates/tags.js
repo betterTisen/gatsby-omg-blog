@@ -16,11 +16,20 @@ class BlogTagsTemplate extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
+    let newPosts = [] //置顶排序
+    posts.forEach(({ node }) => {
+      if (node.frontmatter.top) {
+        newPosts.unshift(node)
+      } else {
+        newPosts.push(node)
+      }
+    })
+
     return (
       <Layout location={this.props.location} title={siteTitle} mainHeadTitle="">
         <SEO title={`${pageContext.tag}`} />
         <div className="Main-list-class">
-          {posts.map(({ node }) => {
+          {newPosts.map(node => {
             const title = node.frontmatter.title || node.fields.slug
 
             return (
@@ -41,7 +50,12 @@ class BlogTagsTemplate extends React.Component {
                 ) : (
                   ""
                 )}
-                <header>{title}</header>
+                <header>
+                  {title}
+                  {node.frontmatter.top && (
+                    <div className="top-badge">置顶</div>
+                  )}
+                </header>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
@@ -95,6 +109,7 @@ export const pageQuery = graphql`
             description
             tags
             top_img
+            top
           }
         }
       }
