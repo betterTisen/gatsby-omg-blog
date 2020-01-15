@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import Valine from "valine"
 
 class Comment extends Component {
   render() {
@@ -13,6 +12,7 @@ class Comment extends Component {
   }
 
   componentDidMount() {
+    const Valine = require("valine")
     new Valine().init({
       el: `#vcomments`,
       appId: "ojyETDuDNqK1Vj4R6SL7XX0j-9Nh9j0Va",
