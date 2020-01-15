@@ -5,6 +5,7 @@ tags:
   - web
   - css
 description: ""
+top_img: ""
 ---
 
 # 定义
@@ -91,7 +92,7 @@ justify-items 和 align-items 的可选属性有
 
 ![如图所示](5.png)
 
-## justify-items align-items place-items和 justify-self align-self place-self
+## justify-items align-items place-items 和 justify-self align-self place-self
 
 这六个属性用于设置单元格内的对其方式。和 flex 中的用法一致，只有当子项的宽高固定时才有效，故用的不多。
 不同的是前三者是整体的对齐方式，应用于容器。后三者是针对于特殊子项调整对齐方式，故应用于子项。
@@ -118,8 +119,14 @@ place-self: <align-self> <justify-self>;
 ```css
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 10px 20px 50px); /* 等价于 grid-template-columns: 10px 20px 50px 10px 20px 50px; */
-  grid-template-rows: repeat(3, 100px); /* 等价于grid-template-rows:100px 100px 100px; */
+  grid-template-columns: repeat(
+    2,
+    10px 20px 50px
+  ); /* 等价于 grid-template-columns: 10px 20px 50px 10px 20px 50px; */
+  grid-template-rows: repeat(
+    3,
+    100px
+  ); /* 等价于grid-template-rows:100px 100px 100px; */
 }
 ```
 
