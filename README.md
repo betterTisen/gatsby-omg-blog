@@ -2,9 +2,14 @@
 
 ![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v0.2-5FCF80.svg?style=plastic)
 
-现有功能:
+预览：
 
-**首页**
+![show1](./static/show1.jpg)
+![show2](./static/show2.jpg)
+
+**现有功能**:
+
+首页
 
 - 文章头图设置
 - 文章标签分类
@@ -12,7 +17,7 @@
 - 博客访客统计（基于不蒜子）
 - 博客留言功能（基于valine）
 
-**文章页**
+文章页
 
 - 文章目录
 - 锚链接跳转
