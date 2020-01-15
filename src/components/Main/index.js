@@ -4,6 +4,11 @@ import MainHead from "./MainHead"
 import NavRight from "./NavRight"
 import Footer from "./Footer"
 
+/*
+ * mainHeadData
+ * - title
+ * - details
+ */
 function Main({ children, mainHeadData, mainCatalogueData }) {
   return (
     <section className={"Main-class"}>

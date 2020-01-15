@@ -18,14 +18,18 @@ function MainHead({ mainHeadData }) {
     mainHeadData = {}
   }
 
-  const { title = author, details = notice } = mainHeadData
+  const {
+    title = author,
+    details = notice,
+    readNumState = false,
+  } = mainHeadData
 
   return (
     <div className={`MainHead-class`}>
       <span>{title}</span>
       <p>
         <span>{details}</span>
-        {mainHeadData.details && (
+        {readNumState && (
           <span>
             阅读量 <span id="busuanzi_value_page_pv"></span>
           </span>

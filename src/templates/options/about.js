@@ -8,12 +8,20 @@ class BlogAboutTemplate extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
 
+    const mainHeadData = {
+      title: "关于我",
+      details: "我是一个喜欢女人的男人...",
+    }
+
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        mainHeadData={mainHeadData}
+      >
         <SEO title={`About me`} />
         <div className="About-class">
           <div className="about-container">
-            <h2>关于我</h2>
             <div className="note">
               <p>姓名：宋昊天</p>
               <p>年龄：23</p>
