@@ -26,7 +26,7 @@
 
 点击[这里](https://bettertisen.github.io/gatsby-omg-blog/)查看效果
 
-目标：
+**目标**：
 
 分离配置项
 
