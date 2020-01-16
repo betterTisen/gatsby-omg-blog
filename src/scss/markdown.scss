@@ -29,7 +29,7 @@
   strong,
   b {
     font-weight: bold;
-    color: #bf360c;
+    color: #222;
   }
 
   em,
@@ -235,5 +235,8 @@
   }
   ol li {
     list-style-type: decimal;
+  }
+  :not(pre) > code[class*="language-"] {
+    padding: 0.2rem 0.4rem;
   }
 }
