@@ -9,11 +9,9 @@ top_img: "1.png"
 top: true
 ---
 
-# 概述
+## 什么是 NoneBot
 
 NoneBot 的 [github 地址 👈](https://github.com/richardchien/nonebot)
-
-## 什么是 NoneBot
 
 NoneBot 是一个基于 CoolQ HTTP API 的 python 异步机器人框架。
 
@@ -26,19 +24,20 @@ NoneBot 是一个基于 CoolQ HTTP API 的 python 异步机器人框架。
   <p>基于时下流行的 asyncio 模块，利用 WebSocket 进行通信，以获得极高的性能；同时，支持使用多个机器人账号来负载均衡用户消息，减少业务宕机的可能。</p>
 </div>
 
-## 酷 Qdocker+CoolQ HTTP API 安装教程
+**酷 Q docker+CoolQ HTTP API 安装教程**
 
 windows 在[官网 👈](https://cqp.cc/t/23253)下载安装包即可完成安装
 [mac OS/linux👈](https://www.ihewro.com/archives/979/)的安装教程点这里
 
-## 文档
+**文档**
 
 [CoolQ HTTP API 4.12 的文档 👈](https://cqhttp.cc/)
+
 [NoneBot 文档 👈](https://nonebot.cqp.moe/)
 
-# NoneBot 在云主机 CentOS7 部署
+## NoneBot 的部署
 
-## 安装 docker 镜像
+**1. 安装 docker 镜像**
 
 ```bash
 #1. 安装docker
@@ -60,7 +59,7 @@ docker start coolq
 docker stop coolq
 ```
 
-## 下载及配置 CoolQ Http API 包
+**2. 下载及配置 CoolQ Http API 包**
 
 - 点击[这里 👈](https://github.com/richardchien/coolq-http-api/releases)下载 cpk 文件
 - 然后将其放入 ~/coolq/app 中
@@ -77,7 +76,7 @@ docker stop coolq
 }
 ```
 
-## 下载 NoneBot
+**3. 下载 NoneBot**
 
 - 建议先在本机熟悉 nonebot 相关知识并成功启动服务。点击[这里 👈](https://nonebot.cqp.moe/guide/)查看文档
 - 这是我的 requirements.txt 文件，环境为 python3.7。各位可自行拷贝。然后通过 pip install -r requirements.txt 进行安装
@@ -118,7 +117,7 @@ wsproto==0.15.0
 yarl==1.3.0
 ```
 
-## 编写 py 文件
+**4. 编写 py 文件**
 
 ```python
 # bot.py文件
@@ -133,13 +132,11 @@ if __name__ == '__main__':
     nonebot.run(host='0.0.0.0', port=9999)
 ```
 
-## 服务部署
+**5. 服务部署**
 
-### 前台部署
+**前台部署**：通过命令 `python bot.py` 即可成功启动前台服务（断开 ssh 后则会失效）
 
-通过命令 `python bot.py` 即可成功启动前台服务（断开 ssh 后则会失效）
-
-### 后台部署
+**后台部署**：
 
 ```bash
 # 使用nohup命令今可进行后台部署，断开ssh后仍然有效
@@ -151,21 +148,19 @@ ps -ax | grep python
 kill -9 <进程号PID>
 ```
 
-# NoneBot 常用 Api
+## NoneBot 常用 Api
 
 因为最近的 bot 开发选用了此框架。故在此进行了实用 api 的记录和整理，为以后进行开发做一个记录，同时也方便其他刚接触此框架的小伙伴快速上手。
 
-## 装饰器
-
-### on_command (命令配置):
+**on_command (命令配置):**
 
 将函数装饰为命令函数
 
-#### args_parser:
+**args_parser:**
 
 将函数装饰为命令层面的参数解析器，将在命令实际处理函数之前被运行。接受的参数为`CommandSession`
 
-#### CommandSession 常用参数:
+**CommandSession 常用参数:**
 
 - `state`: 属性本身只读，但属性中的内容可读写。
   - **读**: session.state.get('xxx')
@@ -173,7 +168,7 @@ kill -9 <进程号PID>
 - `is_first_run`: 是否是第一次运行
 - `current_arg_text`: 属性的纯文本部分（不包含 CQ 码），各部分使用空格连接。
 
-#### 命令权限
+**命令权限**
 
 - PRIVATE_FRIEND(0x0001): 好友私聊
 - PRIVATE_GROUP(0x0002): 群临时私聊
@@ -196,14 +191,14 @@ kill -9 <进程号PID>
     pass
 ```
 
-### on_message（收到消息）:
+**on_message（收到消息）:**
 
 将函数装饰为消息事件的处理函数
 
 - `private`: 私聊消息
 - `group`: 群消息
 
-### on_notice（群、讨论组变动等通知类事件）:
+**on_notice（群、讨论组变动等通知类事件）:**
 
 将函数装饰为通知事件的处理函数
 
@@ -212,21 +207,17 @@ kill -9 <进程号PID>
 - `group_increase`：群成员增加
 - `friend_add`：好友添加（官方文档说是好友添加的相应事件，可是本人测试发现无效）
 
-### on_request（加好友请求、加群请求／邀请）:
+**on_request（加好友请求、加群请求／邀请）:**
 
 将函数装饰为请求事件的处理函数
 
 - `friend`:有人发送添加好友请求时触发
 - `group`:有人发送加入群请求时触发
 
-## CQ 码（表情）
+**CQ 码（表情）**
 
-### qq 自带表情
+qq 自带表情 [CQ:face,id=表情 id]：
+[对照表 👈](https://cqp.cc/t/36910)
 
-[CQ:face,id=表情 id]
-qq 自带表情对照表点击[这里 👈](https://cqp.cc/t/36910)
-
-### emoji 表情
-
-[CQ:emoji,id=表情 id]
-emoji 表情对照表点击[这里 👈](https://cqp.cc/t/15827)
+emoji 表情 [CQ:emoji,id=表情 id]：
+[对照表 👈](https://cqp.cc/t/15827)
