@@ -12,6 +12,7 @@ module.exports = {
     mail: ``,
   },
   pathPrefix: "/gatsby-omg-blog/",
+  pathPrefix: "", // 静态资源访问位置（仓库名）（/gatsby-omg-blog/）
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
