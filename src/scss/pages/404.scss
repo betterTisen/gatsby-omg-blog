@@ -1,0 +1,26 @@
+.ERR-404-Class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+  div {
+    margin-bottom: 150px;
+    padding: 0 10px;
+    height: 230px;
+    h1 {
+      font-size: 140px;
+      text-align: center;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+    a {
+      color: yellowgreen;
+    }
+  }
+}

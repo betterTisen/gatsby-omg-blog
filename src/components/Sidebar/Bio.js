@@ -27,16 +27,13 @@ const Bio = () => {
     }
   `)
 
-  const bioClick = () => {
-    console.log(1)
-  }
-
   const { author } = data.site.siteMetadata
+
   return (
     <div className={`Bio-class`}>
       <div
         className={`head-img`}
-        onClick={() => bioClick()}
+        onClick={() => {}}
         onKeyDown={()=>{}}
         role="button"
         tabIndex={0}
