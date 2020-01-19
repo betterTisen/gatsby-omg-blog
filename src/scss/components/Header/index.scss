@@ -16,17 +16,69 @@ $headerInput: 150px;
   justify-content: space-between;
 
   .hamburger {
+    position: relative;
     display: none;
-    margin-left: 5px;
-    padding: 0 12px;
-    font-family: $iconfont;
-    font-size: 24px;
-    transform: rotate(0deg);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    margin-left: 15px;
+    padding: 0;
+    min-width: 25px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    // transition: all 0.3s ease;
+    span {
+      display: block;
+      position: absolute;
+      top: 12.5px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #111;
+      border-radius: 1px;
+      transition: background-color 0s 0.25s;
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #111;
+        border-radius: 1px;
+        content: "";
+        transform: rotate(0deg);
+        transition-duration: 0.25s, 0.25s;
+        transition-delay: 0s, 0.25s;
+      }
+      &::before {
+        top: -8px;
+        transition-property: transform, top;
+      }
+      &::after {
+        bottom: -8px;
+        transition-property: transform, bottom;
+      }
+    }
   }
-  .hamburgerActive {
-    transform: rotate(-90deg);
+  .hamburger-active {
+    span {
+      background: none;
+      &::before,
+      &::after {
+        transition-delay: 0.25s, 0s;
+      }
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+        transition-property: transform, top;
+      }
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition-property: transform, bottom;
+      }
+    }
   }
 
   .headLogo {
@@ -75,8 +127,9 @@ $headerInput: 150px;
       .mobile-search {
         display: none;
         align-items: center;
-        font-family: $iconfont;
         padding: 0 10.5px;
+        font-family: $iconfont;
+        border: none;
       }
       .mobile-active {
         padding-left: 15px;

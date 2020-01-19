@@ -19,17 +19,14 @@ class Search extends Component {
             className={this.state.mobileActive ? "mobile-active" : ""}
           />
           <span>&#xe621;</span>
-          <i
+          <button
             className="mobile-search"
             onClick={e => {
               this.mobileSearch()
             }}
-            onKeyDown={() => {}}
-            role="button"
-            tabIndex={0}
           >
             &#xe621;
-          </i>
+          </button>
         </label>
         {this.state.focusState && this.state.searchRes.length > 0 && (
           <ul className="search-list">

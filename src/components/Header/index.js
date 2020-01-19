@@ -7,15 +7,13 @@ import { Link } from "gatsby"
 import Search from "./Search"
 
 const Hamburger = ({ hambState, blogStatusChange }) => (
-  <i
-    className={`hamburger ${hambState ? "hamburgerActive" : ""}`}
+  <button
+    className={`hamburger ${hambState ? "hamburger-active" : ""}`}
     onClick={blogStatusChange}
-    onKeyDown={() => {}}
-    role="button"
-    tabIndex={0}
   >
-    &#xe602;
-  </i>
+    <span>
+    </span>
+  </button>
 )
 
 const mapStateToProps = ({ hambState }) => {

@@ -239,4 +239,11 @@
   :not(pre) > code[class*="language-"] {
     padding: 0.2rem 0.4rem;
   }
+  blockquote{
+    padding: 8px 12px;
+    background-color: #f3f3f3;
+    p{
+      margin: 0;
+    }
+  }
 }
