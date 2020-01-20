@@ -11,7 +11,6 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const postPageState = this.props.data.site.siteMetadata.post.pageviews
     const { previous, next } = this.props.pageContext
-    console.log(postPageState)
     // head info
     const mainHeadData = {
       title: post.frontmatter.title,
