@@ -25,6 +25,9 @@ export default () => {
         const self = document.getElementById(
           "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
         )
+        if (!self) {
+          return
+        }
         // 拿到父节点:
         const parent = self.parentElement
         // 删除:
