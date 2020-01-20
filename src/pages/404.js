@@ -8,6 +8,7 @@ class NotFoundPage extends React.Component {
     return (
       <div className="ERR-404-Class">
         <SEO title="404: Not Found" />
+        <img alt="404" src={require("../../content/assets/404.jpeg")} />
         <div>
           <h1>404</h1>
           <p>The page you are looking for is not here.</p>

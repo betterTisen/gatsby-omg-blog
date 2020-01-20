@@ -4,13 +4,18 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: #f0f0f0;
-  div {
+  background: #f3f3f3;
+  img {
     margin-bottom: 150px;
+    height: 300px;
+  }
+  div {
+    margin: 0 100px 150px 0;
     padding: 0 10px;
     height: 230px;
     h1 {
       font-size: 140px;
+      // font-weight: normal;
       text-align: center;
     }
     p {
