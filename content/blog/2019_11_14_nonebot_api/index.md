@@ -5,8 +5,6 @@ tags:
   - python
   - coolq
   - nonebot
-top_img: "1.png"
-top: true
 ---
 
 ## 什么是 NoneBot
