@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 20 Jan 2020 08:20:06 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 20 Jan 2020 08:23:16 GMT</lastBuildDate><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h2 id=&quot;定义&quot;&gt;定义&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;什么是 grid&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
@@ -17,13 +17,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;假装模拟的博客post页面&quot;
         title=&quot;假装模拟的博客post页面&quot;
-        src=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
+        src=&quot;/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
+        srcset=&quot;/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
+/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
+/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
+/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
+/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
+/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -41,7 +41,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
+    href=&quot;/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -54,10 +54,10 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;画的不好见谅哈&quot;
         title=&quot;画的不好见谅哈&quot;
-        src=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/00d96/2.png 148w,
-/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/0b23c/2.png 295w,
-/gatsby-omg-blog/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png 495w&quot;
+        src=&quot;/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png&quot;
+        srcset=&quot;/static/3f00bcd43d671af2a1a323032a6e34e7/00d96/2.png 148w,
+/static/3f00bcd43d671af2a1a323032a6e34e7/0b23c/2.png 295w,
+/static/3f00bcd43d671af2a1a323032a6e34e7/12c96/2.png 495w&quot;
         sizes=&quot;(max-width: 495px) 100vw, 495px&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -72,7 +72,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png&quot;
+    href=&quot;/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -85,13 +85,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;如图所示&quot;
         title=&quot;如图所示&quot;
-        src=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/00d96/3.png 148w,
-/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/0b23c/3.png 295w,
-/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png 590w,
-/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/2a3d6/3.png 885w,
-/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/ae92f/3.png 1180w,
-/gatsby-omg-blog/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png 1612w&quot;
+        src=&quot;/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png&quot;
+        srcset=&quot;/static/e11b34888d9bb7b8971e6783d098324b/00d96/3.png 148w,
+/static/e11b34888d9bb7b8971e6783d098324b/0b23c/3.png 295w,
+/static/e11b34888d9bb7b8971e6783d098324b/799d3/3.png 590w,
+/static/e11b34888d9bb7b8971e6783d098324b/2a3d6/3.png 885w,
+/static/e11b34888d9bb7b8971e6783d098324b/ae92f/3.png 1180w,
+/static/e11b34888d9bb7b8971e6783d098324b/db188/3.png 1612w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -110,7 +110,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png&quot;
+    href=&quot;/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -123,13 +123,13 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;如图所示&quot;
         title=&quot;如图所示&quot;
-        src=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/00d96/4.png 148w,
-/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/0b23c/4.png 295w,
-/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png 590w,
-/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/2a3d6/4.png 885w,
-/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/ae92f/4.png 1180w,
-/gatsby-omg-blog/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png 1364w&quot;
+        src=&quot;/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png&quot;
+        srcset=&quot;/static/b7b88cb781f5aca2063f23abe4924f9c/00d96/4.png 148w,
+/static/b7b88cb781f5aca2063f23abe4924f9c/0b23c/4.png 295w,
+/static/b7b88cb781f5aca2063f23abe4924f9c/799d3/4.png 590w,
+/static/b7b88cb781f5aca2063f23abe4924f9c/2a3d6/4.png 885w,
+/static/b7b88cb781f5aca2063f23abe4924f9c/ae92f/4.png 1180w,
+/static/b7b88cb781f5aca2063f23abe4924f9c/8031a/4.png 1364w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -172,7 +172,7 @@ justify-items 和 align-items 的可选属性有&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png&quot;
+    href=&quot;/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -185,13 +185,13 @@ justify-items 和 align-items 的可选属性有&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;如图所示&quot;
         title=&quot;如图所示&quot;
-        src=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/00d96/5.png 148w,
-/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/0b23c/5.png 295w,
-/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png 590w,
-/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/2a3d6/5.png 885w,
-/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/ae92f/5.png 1180w,
-/gatsby-omg-blog/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png 1188w&quot;
+        src=&quot;/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png&quot;
+        srcset=&quot;/static/2e31638dd649cd86b126cab4709bab0b/00d96/5.png 148w,
+/static/2e31638dd649cd86b126cab4709bab0b/0b23c/5.png 295w,
+/static/2e31638dd649cd86b126cab4709bab0b/799d3/5.png 590w,
+/static/2e31638dd649cd86b126cab4709bab0b/2a3d6/5.png 885w,
+/static/2e31638dd649cd86b126cab4709bab0b/ae92f/5.png 1180w,
+/static/2e31638dd649cd86b126cab4709bab0b/de8d7/5.png 1188w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -268,7 +268,7 @@ grid：二维布局。可以更好的处理复杂的业务场景&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png&quot;
+    href=&quot;/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -281,13 +281,13 @@ grid：二维布局。可以更好的处理复杂的业务场景&lt;/p&gt;
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;我又回来了&quot;
         title=&quot;我又回来了&quot;
-        src=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
-        srcset=&quot;/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
-/gatsby-omg-blog/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
+        src=&quot;/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png&quot;
+        srcset=&quot;/static/651a813e2ae3a1236602570ca4be9262/00d96/1.png 148w,
+/static/651a813e2ae3a1236602570ca4be9262/0b23c/1.png 295w,
+/static/651a813e2ae3a1236602570ca4be9262/799d3/1.png 590w,
+/static/651a813e2ae3a1236602570ca4be9262/2a3d6/1.png 885w,
+/static/651a813e2ae3a1236602570ca4be9262/ae92f/1.png 1180w,
+/static/651a813e2ae3a1236602570ca4be9262/9926b/1.png 1296w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
         loading=&quot;lazy&quot;
       /&gt;
