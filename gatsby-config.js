@@ -1,17 +1,8 @@
+const conf = require("./_config")
+
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby OMG Blog`,
-    author: `Byeguo`,
-    notice: `代码的价值在于产品，产品的价值在于用户`,
-    description: `A personal blog used by gatsby`,
-    siteUrl: `https://www.byeguo.cn`,
-    qq: ``,
-    wx: ``,
-    weibo: ``,
-    github: ``,
-    mail: ``,
-  },
-  pathPrefix: "", // 静态资源访问位置（仓库名）（/gatsby-omg-blog/）
+  siteMetadata: conf,
+  pathPrefix: conf.pathPrefix,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

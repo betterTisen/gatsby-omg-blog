@@ -9,7 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const Bio = () => {
+export default () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(relativePath: { eq: "avatar.png" }) {
@@ -34,7 +34,7 @@ const Bio = () => {
       <div
         className={`head-img`}
         onClick={() => {}}
-        onKeyDown={()=>{}}
+        onKeyDown={() => {}}
         role="button"
         tabIndex={0}
       >
@@ -43,5 +43,3 @@ const Bio = () => {
     </div>
   )
 }
-
-export default Bio

@@ -1,51 +1,68 @@
 import React, { Component } from "react"
+import { StaticQuery, graphql } from "gatsby"
 
 import { easeInOutCubic, getCurrentScrollTop } from "../../../utils/anim"
 
 class Catalogue extends Component {
-
   render() {
     return (
-      <div className="Catalogue-class">
-        <div className="item-title">文章目录</div>
-        <ul>
-          {this.state.links.map(item => {
-            return (
-              <li
-                className={
-                  this.state.active === item.id ? "catalogue-active" : ""
+      <StaticQuery
+        query={graphql`
+          {
+            site {
+              siteMetadata {
+                post {
+                  cat {
+                    enable
+                  }
                 }
-                key={item.id}
-                data-depth={item.depth}
-              >
-                <a
-                  onClick={e => {
-                    e.preventDefault()
-                    this.scrollTo(item.id)
-                  }}
-                  href={`#${item.id}`}
-                >
-                  {item.value}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
+              }
+            }
+          }
+        `}
+        render={data => {
+          const catConf = data.site.siteMetadata.post.cat
+          return (
+            <div className={catConf.enable ? "Catalogue-class" : "Hide-class"}>
+              <div className="item-title">文章目录</div>
+              <ul>
+                {this.state.links.map(item => {
+                  return (
+                    <li
+                      className={
+                        this.state.active === item.id ? "catalogue-active" : ""
+                      }
+                      key={item.id}
+                      data-depth={item.depth}
+                    >
+                      <a
+                        onClick={e => {
+                          e.preventDefault()
+                          this.scrollTo(item.id)
+                        }}
+                        href={`#${item.id}`}
+                      >
+                        {item.value}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          )
+        }}
+      />
     )
   }
 
   // 绑定links
   UNSAFE_componentWillMount() {
-    const data = this.props.data
+    const data = this.props.catData
     const links = data.map(h => ({
       // 在 gatsby-remark-autolink-headers 插件中，
       // 对特殊字符进行过滤，且对标题的空格用-替换，并转为小写，
       id: h.value
-        .replace(
-          /[`~!@#$%^&*()+=<>?:"{}|,.;'\\[\]·~@#%……&*——+={}|“”‘’]/g,
-          ""
-        )
+        .replace(/[`~!@#$%^&*()+=<>?:"{}|,.;'\\[\]·~@#%……&*——+={}|“”‘’]/g, "")
         .replace(/ /g, "-")
         .toLowerCase(),
       ...h,

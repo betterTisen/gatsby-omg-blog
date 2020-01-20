@@ -26,3 +26,8 @@ body {
   background-color: $backgroundColor;
   -webkit-font-smoothing: antialiased;
 }
+
+// 用于控制config中的显示隐藏
+.Hide-class {
+  display: none;
+}

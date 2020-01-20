@@ -10,7 +10,7 @@ class BlogAboutTemplate extends React.Component {
 
     const mainHeadData = {
       title: "关于我",
-      details: "我是一个喜欢女人的男人...",
+      details: "怀虔诚之态 以拥抱未来",
     }
 
     return (

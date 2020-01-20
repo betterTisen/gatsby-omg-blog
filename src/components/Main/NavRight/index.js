@@ -13,7 +13,7 @@ function NavRight({ mainCatalogueData }) {
       <NavRightTags />
       <Statistics />
       {mainCatalogueData && mainCatalogueData.length ? (
-        <Catalogue data={mainCatalogueData} />
+        <Catalogue catData={mainCatalogueData} />
       ) : (
         ""
       )}

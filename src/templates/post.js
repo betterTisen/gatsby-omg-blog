@@ -9,13 +9,14 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+    const postPageState = this.props.data.site.siteMetadata.post.pageviews
     const { previous, next } = this.props.pageContext
-
+    console.log(postPageState)
     // head info
     const mainHeadData = {
       title: post.frontmatter.title,
       details: post.frontmatter.date,
-      readNumState: true,
+      readNumState: postPageState,
     }
 
     return (
@@ -61,7 +62,6 @@ class BlogPostTemplate extends React.Component {
       </Layout>
     )
   }
-
 }
 
 export default BlogPostTemplate
@@ -72,6 +72,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        post {
+          pageviews
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

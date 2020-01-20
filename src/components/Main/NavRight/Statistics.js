@@ -1,26 +1,24 @@
-import React, { Component } from "react"
+import React, { useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Tools from "../../../utils/tools"
 
-class Statistics extends Component {
-  render() {
-    return (
-      <div className="Statistics-class">
-        <span className="item-title">博客信息</span>
-        <ul>
-          <li>
-            <span>访客数:</span>
-            <span id="busuanzi_value_site_uv"></span>
-          </li>
-          <li>
-            <span>总访问量:</span>
-            <span id="busuanzi_value_site_pv"></span>
-          </li>
-        </ul>
-      </div>
-    )
-  }
+export default () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          statistics {
+            homePage
+          }
+        }
+      }
+    }
+  `)
 
-  componentDidMount() {
+  const { homePage } = data.site.siteMetadata.statistics
+
+  useEffect(() => {
     Tools.asyncLoadScript(
       "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",
       function() {
@@ -33,7 +31,20 @@ class Statistics extends Component {
         parent.removeChild(self)
       }
     )
-  }
+  })
+  return (
+    <div className={homePage ? "Statistics-class" : "Hide-class"}>
+      <span className="item-title">博客信息</span>
+      <ul>
+        <li>
+          <span>访客数:</span>
+          <span id="busuanzi_value_site_uv"></span>
+        </li>
+        <li>
+          <span>总访问量:</span>
+          <span id="busuanzi_value_site_pv"></span>
+        </li>
+      </ul>
+    </div>
+  )
 }
-
-export default Statistics
