@@ -117,4 +117,22 @@
       display: none;
     }
   }
+
+  .ERR-404-Class {
+    flex-direction: column;
+    img {
+      margin: 0;
+      height: 180px;
+    }
+    div {
+      margin: 0;
+      margin-bottom: 80px;
+      h1 {
+        font-size: 80px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
 }

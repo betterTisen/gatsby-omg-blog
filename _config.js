@@ -49,5 +49,5 @@ module.exports = {
   },
 
   // 其他
-  pathPrefix: "/gatsby-omg-blog/", // 静态资源访问位置（仓库名）（/gatsby-omg-blog/）
+  pathPrefix: "", // 静态资源访问位置（仓库名）（/gatsby-omg-blog/）
 }
