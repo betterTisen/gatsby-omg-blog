@@ -87,6 +87,9 @@
       text-overflow: ellipsis;
       span {
         padding-right: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
       i {
         font-size: 12px;

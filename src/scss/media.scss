@@ -120,17 +120,17 @@
 
   .ERR-404-Class {
     flex-direction: column;
-    img {
+    .left-404-img {
       margin: 0;
       height: 180px;
     }
-    div {
+    .right-404-context {
       margin: 0;
       margin-bottom: 80px;
       h1 {
         font-size: 80px;
       }
-      p{
+      p {
         font-size: 14px;
       }
     }
