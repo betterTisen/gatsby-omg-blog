@@ -18,9 +18,9 @@ $mainBackgroundColor: #efefef;
 
 @import "./pages/index.scss";
 
-@import "./pages/404.scss";
-
 @import "./media.scss";
+
+@import "./anim/index.scss";
 
 body {
   background-color: $backgroundColor;

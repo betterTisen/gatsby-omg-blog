@@ -20,7 +20,7 @@ class BlogAboutTemplate extends React.Component {
         mainHeadData={mainHeadData}
       >
         <SEO title={`About me`} />
-        <div className="Option-class About-class">
+        <div className="Option-class About-class fade-in-ani">
           <div className="Option-container about-container">
             <div className="note">
               <p>姓名：宋昊天</p>
