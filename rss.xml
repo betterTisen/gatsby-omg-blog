@@ -1,25 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 20 Jan 2020 10:35:24 GMT</lastBuildDate><item><title><![CDATA[OMG！简约至上的博客主题]]></title><description><![CDATA[快速开始 这是一款基于 gatsby-start-blog 开发的一款博客。添加了 博客标签、访问统计、评论系统 等功能。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Jan 2020 03:54:05 GMT</lastBuildDate><item><title><![CDATA[OMG！简约至上的博客主题]]></title><description><![CDATA[快速开始 这是一款基于 gatsby-start-blog 开发的一款博客。添加了 博客标签、访问统计、评论系统 等功能。
 如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下放详细的博客文档。
-如果在使用该主题时有任何问题，欢迎留言～ 主题安装 该主题基于 nodejs…]]></description><link>https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</guid><pubDate>Mon, 20 Jan 2020 18:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;快速开始&quot;&gt;快速开始&lt;/h2&gt;
+如果在使用该主题时有任何问题，欢迎留言～  主题安装 该主题基于 nodejs…]]></description><link>https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</guid><pubDate>Mon, 20 Jan 2020 18:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;快速开始&quot;&gt;快速开始&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这是一款基于 gatsby-start-blog 开发的一款博客。添加了 &lt;strong&gt;博客标签&lt;/strong&gt;、&lt;strong&gt;访问统计&lt;/strong&gt;、&lt;strong&gt;评论系统&lt;/strong&gt; 等功能。
 如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下放详细的博客文档。
 如果在使用该主题时有任何问题，欢迎留言～&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d4d756d1523ae09ff75c3221440fee8e/15e1d/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAABje0nGYNlf//EABoQAQADAAMAAAAAAAAAAAAAAAIAAQMEEjL/2gAIAQEAAQUCWCm/HIPW4vN6q6Wqn//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/AYf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAfEAABAwMFAAAAAAAAAAAAAAABABEhAhBBIzEyUZH/2gAIAQEABj8C5BaYLrY+WeuW6hA05GZX/8QAGhABAQEBAQEBAAAAAAAAAAAAAREAIUGRsf/aAAgBAQABPyEJ+hi6JcY+Z9/u1VGJ0dZlcYASBaY//9oADAMBAAIAAwAAABA87//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxA0WF//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAIAQIBAT8Qq6//xAAeEAEAAgICAwEAAAAAAAAAAAABESEAMUFRYXHR8P/aAAgBAQABPxCGqDBpetnzHUFAiQLYXuMG0X8cY3PkoTCWe9ZB5JHNz56yE1rCQym6qs//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;图片&quot;
+        title=&quot;图片&quot;
+        src=&quot;/static/d4d756d1523ae09ff75c3221440fee8e/88218/1.jpg&quot;
+        srcset=&quot;/static/d4d756d1523ae09ff75c3221440fee8e/7237a/1.jpg 148w,
+/static/d4d756d1523ae09ff75c3221440fee8e/0cfdf/1.jpg 295w,
+/static/d4d756d1523ae09ff75c3221440fee8e/88218/1.jpg 590w,
+/static/d4d756d1523ae09ff75c3221440fee8e/77d57/1.jpg 885w,
+/static/d4d756d1523ae09ff75c3221440fee8e/5a917/1.jpg 1180w,
+/static/d4d756d1523ae09ff75c3221440fee8e/15e1d/1.jpg 3600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;主题安装&quot;&gt;主题安装&lt;/h2&gt;
-&lt;p&gt;该主题基于 nodejs 和 gatsby。首先需要安装 nodejs。 &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;nodejs 下载地址&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载完成后，打开控制台，输入 node -v 或者 npm -v，如果出现版本信息即下载成功&lt;/p&gt;
+&lt;p&gt;该主题基于 nodejs 和 gatsby。首先需要安装 nodejs。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;nodejs 下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载完成后，打开控制台，输入 node -v 或者 npm -v，如果出现版本信息即下载成功!&lt;/p&gt;
 &lt;p&gt;然后 &lt;strong&gt;安装 gatsby&lt;/strong&gt;。打开控制台输入：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; gatsby -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;最后下载本 博客源文件 (点击上方地址下载) 并解压&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; gatsby-cli -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最后下载本 博客源文件 并解压&lt;/p&gt;
 &lt;p&gt;博客源文件 &lt;a href=&quot;https://github.com/betterTisen/gatsby-omg-blog/archive/master.zip&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;解压完成后，打开控制台并定位到本博客的根目录下，输入&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 安装依赖文件&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;至此就安装完成了～ 最后，我们启动博客看下效果吧。输入下面的命令，然后打开浏览器输入 localhost:8000 就可以看到博客页面啦&lt;/p&gt;
+&lt;p&gt;至此就安装完成了～&lt;/p&gt;
+&lt;p&gt;最后，我们启动博客看下效果吧。输入下面的命令，然后打开浏览器输入 localhost:8000 就可以看到博客页面啦&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;主题页面&quot;&gt;主题页面&lt;/h2&gt;
-&lt;h2 id=&quot;配置项&quot;&gt;配置项&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
+&lt;p&gt;&lt;strong&gt;文章页&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 markdown 下加入如下代码段（没有需求可不填）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;title：文章名称（不填则默认展示文件夹名）&lt;/li&gt;
+&lt;li&gt;date：文章发布时间，注意时间格式必须填写完整（不填则不显示）&lt;/li&gt;
+&lt;li&gt;tags：文章标签类别（不填则无类别）&lt;/li&gt;
+&lt;li&gt;topImg: 首页头图展示（不填写则无头图，图片文件需放在/content/assets/top_image/下）&lt;/li&gt;
+&lt;li&gt;top: 文章是否置顶（填写 true 或 false，默认为 false）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
+title: OMG！简约至上的博客主题
+date: 2020-1-20 18:00:00
+tags:
+  &lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; web
+  &lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; react
+  &lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; gatsby
+topImg: 2020-01-20.jpg
+&lt;span class=&quot;token title important&quot;&gt;top: true
+&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;留言 和 关于我&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;留言：/src/templates/options/message.js&lt;/li&gt;
+&lt;li&gt;关于我：/src/templates/options/about.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;各位可根据需要自行修改&lt;/p&gt;
+&lt;h2 id=&quot;配置项&quot;&gt;配置项&lt;/h2&gt;
+&lt;p&gt;站点配置文件是根目录下的 &lt;strong&gt;_config.js&lt;/strong&gt; 文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;博客主要信息&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;title: 博客站点名称&lt;/li&gt;
+&lt;li&gt;author: 作者名称&lt;/li&gt;
+&lt;li&gt;notice: 个性签名&lt;/li&gt;
+&lt;li&gt;description: 博客描述&lt;/li&gt;
+&lt;li&gt;siteUrl: 站点地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;文章页配置 post&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pageviews：文章阅读量的显示和隐藏&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cat：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;enable&lt;/em&gt; 文章目录的显示和隐藏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;侧边功能 side&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;message：留言板页面的显示与隐藏&lt;/li&gt;
+&lt;li&gt;about：关于我 页面的显示与隐藏&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;footer：个人联系方式（不填写则不展示）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;qq：qq 号码&lt;/li&gt;
+&lt;li&gt;github：github 网站地址&lt;/li&gt;
+&lt;li&gt;mail：邮箱地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;底部信息配置 foot&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;beian：域名的备案号，没有可不填写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;评论功能 valine&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;需要注册 leancloud 账号，需要评论功能可自行查看 &lt;a href=&quot;https://valine.js.org/&quot;&gt;valine 文档&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;enable：评论的显示与隐藏&lt;/li&gt;
+&lt;li&gt;其他：查看 valine 官方文档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;统计 statistics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;homePage：右侧边栏博客信息的显示与隐藏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;pathPrefix&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;静态资源访问位置，用于博客部署&lt;/p&gt;
+&lt;h2 id=&quot;github-部署&quot;&gt;github 部署&lt;/h2&gt;
+&lt;p&gt;首先需要注册一个 github 账号，完成之后创建一个仓库 blog&lt;/p&gt;
+&lt;p&gt;把 _config.js 下的 pathPrefix 添加上 &lt;strong&gt;/blog/&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后进入博客文件的根目录，输入下面几个命令：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; -rf .git &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; init
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token string&quot;&gt;&apos;First commit&apos;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; origin https://github.com/your_github_name/blog.git
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push -u origin master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如果没有问题的话，输入下面的命令进行部署：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run gh-deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最后你就可以登陆 &lt;a href=&quot;https://your_github_name.github.io/blog/&quot;&gt;https://your_github_name.github.io/blog/&lt;/a&gt; 查看你的博客了~&lt;/p&gt;</content:encoded></item><item><title><![CDATA[浅谈 CSS Grid 布局]]></title><description><![CDATA[定义 什么是 grid Grid 布局是一种二维 栅格(网格) 布局，常用与解决复杂页面的排版问题。
 本篇文章介绍了 grid 布局常用的属性包括对容器，对项目的属性，以及与当前常见的 flex 布局方式进行了对比介绍。主要包括了 flex 与 grid…]]></description><link>https://www.byeguo.cn/post/2019_12_16_css_grid/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_12_16_css_grid/</guid><pubDate>Mon, 16 Dec 2019 17:35:49 GMT</pubDate><content:encoded>&lt;h2 id=&quot;定义&quot;&gt;定义&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;什么是 grid&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Grid 布局是一种二维 &lt;strong&gt;栅格(网格)&lt;/strong&gt; 布局，常用与解决复杂页面的排版问题。
@@ -607,6 +725,7 @@ yarl==1.3.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/table&gt;
 &lt;h1 id=&quot;引用&quot;&gt;引用&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt;&lt;/span&gt; 123
+&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt;&lt;/span&gt;
 &lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt; &gt;&lt;/span&gt; 123&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;123&lt;/p&gt;
