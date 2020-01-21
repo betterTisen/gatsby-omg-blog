@@ -3,7 +3,6 @@ title: markdown在omg中的渲染效果展示
 date: 2019-10-26 16:26:53
 tags:
   - markdown
-top_img: ""
 ---
 
 本文仅为 omg-markdown 引擎渲染效果测试，方便日后博客编写
@@ -92,10 +91,12 @@ _斜体_
 
 ```markdown
 > 123
+>
 > > 123
 ```
 
 > 123
+>
 > > 123
 
 # 表单
