@@ -232,6 +232,12 @@
   }
   ul li {
     list-style-type: disc;
+    li {
+      list-style-type: circle;
+      li {
+        list-style-type: square;
+      }
+    }
   }
   ol li {
     list-style-type: decimal;
@@ -239,10 +245,10 @@
   :not(pre) > code[class*="language-"] {
     padding: 0.2rem 0.4rem;
   }
-  blockquote{
+  blockquote {
     padding: 8px 12px;
     background-color: #f3f3f3;
-    p{
+    p {
       margin: 0;
     }
   }

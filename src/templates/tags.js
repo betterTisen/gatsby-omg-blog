@@ -35,15 +35,15 @@ class BlogTagsTemplate extends React.Component {
             return (
               <Link
                 className={`main-img-left-layout${
-                  node.frontmatter.top_img ? " main-have-img" : " main-no-img"
+                  node.frontmatter.topImg ? " main-have-img" : " main-no-img"
                 }`}
                 to={node.fields.slug}
                 key={node.fields.slug}
               >
-                {node.frontmatter.top_img ? (
+                {node.frontmatter.topImg ? (
                   <div className="left-img">
                     <img
-                      src={require(`../../content/assets/top_image/${node.frontmatter.top_img}`)}
+                      src={require(`../../content/assets/top_image/${node.frontmatter.topImg}`)}
                       alt=""
                     />
                   </div>
@@ -108,7 +108,7 @@ export const pageQuery = graphql`
             title
             description
             tags
-            top_img
+            topImg
             top
           }
         }
