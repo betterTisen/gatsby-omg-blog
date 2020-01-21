@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
             
             return (
               <Link
-                className={`main-img-left-layout${
+                className={`main-img-left-layout fade-in-ani${
                   node.frontmatter.topImg ? " main-have-img" : " main-no-img"
                 }`}
                 to={node.fields.slug}

@@ -21,7 +21,7 @@ class BlogAboutTemplate extends React.Component {
         mainHeadData={mainHeadData}
       >
         <SEO title={`Message`} />
-        <div className="Option-class Message-class">
+        <div className="Option-class Message-class fade-in-ani">
           <div className="Option-container">
             <h2>
               <center>
