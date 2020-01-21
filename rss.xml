@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Jan 2020 03:54:05 GMT</lastBuildDate><item><title><![CDATA[OMG！简约至上的博客主题]]></title><description><![CDATA[快速开始 这是一款基于 gatsby-start-blog 开发的一款博客。添加了 博客标签、访问统计、评论系统 等功能。
-如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下放详细的博客文档。
-如果在使用该主题时有任何问题，欢迎留言～  主题安装 该主题基于 nodejs…]]></description><link>https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</guid><pubDate>Mon, 20 Jan 2020 18:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;快速开始&quot;&gt;快速开始&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 21 Jan 2020 07:27:19 GMT</lastBuildDate><item><title><![CDATA[OMG！简约至上的博客主题]]></title><description><![CDATA[快速开始 这是一款基于 gatsby-start-blog 开发的一款博客。添加了 博客标签、访问统计、评论系统 等功能。
+如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下方详细的博客文档。
+在使用该主题时有任何问题，欢迎留言～  主题安装 该主题基于 nodejs…]]></description><link>https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_01_20_omg_blog_doc/</guid><pubDate>Mon, 20 Jan 2020 18:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;快速开始&quot;&gt;快速开始&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这是一款基于 gatsby-start-blog 开发的一款博客。添加了 &lt;strong&gt;博客标签&lt;/strong&gt;、&lt;strong&gt;访问统计&lt;/strong&gt;、&lt;strong&gt;评论系统&lt;/strong&gt; 等功能。
-如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下放详细的博客文档。
-如果在使用该主题时有任何问题，欢迎留言～&lt;/p&gt;
+如果有喜欢这个主题的小伙伴，需要使用其进行博客编写，请看下方详细的博客文档。
+在使用该主题时有任何问题，欢迎留言～&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -57,6 +57,7 @@
 &lt;ul&gt;
 &lt;li&gt;title：文章名称（不填则默认展示文件夹名）&lt;/li&gt;
 &lt;li&gt;date：文章发布时间，注意时间格式必须填写完整（不填则不显示）&lt;/li&gt;
+&lt;li&gt;description：文章简述，用于首页文章的简述（不填则从文章开头截取）&lt;/li&gt;
 &lt;li&gt;tags：文章标签类别（不填则无类别）&lt;/li&gt;
 &lt;li&gt;topImg: 首页头图展示（不填写则无头图，图片文件需放在/content/assets/top_image/下）&lt;/li&gt;
 &lt;li&gt;top: 文章是否置顶（填写 true 或 false，默认为 false）&lt;/li&gt;
@@ -64,6 +65,7 @@
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
 title: OMG！简约至上的博客主题
 date: 2020-1-20 18:00:00
+description:xxxx...
 tags:
   &lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; web
   &lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; react
