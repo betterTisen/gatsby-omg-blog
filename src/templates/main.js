@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
         <div className="Main-list-class">
           {newPosts.map(node => {
             const title = node.frontmatter.title || node.fields.slug
-            
+
             return (
               <Link
                 className={`main-img-left-layout fade-in-ani${
@@ -100,7 +100,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
             description
             tags

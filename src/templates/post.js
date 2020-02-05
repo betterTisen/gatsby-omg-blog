@@ -30,7 +30,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
 
-        <div className="Post-page-class">
+        <div className="Post-page-class fade-in-ani">
           <article>
             <section
               className="omg-markdown"
