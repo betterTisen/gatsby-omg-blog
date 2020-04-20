@@ -16,9 +16,9 @@ exports.createPages = async ({ graphql, actions }) => {
   await Main(graphql, createPage)
   await Tags(graphql, createPage)
 
-  side.message && (await Message(createPage))
-  side.about && (await About(createPage))
-  side.github && (await Github(createPage))
+  side.message.enable && (await Message(createPage))
+  side.about.enable && (await About(createPage))
+  side.github.enable && (await Github(createPage))
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
