@@ -2,7 +2,7 @@ module.exports = {
   // 博客主要信息
   title: `Gatsby OMG Blog`,
   author: `Byeguo`,
-  notice: `代码的价值在于产品，产品的价值在于用户`,
+  notice: `怀虔诚之态 以拥抱未来`,
   description: `A personal blog used by gatsby`,
   siteUrl: `https://www.byeguo.cn`,
 
@@ -20,6 +20,10 @@ module.exports = {
   side: {
     message: true,
     about: true,
+    github: {
+      enable: true,
+      username: `betterTisen`, //用于读取仓库项目信息
+    },
     // 底部联系方式
     footer: {
       qq: ``,

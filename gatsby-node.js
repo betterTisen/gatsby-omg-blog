@@ -8,6 +8,7 @@ const { Tags } = require("./gatsby_pages/tags")
 
 const { About } = require("./gatsby_pages/options/about")
 const { Message } = require("./gatsby_pages/options/message")
+const { Github } = require("./gatsby_pages/options/github")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -17,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   side.message && (await Message(createPage))
   side.about && (await About(createPage))
+  side.github && (await Github(createPage))
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

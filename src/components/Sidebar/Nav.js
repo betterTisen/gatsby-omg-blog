@@ -11,12 +11,16 @@ export default ({ handleHamb }) => {
           side {
             message
             about
+            github {
+              enable
+              username
+            }
           }
         }
       }
     }
   `)
-  const { message, about } = data.site.siteMetadata.side
+  const { message, about, github } = data.site.siteMetadata.side
 
   return (
     <div className={`Nav-class`}>
@@ -27,11 +31,13 @@ export default ({ handleHamb }) => {
             <span>&#xeb8e;</span> 首页
           </Link>
         </li>
-        {/* <li>
-            <Link onClick={handleHamb} to="/">
+        <li>
+          {github.enable && (
+            <Link onClick={handleHamb} to="/github">
               <span>&#xe603;</span> 仓库
             </Link>
-          </li> */}
+          )}
+        </li>
         {message && (
           <li>
             <Link onClick={handleHamb} to="/message">
