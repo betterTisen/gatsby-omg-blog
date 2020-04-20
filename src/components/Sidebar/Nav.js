@@ -9,8 +9,12 @@ export default ({ handleHamb }) => {
       site {
         siteMetadata {
           side {
-            message
-            about
+            message {
+              enable
+            }
+            about {
+              enable
+            }
             github {
               enable
               username
@@ -38,14 +42,14 @@ export default ({ handleHamb }) => {
             </Link>
           )}
         </li>
-        {message && (
+        {message.enable && (
           <li>
             <Link onClick={handleHamb} to="/message">
               <span>&#xe606;</span> 留言
             </Link>
           </li>
         )}
-        {about && (
+        {about.enable && (
           <li>
             <Link onClick={handleHamb} to="/about">
               <span>&#xe609;</span> 关于我
