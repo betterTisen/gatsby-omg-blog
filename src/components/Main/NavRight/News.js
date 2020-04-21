@@ -29,10 +29,9 @@ function NavRightNews() {
           return (
             <li key={node.fields.slug}>
               <Link to={node.fields.slug}>
-                <div
-                  className="imgBox"
-                  style={{ backgroundImage: `url(${imgUrl})` }}
-                ></div>
+                <div className="imgBox">
+                  <i style={{ backgroundImage: `url(${imgUrl})` }}></i>
+                </div>
                 <span className="textTitle">{node.frontmatter.title}</span>
               </Link>
             </li>

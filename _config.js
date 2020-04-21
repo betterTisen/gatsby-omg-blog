@@ -22,7 +22,7 @@ module.exports = {
       enable: true,
     },
     about: {
-      enable: false,
+      enable: true,
     },
     github: {
       enable: true,
@@ -45,8 +45,8 @@ module.exports = {
   // 查看文档（https://valine.js.org/）
   valine: {
     enable: true,
-    appId: "ojyETDuDNqK1Vj4R6SL7XX0j-9Nh9j0Va",
-    appKey: "womPC41Gyh9L0V5rTwpmytQU",
+    appId: "",
+    appKey: "",
     placeholder: "随便说点什么吧...",
     avatar: "robohash",
   },
