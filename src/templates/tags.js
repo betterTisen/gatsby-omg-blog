@@ -51,7 +51,7 @@ class BlogTagsTemplate extends React.Component {
                   ""
                 )}
                 <header>
-                  {title}
+                  <span>{title}</span>
                   {node.frontmatter.top && (
                     <div className="top-badge">置顶</div>
                   )}

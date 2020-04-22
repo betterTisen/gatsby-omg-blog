@@ -46,8 +46,13 @@
       font-size: 19px;
       color: #555;
       overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+
+      span {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
       .top-badge {
         position: absolute;
         top: 5px;
