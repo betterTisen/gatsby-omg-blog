@@ -25,10 +25,10 @@ class BlogAboutTemplate extends React.Component {
           <div className="Option-container about-container">
             <div className="note">
               <p>姓名：宋昊天</p>
-              <p>年龄：23</p>
+              <p>年龄：{new Date().getFullYear() - 1996}</p>
               <p>地址：杭州市 西湖区</p>
               <p>
-                博客：<a href="https://www.byeguo.cn">https://www.byeguo.cn</a>
+                博客：<a href="https://omg.byeguo.cn">https://omg.byeguo.cn</a>
               </p>
               <p>
                 github：
