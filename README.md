@@ -2,7 +2,9 @@
 
 点击[传送门](https://omg.byeguo.cn/)查看效果
 
-## 一套基于 gatsby-starter-blog 的个人博客主题
+## GATSBY-OMG-BLOG
+
+一套基于 gatsby-starter-blog 的个人博客主题
 
 预览：
 
