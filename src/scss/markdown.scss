@@ -1,18 +1,20 @@
 .omg-markdown {
+  max-width: 675px;
   pre,
   code {
     font-size: 13.5px;
-    font-family: Roboto, "Courier New", Consolas, Inconsolata, Courier,
-      monospace;
     margin: auto 5px;
   }
 
-  code {
-    white-space: pre-wrap;
-    display: inline;
-  }
+  // code {
+  // white-space: pre-wrap;
+  // display: inline;
+  // }
 
   pre {
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
     font-size: 15px;
     line-height: 1.4em;
     display: block;
@@ -20,10 +22,12 @@
 
   pre code {
     // white-space: pre;
-    overflow: auto;
-    border-radius: 3px;
     padding: 1px 1px;
     display: block;
+    color: #999;
+    overflow: auto;
+    overflow-x: scroll;
+    border-radius: 3px;
   }
 
   strong,
@@ -242,6 +246,7 @@
   ol li {
     list-style-type: decimal;
   }
+
   :not(pre) > code[class*="language-"] {
     padding: 0.2rem 0.4rem;
   }
