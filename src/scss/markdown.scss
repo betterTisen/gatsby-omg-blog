@@ -30,6 +30,14 @@
     border-radius: 3px;
   }
 
+  .token.block-comment,
+  .token.cdata,
+  .token.comment,
+  .token.doctype,
+  .token.prolog {
+    color: #bbb;
+  }
+
   strong,
   b {
     font-weight: bold;
