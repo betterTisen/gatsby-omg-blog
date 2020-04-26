@@ -2,7 +2,7 @@
 
 ## 一套基于 gatsby-starter-blog 的个人博客主题
 
-![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v1.0-5FCF80.svg?style=plastic)
+![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v1.1-5FCF80.svg?style=plastic)
 
 预览：
 
