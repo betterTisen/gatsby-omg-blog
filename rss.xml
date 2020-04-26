@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 22 Apr 2020 09:08:45 GMT</lastBuildDate><item><title><![CDATA[新瓶旧酒：如何用js写一个js解释器]]></title><description><![CDATA[想看代码的直接下载项目即可，里面注释写的还算详细。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Apr 2020 08:35:58 GMT</lastBuildDate><item><title><![CDATA[新瓶旧酒：如何用js写一个js解释器]]></title><description><![CDATA[想看代码的直接下载项目即可，里面注释写的还算详细。
 项目地址：https://github.com/betterTisen/oreojs…]]></description><link>https://www.byeguo.cn/post/2020_04_21_js_ast/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_04_21_js_ast/</guid><pubDate>Tue, 21 Apr 2020 18:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想看代码的直接下载项目即可，里面注释写的还算详细。
 项目地址：&lt;a href=&quot;https://github.com/betterTisen/oreojs&quot;&gt;https://github.com/betterTisen/oreojs&lt;/a&gt;&lt;/p&gt;
@@ -215,7 +215,7 @@
 &lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
 &lt;p&gt;总结一下，写这个解释器最复杂的就是处理作用域的问题，理解了这个解析器递归解释树的思路后，就是去写NodeIterator中不同type所对应的方法就行啦，看完这边文章后还不了解的话可以把github的代码拉下来，通过整个项目去看更容易理解一些，毕竟文章篇幅有限。&lt;/p&gt;
 &lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;%E5%89%8D%E7%AB%AF%E4%B8%8E%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%94%A8JS%E5%86%99%E4%B8%80%E4%B8%AAJS%E8%A7%A3%E9%87%8A%E5%99%A8&quot;&gt;前端与编译原理——用 JS 写一个 JS 解释器&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000017241258#item-6-2&quot;&gt;前端与编译原理——用 JS 写一个 JS 解释器&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/jrainlau/canjs&quot;&gt;jrainlau/canjs&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[10分钟了解浏览器的Event Loop]]></title><description><![CDATA[什么是 Event Loop 因为一定的历史原因，JavaScript 是一种运行在浏览器的语言，而 run in Browser 最重要的就是减少语言的运行成本，因为 js 的设计起初是为了操作浏览器 dom，如若设计成多线程必然会引起文件操作的资源竞争
 Event Loop…]]></description><link>https://www.byeguo.cn/post/2020_03_25_js_event_loop/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_03_25_js_event_loop/</guid><pubDate>Wed, 25 Mar 2020 18:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;什么是-event-loop&quot;&gt;什么是 Event Loop&lt;/h2&gt;
 &lt;p&gt;因为一定的历史原因，JavaScript 是一种运行在浏览器的语言，而 run in Browser 最重要的就是减少语言的运行成本，因为 js 的设计起初是为了操作浏览器 dom，如若设计成多线程必然会引起文件操作的资源竞争
