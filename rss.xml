@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 26 Apr 2020 08:35:58 GMT</lastBuildDate><item><title><![CDATA[新瓶旧酒：如何用js写一个js解释器]]></title><description><![CDATA[想看代码的直接下载项目即可，里面注释写的还算详细。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Apr 2020 07:40:18 GMT</lastBuildDate><item><title><![CDATA[手摸手：用js实现一个LRU缓存淘汰器]]></title><description><![CDATA[什么是 LRU 算法 LRU 全称 Least Resource Used，翻译过来即是 最后被使用的资源。也就是说，最后被使用的资源是有用的，很久没有使用过的资源是无用的，内存满了之后 LRU…]]></description><link>https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</guid><pubDate>Mon, 27 Apr 2020 14:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;什么是-lru-算法&quot;&gt;什么是 LRU 算法&lt;/h2&gt;
+&lt;p&gt;LRU 全称 &lt;strong&gt;Least Resource Used&lt;/strong&gt;，翻译过来即是 最后被使用的资源。也就是说，最后被使用的资源是有用的，很久没有使用过的资源是无用的，内存满了之后 LRU 就会优先销毁 很久没有使用的资源。&lt;/p&gt;
+&lt;p&gt;🌰 拿安卓手机举例，把运行后台想像成一个存储空间，假设手机最多只能在后台运行 3 个程序，当你按顺序打开 app1、app2、app3 时，在空间中的存储顺序按 LRU 的排序方式为 app3、app2、app1，此时再次打开 app1、顺序变为 app1、app3、app2，最后再打开 app4，由于后台最多只能运行 3 个程序，app2 为最久未打开的程序，所以 app2 被移除，app4 进入后台，如图所示：&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2d95e74acaa0435db3ea428eee4e6373/54b06/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.387096774193544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAARlAAAEZQAGA43XUAAAB+UlEQVQozz1S204TURSdjyDCA73O5dzmds6cM/fpdIZSWmqhFEqbUqFqDLWifQBC1ESMib7ok2/+rYMFk/WyV/ZaO3vvJRHMQd1AGgWEq9gpoGCHEEE0Cuu6jh7JNRARSHf/l1KA/f7gRTvtU+CohigsNMIjzc2T3vD4ZWokOhYKcTTshDjggHuaKCTKWhyT4Ozq7vn+mKtsu66XqroCmaPQxnA2vbkXRggVWlIMAB1btrvz5ZsvvwIjVBB7EDdhUNmomGU9NsLO6KQ3OhFB2oIRq1lwU85Ur5PtN7o9P0h3cBjQRsrzHIXaerJrRcerz+2jmQPF6XJ58ekuORhxmbGolQ2mAvvj6fnb7/fjq/cJiSwauU6aoOBRHJpxb7bI8kMO3S0otlBQsxMm2+3J68WP36HTVGW6CUXFSm0oJrdfR4sbqlL133WlHAT1japTNlMSKpgCzBCkeyQ2a4byrJ4CnxFPJYxglqNAL2OrhFs4ArooIAkz7C9vdw6nVGVK4Uc41F0h09bwfPXzT+7vEY3JBYl5aMTds8vBbOEBd7sCSlUkJUZ8cvFuNzsQgMvkYROt6IOu6+XN3aNIj4pXFzxALDbjV9ffJvNVJ+5NP3wcXV5LFLm4QiyVFcFQnkJiYdcGjiFbNhLaUyRMJFAZozLyvaw9mmeD2V/sYYQ3hDo9AQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;图例&quot;
+        title=&quot;图例&quot;
+        src=&quot;/static/2d95e74acaa0435db3ea428eee4e6373/799d3/1.png&quot;
+        srcset=&quot;/static/2d95e74acaa0435db3ea428eee4e6373/00d96/1.png 148w,
+/static/2d95e74acaa0435db3ea428eee4e6373/0b23c/1.png 295w,
+/static/2d95e74acaa0435db3ea428eee4e6373/799d3/1.png 590w,
+/static/2d95e74acaa0435db3ea428eee4e6373/54b06/1.png 620w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;lru-算法的描述&quot;&gt;LRU 算法的描述&lt;/h2&gt;
+&lt;p&gt;根据上面的例子，设想一下如果我们需要实现一个类来模拟 LRU 的缓存方式，首先，我们需要一个用户定义的常量 SIZE，用于告知其最大缓存数是多少。其次，需要一个 get 和 put methods，用于获取其保存的内容和插入新的内容。&lt;/p&gt;
+&lt;h2 id=&quot;lru-实现&quot;&gt;LRU 实现&lt;/h2&gt;
+&lt;p&gt;这里选择用 map 来实现 LRU，因为 map 的键值插入是有序的,而 object 插入是无序的，无法找到最先插入的数据&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LRUCache&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;size &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; size
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;undefined&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;undefined&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 重新向map注入&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; val
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 如果key存在，del key&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; keys &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 长度超出时 清楚第一项&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;size &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;keys&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[新瓶旧酒：如何用js写一个js解释器]]></title><description><![CDATA[想看代码的直接下载项目即可，里面注释写的还算详细。
 项目地址：https://github.com/betterTisen/oreojs…]]></description><link>https://www.byeguo.cn/post/2020_04_21_js_ast/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_04_21_js_ast/</guid><pubDate>Tue, 21 Apr 2020 18:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想看代码的直接下载项目即可，里面注释写的还算详细。
 项目地址：&lt;a href=&quot;https://github.com/betterTisen/oreojs&quot;&gt;https://github.com/betterTisen/oreojs&lt;/a&gt;&lt;/p&gt;
@@ -910,7 +976,7 @@ yarl==1.3.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;a href=&quot;https://cqp.cc/t/15827&quot;&gt;对照表 👈&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[markdown在omg中的渲染效果展示]]></title><description><![CDATA[本文仅为 omg-markdown 引擎渲染效果测试，方便日后博客编写 标题 这是二级标题 这是三级标题 这是四级标题 这是五级标题 这是六级标题 字体 加粗
 斜体
 删除线
-全家桶 列表 无序列表 无序列表 有序列表 有序列表 分割线 表格 表 表啊 我是表 1111 12…]]></description><link>https://www.byeguo.cn/post/2019_10_26_markdown_study/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_10_26_markdown_study/</guid><pubDate>Sat, 26 Oct 2019 16:26:53 GMT</pubDate><content:encoded>&lt;p&gt;本文仅为 omg-markdown 引擎渲染效果测试，方便日后博客编写&lt;/p&gt;
+全家桶 列表 无序列表 无序列表 有序列表 有序列表 分割线 表格 表 表啊 我是表 1111 12…]]></description><link>https://www.byeguo.cn/post/2019_10_26_markdown_show/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2019_10_26_markdown_show/</guid><pubDate>Sat, 26 Oct 2019 16:26:53 GMT</pubDate><content:encoded>&lt;p&gt;本文仅为 omg-markdown 引擎渲染效果测试，方便日后博客编写&lt;/p&gt;
 &lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 这是二级标题&lt;/span&gt;
 
