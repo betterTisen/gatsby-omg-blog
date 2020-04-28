@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/SEO"
+import Loading from "../../components/Loading"
 
 class BlogGithubTemplate extends React.Component {
   constructor(props) {
@@ -27,28 +28,32 @@ class BlogGithubTemplate extends React.Component {
         <SEO title={`My Github`} />
         <div className="Option-class Github-class fade-in-ani">
           <div className="Option-container">
-            {this.state.repos.map(e => {
-              return (
-                <a
-                  className="Repos-item fade-in-ani"
-                  key={e.id}
-                  href={e.clone_url}
-                >
-                  <header>
-                    {e.name}
-                    <div className="top-badge">点击查看</div>
-                  </header>
-                  <p>{e.description}</p>
-                  <div className="repos-nav">
-                    <span>
-                      <i>{e.stargazers_count} stars</i> /
-                      <i>{e.forks_count} forks</i>
-                    </span>
-                    <small>{e.language}</small>
-                  </div>
-                </a>
-              )
-            })}
+            {this.state.repos.length === 0 ? (
+              <Loading />
+            ) : (
+              this.state.repos.map(e => {
+                return (
+                  <a
+                    className="Repos-item fade-in-ani"
+                    key={e.id}
+                    href={e.clone_url}
+                  >
+                    <header>
+                      {e.name}
+                      <div className="top-badge">点击查看</div>
+                    </header>
+                    <p>{e.description}</p>
+                    <div className="repos-nav">
+                      <span>
+                        <i>{e.stargazers_count} stars</i> /
+                        <i>{e.forks_count} forks</i>
+                      </span>
+                      <small>{e.language}</small>
+                    </div>
+                  </a>
+                )
+              })
+            )}
           </div>
         </div>
       </Layout>
