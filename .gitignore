@@ -104,4 +104,4 @@ public/
 .tern-port
 
 # 文章内容不上传至github
-content/blog
+# content/blog
