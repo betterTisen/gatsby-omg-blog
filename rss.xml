@@ -1,4 +1,179 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Apr 2020 04:11:49 GMT</lastBuildDate><item><title><![CDATA[手摸手：用js实现一个LRU缓存淘汰器]]></title><description><![CDATA[什么是 LRU 算法 LRU 全称 Least Resource Used，翻译过来即是 最后被使用的资源。也就是说，最后被使用的资源是有用的，很久没有使用过的资源是无用的，内存满了之后 LRU…]]></description><link>https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</guid><pubDate>Mon, 27 Apr 2020 14:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;什么是-lru-算法&quot;&gt;什么是 LRU 算法&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 16 Jun 2020 17:05:01 GMT</lastBuildDate><item><title><![CDATA[【每周算法】：两数之和]]></title><description><![CDATA[hello…]]></description><link>https://www.byeguo.cn/post/2020_06_15_mzsf_1/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_06_15_mzsf_1/</guid><pubDate>Mon, 15 Jun 2020 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/11a5915a4539d9e47cac36c5505f8617/0cd64/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDAgT/xAAXAQADAQAAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHvnZxozQP/xAAaEAACAgMAAAAAAAAAAAAAAAABAgARAxIy/9oACAEBAAEFAhpHAYnHcCxO2Fn/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAbEAACAgMBAAAAAAAAAAAAAAAAASIxAhFhIf/aAAgBAQAGPwKaxT4R8LHsfC2j/8QAHBAAAgMAAwEAAAAAAAAAAAAAAREAITFBcYHB/9oACAEBAAE/ISVahWg8DJcF/IBTlIVLyJgHFvcN0oJUv/AZ/9oADAMBAAIAAwAAABALz//EABkRAAMAAwAAAAAAAAAAAAAAAAABESExof/aAAgBAwEBPxBYtElN8P/EABgRAAMBAQAAAAAAAAAAAAAAAAABETFR/9oACAECAQE/ELwbdw//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRYYH/2gAIAQEAAT8QqjlReAx5zmEFgUPGfiD3UCjSYC0lKNO24QwBVO3l81L46iYn2f/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/11a5915a4539d9e47cac36c5505f8617/88218/1.jpg&quot;
+        srcset=&quot;/static/11a5915a4539d9e47cac36c5505f8617/7237a/1.jpg 148w,
+/static/11a5915a4539d9e47cac36c5505f8617/0cfdf/1.jpg 295w,
+/static/11a5915a4539d9e47cac36c5505f8617/88218/1.jpg 590w,
+/static/11a5915a4539d9e47cac36c5505f8617/0cd64/1.jpg 864w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;hello~ 本周，我们正式开始 &lt;strong&gt;每周算法&lt;/strong&gt; 这个专题了，我会尽自己的努力，在自己学习算法的道路上，把自己做过的题目和解题思路 分享给大家，希望大家能和我一起进步、成长。&lt;/p&gt;
+&lt;p&gt;因为本周是第一篇文章，所以我会给出一道题目以及该题的解题过程。并且在结尾给出下周的题目，留给大家时间思考、练习，然后在下周给出本周题目的解答过程～&lt;/p&gt;
+&lt;h2 id=&quot;每周算法：两数之和&quot;&gt;每周算法：两数之和&lt;/h2&gt;
+&lt;p&gt;话不多说，直接进入主题，本周我们来学习leetcode上的第一题，关于&lt;strong&gt;两数之和&lt;/strong&gt;的问题，题目如下：&lt;/p&gt;
+&lt;p&gt;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//举个🌰&lt;/span&gt;
+nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+target &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;
+因为 nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;
+所以 &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解答过程&quot;&gt;解答过程&lt;/h2&gt;
+&lt;p&gt;这里我会用2种解法由浅入深的给大家完成这道题目&lt;/p&gt;
+&lt;h3 id=&quot;直接遍历&quot;&gt;直接遍历&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;twoSum&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; target&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; dif &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;// 因为题目说 同一个元素不能使用两遍&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;// 故从i+1开始遍历&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; dif&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;甭管什么花里胡哨的，老夫写算法就没有for循环解决不了的，如果不行，就再套一层for循环！奥力给！造它就完了！&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 316px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ac2cd609c4a30e2c2e7df3a6e4d5bad3/f6340/2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.55696202531645%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/9oADAMBAAIQAxAAAAGCs8kYZoh//8QAGRABAQEAAwAAAAAAAAAAAAAAAgERAxIi/9oACAEBAAEFAiSqwCDlnH5TndLQv//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAwEBPwERf//EABYRAAMAAAAAAAAAAAAAAAAAAAEQMf/aAAgBAgEBPwE1f//EABoQAAIDAQEAAAAAAAAAAAAAAAARATFBEiH/2gAIAQEABj8Cmh+DIWnOWJn/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUGR/9oACAEBAAE/Iet03S4BXroVG6xrBeTqpplAfUKCsn//2gAMAwEAAgADAAAAEGvP/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAMf/aAAgBAwEBPxB3nJGb/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEhEf/aAAgBAgEBPxBcCtP/xAAbEAEAAgIDAAAAAAAAAAAAAAABADEhQRFxgf/aAAgBAQABPxBtoVUNkZvPmCXUQOSTqiUexnJT5MpxMLaeREo2Man/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/ac2cd609c4a30e2c2e7df3a6e4d5bad3/f6340/2.jpg&quot;
+        srcset=&quot;/static/ac2cd609c4a30e2c2e7df3a6e4d5bad3/7237a/2.jpg 148w,
+/static/ac2cd609c4a30e2c2e7df3a6e4d5bad3/0cfdf/2.jpg 295w,
+/static/ac2cd609c4a30e2c2e7df3a6e4d5bad3/f6340/2.jpg 316w&quot;
+        sizes=&quot;(max-width: 316px) 100vw, 316px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;直接遍历的方法是最容易想到的，所以代码就不进行解释了。但是此方法的时间复杂度是O(n^2)，所以执行效率非常差，虽然我上面说 &lt;strong&gt;没有for循环解决不了的问题&lt;/strong&gt; ，但是在实际面试过程当中，面试题出现算法类型的问题时，面试官是不希望看到这种解法的，如果在面试过程中使用多重for循环嵌套，实际上是一个减分项…&lt;/p&gt;
+&lt;p&gt;所以，请看第二种解法：&lt;/p&gt;
+&lt;h3 id=&quot;map-遍历&quot;&gt;Map 遍历&lt;/h3&gt;
+&lt;p&gt;废话不多说，先上代码：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;twoSum&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; target&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; mapHash &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; dif &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; target &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;mapHash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dif&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mapHash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dif&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		mapHash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我在leetcode上做了编译测试，执行效率比之前的快了将近一倍，由于其只有一层for循环，故时间复杂度为O(n)，大致思路是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/014a4ec17d2b7310f30941fdf69bf532/0fd75/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.92664509169363%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAABvUlEQVQ4y41U25aqMBTz//9xPI4u5dIb5VJQh8nJLpYBZZbzkLUpbUN20rKrhht+g+uvaO5faL9GdER9vcd3FWHbEGtal/bsfiOzXDSMI0ptcTwXOJwytF1Ayw8IkfMNvFRZ/1fCwM2ubnHONaHQhB7NjYRhQKFsrG8Vuqc22vE7Eofbne2P0zpR1vVTXSiUPbslwYTpWfwybOuUKWSlgXYeF1ZH7zzJK87PIhYCdrOa+CJJn6p4pJsOqmpg2bqoWkJatg+lLwotlelwnaG6AYb14mp8XEocSwvT9lDWozQVCu1gOJfTyxROJEzMeR2gSZJaT+14tlZz7BmIPMexVJnb8D4Savqyzw0utp4JP6lIVB2Vw4n4LAwOxJ6enqly7ftGy9KeBJImLP2JbYhPDEcQnx9YEornKe2ZUIf1l6rrDQVJJGnPDb4foKsappPW12dviU3CCG7KjINqwnREiNK3UEy7elzBLdJXQkJUyE2pGcTKKzku9Pv5um0SCkE8Mkz6H6/aPtNTMGpCWXc48P2Rh9unn8QW4fN1WwazgmwQxaLyLwp/vvjqjYxFVc5QJKi3Ct9htuXpyGyt/Q8S+R8hdYQy0wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/014a4ec17d2b7310f30941fdf69bf532/799d3/3.png&quot;
+        srcset=&quot;/static/014a4ec17d2b7310f30941fdf69bf532/00d96/3.png 148w,
+/static/014a4ec17d2b7310f30941fdf69bf532/0b23c/3.png 295w,
+/static/014a4ec17d2b7310f30941fdf69bf532/799d3/3.png 590w,
+/static/014a4ec17d2b7310f30941fdf69bf532/2a3d6/3.png 885w,
+/static/014a4ec17d2b7310f30941fdf69bf532/ae92f/3.png 1180w,
+/static/014a4ec17d2b7310f30941fdf69bf532/0fd75/3.png 1854w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;注意看图例的&lt;strong&gt;mapHash[ nums[i] ]=i&lt;/strong&gt; 与上面的 &lt;strong&gt;mapHash[ dif ]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实际上就是判断了 两数之差dif 是否 存在于mapHash的集合中&lt;/strong&gt;，&lt;/p&gt;
+&lt;p&gt;mapHash是什么？&lt;strong&gt;它就是用于存储每一项所对应的key&lt;/strong&gt;，这样，在for循环当中，只需要每次查找这个集合当中是否有能够匹配当前数据的key即可～&lt;/p&gt;
+&lt;h2 id=&quot;下周题目&quot;&gt;下周题目&lt;/h2&gt;
+&lt;p&gt;既然这周完成了两数之和的题目，我想…下周要不来个三数之和吧～&lt;/p&gt;
+&lt;p&gt;嗯就这样！！&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 547px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/802421b39095b130271a7716c90ffd1e/332e0/4.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.54478976234005%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgT/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAABYqMwMKEI/wD/xAAZEAADAQEBAAAAAAAAAAAAAAAAAQIhERP/2gAIAQEAAQUCZVqTaG8d8PVn/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEiMf/aAAgBAwEBPwGcXf/EABcRAQADAAAAAAAAAAAAAAAAAAABIjH/2gAIAQIBAT8BnFn/xAAaEAEBAAIDAAAAAAAAAAAAAAABABAhETFx/9oACAEBAAY/ArdyLjofbQX/xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMUFx/9oACAEBAAE/IVZdyhtuZFYXkUhFkLwQIoZ5P//aAAwDAQACAAMAAAAQwM//xAAYEQEBAAMAAAAAAAAAAAAAAAABABEhsf/aAAgBAwEBPxBpkSLZ2//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxBpolbf/8QAGxABAAICAwAAAAAAAAAAAAAAAQARIUExUWH/2gAIAQEAAT8QQgKSDYujA7WYUeSq8hgmRYI2CVRLRP8A/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/802421b39095b130271a7716c90ffd1e/332e0/4.jpg&quot;
+        srcset=&quot;/static/802421b39095b130271a7716c90ffd1e/7237a/4.jpg 148w,
+/static/802421b39095b130271a7716c90ffd1e/0cfdf/4.jpg 295w,
+/static/802421b39095b130271a7716c90ffd1e/332e0/4.jpg 547w&quot;
+        sizes=&quot;(max-width: 547px) 100vw, 547px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;该题出自 leetcode 15题，题目如下：&lt;/p&gt;
+&lt;p&gt;给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：答案中不可以包含重复的三元组。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//举个🌰&lt;/span&gt;
+给定数组 nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;，
+
+满足要求的三元组集合为：
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里给个小提示，三数之和的解法其实与链表的知识点相关，你想到怎么做了嘛～&lt;/p&gt;
+&lt;p&gt;我会在下周给大家解答，⛽️⛽️⛽️&lt;/p&gt;</content:encoded></item><item><title><![CDATA[手摸手：用js实现一个LRU缓存淘汰器]]></title><description><![CDATA[什么是 LRU 算法 LRU 全称 Least Resource Used，翻译过来即是 最后被使用的资源。也就是说，最后被使用的资源是有用的，很久没有使用过的资源是无用的，内存满了之后 LRU…]]></description><link>https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_04_27_js_lru_ strategy/</guid><pubDate>Mon, 27 Apr 2020 14:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;什么是-lru-算法&quot;&gt;什么是 LRU 算法&lt;/h2&gt;
 &lt;p&gt;LRU 全称 &lt;strong&gt;Least Resource Used&lt;/strong&gt;，翻译过来即是 最后被使用的资源。也就是说，最后被使用的资源是有用的，很久没有使用过的资源是无用的，内存满了之后 LRU 就会优先销毁 很久没有使用的资源。&lt;/p&gt;
 &lt;p&gt;🌰 拿安卓手机举例，把运行后台想像成一个存储空间，假设手机最多只能在后台运行 3 个程序，当你按顺序打开 app1、app2、app3 时，在空间中的存储顺序按 LRU 的排序方式为 app3、app2、app1，此时再次打开 app1、顺序变为 app1、app3、app2，最后再打开 app4，由于后台最多只能运行 3 个程序，app2 为最久未打开的程序，所以 app2 被移除，app4 进入后台，如图所示：&lt;/p&gt;
 &lt;p&gt;&lt;span
