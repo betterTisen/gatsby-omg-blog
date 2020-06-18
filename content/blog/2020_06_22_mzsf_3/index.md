@@ -39,13 +39,17 @@ var threeSumClosest = function(nums, target) {
 var threeSumClosest = function(nums, target) {
 	const len = nums.length
 	nums.sort((a,b)=>a-b) // 排序
+	// 过滤处理
 	if(len<3) return null
 	if(len==3) return nums[0]+nums[1]+nums[2]
-	
+	// 定义变量res 并赋一个初始值
 	let res = nums[0]+nums[1]+nums[2]
+	// 主循环
 	for(let i=0;i<len;i++){
+		// 定义双指针
 		let L = i+1
 		let R = len - 1
+		// 双指针遍历·启动！
 		while(L<R){
 			const sum = nums[i]+nums[L]+nums[R]
 			if(sum < target) L++
