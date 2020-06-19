@@ -78,7 +78,7 @@ var threeSum = function(nums) {
 ```javascript
 var threeSum = function(nums) {
 	let arr = []
-	if(nums == null || nums.length < 3) return res;
+	if(nums == null || nums.length < 3) return arr;
 	nums.sort((a, b) => a - b)
 	for(var i =0; i<nums.length-2; i++){
 		const hashMap = new Map()
@@ -91,7 +91,7 @@ var threeSum = function(nums) {
 			// 因为hashMap是首次记录第二次才会push到数组，所以需要判断只有三次重复才能continue
 			if(j>i+2 && nums[j]==nums[j-1] && nums[j]==nums[j-2])
 				continue
-			if(hashMap.get(dif) != undefined){
+			if(hashMap.has(dif)){
 				arr.push([nums[i],nums[hashMap.get(dif)],nums[j]])
 				hashMap.delete(dif)
 			}
