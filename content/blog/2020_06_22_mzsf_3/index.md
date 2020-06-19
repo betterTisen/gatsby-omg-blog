@@ -110,8 +110,6 @@ var threeSumClosest = function(nums, target) {
 
 下周依然是一道双指针遍历题，不过该题可是有多种解法的，各位可以先看看自己能想出来几种呢？
 
-本提来自leetcode第3题，欢迎留言！
-
 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
 ```JavaScript
@@ -132,3 +130,5 @@ var lengthOfLongestSubstring = function(s) {
 	// ...
 };
 ```
+
+本提来自leetcode第3题，欢迎留言并写出你的解法，我会在下周进行解答哦！
