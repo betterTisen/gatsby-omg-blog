@@ -57,5 +57,6 @@ module.exports = {
   },
 
   // 其他
+  postsPerPage: 8,
   pathPrefix: "", // 静态资源访问位置（仓库名）（/gatsby-omg-blog/）
 }
