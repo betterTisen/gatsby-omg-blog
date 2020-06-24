@@ -31,7 +31,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 输出: 2
 解释: 子数组 [4,3] 是该条件下的长度最小的连续子数组。
 var minSubArrayLen = function (s, nums) {
-	// ...
+  // ...
 };
 ```
 
@@ -49,20 +49,20 @@ var minSubArrayLen = function (s, nums) {
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {
-	let arr = []
-	let len = nums.length
-	let min = len + 1
-	let sum = 0
-	for (let i = 0; i < len; i++) {
-		arr.push(nums[i])
-		sum += nums[i]
-		while (sum >= s) {
-			sum -= arr[0]
-			min = Math.min(arr.length, min)
-			arr.shift()
-		}
-	}
-	return min == len + 1 ? 0 : min
+  let arr = []
+  let len = nums.length
+  let min = len + 1
+  let sum = 0
+  for (let i = 0; i < len; i++) {
+    arr.push(nums[i])
+    sum += nums[i]
+    while (sum >= s) {
+      sum -= arr[0]
+      min = Math.min(arr.length, min)
+      arr.shift()
+    }
+  }
+  return min == len + 1 ? 0 : min
 };
 ```
 
@@ -79,20 +79,20 @@ var minSubArrayLen = function (s, nums) {
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {
-	let row = 0
-	let len = nums.length
-	let min = len + 1
-	let sum = 0
-	for (let i = 0; i < len; i++) {
-		sum += nums[i]
-		// arr.push(nums[i]) 在这里等同于i++
-		while (sum >= s) {
-			sum -= nums[row]
-			min = Math.min(i-row+1, min)	// arr.length等同于i-row+1
-			row++ // arr.shift() 等同于 row++
-		}
-	}
-	return min == len + 1 ? 0 : min
+  let row = 0
+  let len = nums.length
+  let min = len + 1
+  let sum = 0
+  for (let i = 0; i < len; i++) {
+    sum += nums[i]
+    // arr.push(nums[i]) 在这里等同于i++
+    while (sum >= s) {
+      sum -= nums[row]
+      min = Math.min(i-row+1, min)	// arr.length等同于i-row+1
+      row++ // arr.shift() 等同于 row++
+    }
+  }
+  return min == len + 1 ? 0 : min
 };
 ```
 
@@ -126,7 +126,7 @@ var minSubArrayLen = function (s, nums) {
 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 
 var lengthOfLongestSubstring = function(s) {
-	// ...
+  // ...
 }
 ```
 

@@ -42,23 +42,23 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 ```javascript
 var threeSum = function(nums) {
-	let res = []
-	// 如果数组小于3时没有遍历的意义，故return
-	if(nums == null || nums.length < 3) return res;
-	nums.sort((a, b) => a-b) // 排序
-	for (let i = 0; i < nums.length - 2; i++) {
-		// 因为数组已经排序，所以当i>0时就没有遍历下去的意义了
-		if(nums[i] > 0) break;
-		// 去重处理
-		if(i > 0 && nums[i] == nums[i-1]) continue
-		for (let j = i + 1; j < nums.length - 1; j++) {
-			for (let k = j + 1; k < nums.length; k++) {
-				if (nums[i] + nums[j] + nums[k] === 0)
-					res.push([nums[i], nums[j], nums[k]])
-			}
-		}
-	}
-	return res
+  let res = []
+  // 如果数组小于3时没有遍历的意义，故return
+  if(nums == null || nums.length < 3) return res;
+  nums.sort((a, b) => a-b) // 排序
+  for (let i = 0; i < nums.length - 2; i++) {
+    // 因为数组已经排序，所以当i>0时就没有遍历下去的意义了
+    if(nums[i] > 0) break;
+    // 去重处理
+    if(i > 0 && nums[i] == nums[i-1]) continue
+    for (let j = i + 1; j < nums.length - 1; j++) {
+      for (let k = j + 1; k < nums.length; k++) {
+        if (nums[i] + nums[j] + nums[k] === 0)
+          res.push([nums[i], nums[j], nums[k]])
+      }
+    }
+  }
+  return res
 }
 ```
 
@@ -78,28 +78,28 @@ var threeSum = function(nums) {
 
 ```javascript
 var threeSum = function(nums) {
-	let arr = []
-	if(nums == null || nums.length < 3) return arr;
-	nums.sort((a, b) => a - b)
-	for(var i =0; i<nums.length-2; i++){
-		const hashMap = new Map()
-		if(nums[i] > 0) break;
-		// 去重处理
-		if(i > 0 && nums[i] == nums[i-1]) continue
-		for(var j =i+1; j<nums.length; j++){
-			const dif = -(nums[i]+nums[j])
-			// 去重处理
-			// 因为hashMap是首次记录第二次才会push到数组，所以需要判断只有三次重复才能continue
-			if(j>i+2 && nums[j]==nums[j-1] && nums[j]==nums[j-2])
-				continue
-			if(hashMap.has(dif)){
-				arr.push([nums[i],nums[hashMap.get(dif)],nums[j]])
-				hashMap.delete(dif)
-			}
-			hashMap.set(nums[j],j)
-		}
-	}
-	return arr
+  let arr = []
+  if(nums == null || nums.length < 3) return arr;
+  nums.sort((a, b) => a - b)
+  for(var i =0; i<nums.length-2; i++){
+    const hashMap = new Map()
+    if(nums[i] > 0) break;
+    // 去重处理
+    if(i > 0 && nums[i] == nums[i-1]) continue
+    for(var j =i+1; j<nums.length; j++){
+      const dif = -(nums[i]+nums[j])
+      // 去重处理
+      // 因为hashMap是首次记录第二次才会push到数组，所以需要判断只有三次重复才能continue
+      if(j>i+2 && nums[j]==nums[j-1] && nums[j]==nums[j-2])
+        continue
+      if(hashMap.has(dif)){
+        arr.push([nums[i],nums[hashMap.get(dif)],nums[j]])
+        hashMap.delete(dif)
+      }
+      hashMap.set(nums[j],j)
+    }
+  }
+  return arr
 };
 ```
 
@@ -118,28 +118,28 @@ var threeSum = function(nums) {
 
 ```javascript
 var threeSum = function(nums) {
-	let res = [];
-	if(nums == null || nums.length < 3) return res;
-	nums.sort((a, b) => a - b); // 排序
-	for (let i = 0; i < nums.length-2 ; i++) {
-		if(nums[i] > 0) break; 
-		if(i > 0 && nums[i] == nums[i-1]) continue; // 去重
-		let L = i+1;
-		let R = nums.length-1;
-		while(L < R){
-			const sum = nums[i] + nums[L] + nums[R];
-			if(sum == 0){
-				res.push([nums[i],nums[L],nums[R]]);
-				while (L<R && nums[L] == nums[L+1]) L++; // 去重
-				while (L<R && nums[R] == nums[R-1]) R--; // 去重
-				L++;
-				R--;
-			}
-			else if (sum < 0) L++;
-			else if (sum > 0) R--;
-		}
-	}        
-	return res;
+  let res = [];
+  if(nums == null || nums.length < 3) return res;
+  nums.sort((a, b) => a - b); // 排序
+  for (let i = 0; i < nums.length-2 ; i++) {
+    if(nums[i] > 0) break; 
+    if(i > 0 && nums[i] == nums[i-1]) continue; // 去重
+    let L = i+1;
+    let R = nums.length-1;
+    while(L < R){
+      const sum = nums[i] + nums[L] + nums[R];
+      if(sum == 0){
+        res.push([nums[i],nums[L],nums[R]]);
+        while (L<R && nums[L] == nums[L+1]) L++; // 去重
+        while (L<R && nums[R] == nums[R-1]) R--; // 去重
+        L++;
+        R--;
+      }
+      else if (sum < 0) L++;
+      else if (sum > 0) R--;
+    }
+  }        
+  return res;
 };
 ```
 
@@ -174,6 +174,6 @@ var threeSum = function(nums) {
 // 输出：2
 // 解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
 var threeSumClosest = function(nums, target) {
-	// ...
+  // ...
 };
 ```

@@ -29,7 +29,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 // 输出：2
 // 解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
 var threeSumClosest = function(nums, target) {
-	// ...
+  // ...
 };
 ```
 
@@ -46,26 +46,26 @@ var threeSumClosest = function(nums, target) {
 
 ```JavaScript
 var threeSumClosest = function(nums, target) {
-	const len = nums.length
-	nums.sort((a,b)=>a-b) // 排序
-	// 定义变量res 并赋一个初始值
-	let res = nums[0]+nums[1]+nums[2]
-	// 主循环
-	for(let i=0; i<len; i++){
-		// 定义双指针
-		let L = i+1
-		let R = len - 1
-		// 双指针遍历·启动！
-		while(L<R){
-			const sum = nums[i]+nums[L]+nums[R]
-			if(sum < target) L++
-			else if(sum > target) R--
-			else if(sum == target) return sum
-			if(Math.abs(target-sum) < Math.abs(target-res))
-				res = sum
-		}
-	}
-	return res
+  const len = nums.length
+  nums.sort((a,b)=>a-b) // 排序
+  // 定义变量res 并赋一个初始值
+  let res = nums[0]+nums[1]+nums[2]
+  // 主循环
+  for(let i=0; i<len; i++){
+    // 定义双指针
+    let L = i+1
+    let R = len - 1
+    // 双指针遍历·启动！
+    while(L<R){
+      const sum = nums[i]+nums[L]+nums[R]
+      if(sum < target) L++
+      else if(sum > target) R--
+      else if(sum == target) return sum
+      if(Math.abs(target-sum) < Math.abs(target-res))
+        res = sum
+    }
+  }
+  return res
 };
 ```
 
@@ -75,28 +75,28 @@ var threeSumClosest = function(nums, target) {
 
 ```JavaScript
 var threeSumClosest = function(nums, target) {
-	const len = nums.length
-	nums.sort((a,b)=>a-b)
-	// 添加len<=3的处理方式，减少逻辑判断
-	if(len<3) return null
-	if(len==3) return nums[0]+nums[1]+nums[2]
-	let res = nums[0]+nums[1]+nums[2]
-	// 因为一共有三个指针，所以i遍历至len-2即可
-	for(let i=0; i<len-2; i++){
-		// 这里添加了去重处理
-		if (i > 0 && nums[i] === nums[i - 1]) continue
-		let L = i+1
-		let R = len - 1
-		while(L<R){
-			const sum = nums[i]+nums[L]+nums[R]
-			if(sum < target) L++
-			else if(sum > target) R--
-			else if(sum == target) return sum
-			if(Math.abs(target-sum) < Math.abs(target-res))
-				res = sum
-		}
-	}
-	return res
+  const len = nums.length
+  nums.sort((a,b)=>a-b)
+  // 添加len<=3的处理方式，减少逻辑判断
+  if(len<3) return null
+  if(len==3) return nums[0]+nums[1]+nums[2]
+  let res = nums[0]+nums[1]+nums[2]
+  // 因为一共有三个指针，所以i遍历至len-2即可
+  for(let i=0; i<len-2; i++){
+    // 这里添加了去重处理
+    if (i > 0 && nums[i] === nums[i - 1]) continue
+    let L = i+1
+    let R = len - 1
+    while(L<R){
+      const sum = nums[i]+nums[L]+nums[R]
+      if(sum < target) L++
+      else if(sum > target) R--
+      else if(sum == target) return sum
+      if(Math.abs(target-sum) < Math.abs(target-res))
+        res = sum
+    }
+  }
+  return res
 };
 ```
 
@@ -119,7 +119,7 @@ var threeSumClosest = function(nums, target) {
 输出: 2
 解释: 子数组 [4,3] 是该条件下的长度最小的连续子数组。
 var minSubArrayLen = function (s, nums) {
-	// ...
+  // ...
 };
 ```
 
