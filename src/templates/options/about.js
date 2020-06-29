@@ -28,7 +28,7 @@ class BlogAboutTemplate extends React.Component {
               <p>年龄：{new Date().getFullYear() - 1996}</p>
               <p>地址：杭州市 西湖区</p>
               <p>
-                博客：<a href="https://omg.byeguo.cn">https://omg.byeguo.cn</a>
+                公众号：一个歪卜
               </p>
               <p>
                 github：
