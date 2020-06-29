@@ -6,6 +6,8 @@
 
 一套基于 gatsby-starter-blog 的个人博客主题
 
+查看[使用文档](https://omg.byeguo.cn/post/2020_01_20_omg_blog_doc/)
+
 预览：
 
 ![show1](./static/show1.jpg)
