@@ -4,7 +4,7 @@ date: 2020-6-29 18:00:00
 tags:
   - javascript
   - 每周算法
-topImg: 2020-06-22.png
+topImg: gzh-mzsf.png
 description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方评论区评论，也可以写出下周题目的解题思路哦～"
 ---
 ![](https://imgkr.cn-bj.ufileos.com/c9481aef-7992-455a-8a77-cc5862e5c0c7.png)
