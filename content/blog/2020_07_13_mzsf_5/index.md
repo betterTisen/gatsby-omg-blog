@@ -79,6 +79,53 @@ var lengthOfLongestSubstring = function(s) {
 
 ### 维护Map 的滑块遍历
 
+```JavaScript
+var lengthOfLongestSubstring = function(s) {
+    const len = s.length
+    let max = 0
+    let map = new Map()
+    let idx = 0    
+    for(let i = 0;i<len;i++){
+        if(map.has(s[i]) && idx < map.get(s[i]) + 1){
+            idx = map.get(s[i])+1
+        }
+        map.set(s[i],i)
+        max = Math.max(max, i - idx+1)
+    }
+    return max
+};
+```
+
+- 执行用时：104 ms, 在所有 JavaScript 提交中击败了67.64%的用户
+- 内存消耗：39.4 MB, 在所有 JavaScript 提交中击败了64.38%的用户
+
 
 ## 下周题目
 
+下周我们就要进入双指针问题的最后一个篇章了：快慢指针。
+
+废话不多说，直接看题目，我会在下周给大家进行解答！
+
+给定一个链表，判断链表中是否有环。
+
+```JavaScript
+前置知识：ListNode结构
+{
+  val:1,
+  // ListNode是下一项的地址，如果链表中无环，则最后一项的 next = null
+  next: ListNode
+}
+
+// 举个🌰
+输入： 1 => 2 => 3 => 4 => 2
+输出： true
+
+输入：1 => 2 => 3 => 4
+输出：false
+
+/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */
+var hasCycle = function(head) {};
+```
