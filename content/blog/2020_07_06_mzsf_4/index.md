@@ -49,8 +49,8 @@ var minSubArrayLen = function (s, nums) {
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {
+  const len = nums.length
   let arr = []
-  let len = nums.length
   let min = len + 1
   let sum = 0
   for (let i = 0; i < len; i++) {
@@ -79,8 +79,8 @@ var minSubArrayLen = function (s, nums) {
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {
+  const len = nums.length
   let row = 0
-  let len = nums.length
   let min = len + 1
   let sum = 0
   for (let i = 0; i < len; i++) {
@@ -101,7 +101,7 @@ var minSubArrayLen = function (s, nums) {
 
 简单解释下代码：
 
-解法一的 **arr<:array>** 在这里替换成了 **row<:int>**，因为**arr**本身结束位置就和**nums**遍历的进度保持一致，所以 **i** 就可以当作解法一中arr的结束下标，**row**当作**arr**的起始下标，所以解法一中的**push**等同于**i++**，可以省去，**shift**方法等同于**row++**。
+解法一的 `arr<:array>` 在这里替换成了 `row<:int>`，因为`arr`本身结束位置就和`nums`遍历的进度保持一致，所以 `i` 就可以当作解法一中arr的结束下标，`row`当作`arr`的起始下标，所以解法一中的`push`等同于`i++`，可以省去，`shift`方法等同于`row++`。
 
 
 ## 下周题目
