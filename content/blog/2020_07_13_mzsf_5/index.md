@@ -82,6 +82,10 @@ var lengthOfLongestSubstring = function(s) {
 
 这里我们重点看第三种解法！
 
+我画了这张动图向大家演示一下：
+
+![](https://imgkr.cn-bj.ufileos.com/d1b33e47-60a8-4609-bf57-b1d0f21826f4.gif)
+
 ```JavaScript
 var lengthOfLongestSubstring = function(s) {
     const len = s.length
@@ -106,11 +110,6 @@ var lengthOfLongestSubstring = function(s) {
 *Map的特性就是可以在数组单次循环的时候通过Map.set(v,k)方法缓存数组的状态*，
 
 所以在未来如果遇到这种可以通过存储数组状态所完成的问题，都可以尝试通过Map存储的方式来完成。
-
-如果对这种解法看的不是很明白，我画了这张动图向大家再演示一下：
-
-![](https://imgkr.cn-bj.ufileos.com/d1b33e47-60a8-4609-bf57-b1d0f21826f4.gif)
-
 
 ## 下周题目
 
