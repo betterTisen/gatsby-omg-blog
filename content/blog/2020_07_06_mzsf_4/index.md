@@ -45,7 +45,7 @@ var minSubArrayLen = function (s, nums) {
 
 整个思路流程如图所示：
 
-![](https://static01.imgkr.com/temp/5453d42338ce444b917e997820fc06db.png)
+![](https://imgkr.cn-bj.ufileos.com/6ff23fea-3cc3-4a3a-9465-ec3cc4776099.gif)
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {
