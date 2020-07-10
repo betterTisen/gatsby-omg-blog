@@ -105,3 +105,6 @@ public/
 
 # 文章内容不上传至github
 # content/blog
+
+#script不上传
+# script
