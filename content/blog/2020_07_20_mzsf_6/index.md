@@ -14,7 +14,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 假设在一个环形跑道上，小明和小红比赛跑步，假定小红的速度始终比小明快，那么小红早晚会超过小明一圈并在此相遇。
 
-![](./2.gif)
+![](https://cdn.byeguo.cn/gzh/blog/2020_07_20_mzsf_6/1.png)
 
 又或者，小红的速度是小明的2倍，他俩在直线跑道上跑，那当小红跑道重点时，小明正好在跑道中间
 
@@ -73,7 +73,7 @@ var hasCycle = function(head) {
 
 百用不厌的hash法（所以说Map真是个好东西💪）。在遍历链表时存储遍历过的节点，如果Map中该节点存在，则说明链表中有环
 
-这种解法和上面的异曲同工。
+这种解法和节点标记法异曲同工。
 
 ```javascript
 var hasCycle = (head) => {
@@ -95,7 +95,7 @@ var hasCycle = (head) => {
 
 重点来了！别说话，看图：
 
-![](./2.gif)
+![](https://cdn.byeguo.cn/gzh/blog/2020_07_20_mzsf_6/2.gif)
 
 ```javascript
 var hasCycle = function(head) {
@@ -113,6 +113,8 @@ var hasCycle = function(head) {
 
 - 执行用时：76 ms, 在所有 JavaScript 提交中击败了85.77%的用户
 - 内存消耗：38.3 MB, 在所有 JavaScript 提交中击败了33.33%的用户
+
+首先定义两个变量（指针）开始循环，快指针的速度是慢指针的两倍，所以当他们相遇时，则链表中存在环，或者快指针走到终点，说明链表无环。
 
 ## 最后
 
