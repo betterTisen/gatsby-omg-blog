@@ -3,10 +3,12 @@ const qiniu = require("qiniu")
 const path = require("path")
 const fs = require("fs")
 
-const basePath = "../content/blog/2020_07_13_mzsf_5/"
-
 const accessKey = ""
 const secretKey = ""
+const baseFile = "2020_07_13_mzsf_5"
+
+const basePath = `../content/blog/${baseFile}/`
+
 const bucket = "byeguo"
 
 function mapDir(dir) {
