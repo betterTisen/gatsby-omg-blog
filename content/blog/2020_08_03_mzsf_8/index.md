@@ -114,7 +114,7 @@ var reverseList = function(head) {
 
 以上所有的操作都是对链表的地址进行的，所以在递归中的链表操作，也会对外层函数存在影响，下面看这张图就会明白啦！
 
-![由于图片较长，在手机上可以会字体模糊，建议在电脑查看～](https://static01.imgkr.com/temp/d5389cc5f2354460a114abbcd9113042.gif)
+![由于图片较长，手机上可能会字体模糊，建议在电脑查看～](https://static01.imgkr.com/temp/d5389cc5f2354460a114abbcd9113042.gif)
 
 ## 最后
 
