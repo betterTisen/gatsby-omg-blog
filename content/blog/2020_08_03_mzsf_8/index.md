@@ -8,7 +8,7 @@ topImg: gzh-mzsf.png
 description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方评论区评论，也可以写出下周题目的解题思路哦～"
 ---
 
-![](https://imgkr.cn-bj.ufileos.com/1c6a560a-ffa5-4867-a5e4-c06258bcd973.jpg)
+![](1.jpg)
 
 我们知道数组是一种通用的数据结构，能用来实现栈、队列等很多数据结构。而链表也是一种使用广泛的通用数据结构，它同样也可以用来作为实现栈、队列等数据结构，
 
@@ -18,7 +18,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 ## 【动图算法】(链表篇)：反转链表
 
-> leetcode 206 题：环形链表  
+> leetcode 206 题：反转链表  
 > https://leetcode-cn.com/problems/linked-list-cycle/
 
 实现一个函数，用于反转一个单链表。
@@ -44,7 +44,7 @@ var reverseList = function(head) {};
 
 基础解法，很容易想到。通过一个循环，按部就班的对链表的每项依次进行反转～
 
-![](https://imgkr.cn-bj.ufileos.com/3176d3dd-f5b8-48c3-89a6-dc811981f3ce.gif)
+![](2.gif)
 
 ```JavaScript
 var reverseList = function(head) {
@@ -114,7 +114,7 @@ var reverseList = function(head) {
 
 以上所有的操作都是对链表的地址进行的，所以在递归中的链表操作，也会对外层函数存在影响，下面看这张图就会明白啦！
 
-![由于图片较长，手机上可能会字体模糊，建议在电脑查看～](https://static01.imgkr.com/temp/d5389cc5f2354460a114abbcd9113042.gif)
+![由于图片较长，手机上可能会字体模糊，建议在电脑查看～](3.gif)
 
 ## 最后
 

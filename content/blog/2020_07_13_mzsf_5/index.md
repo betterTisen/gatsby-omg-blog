@@ -8,7 +8,7 @@ topImg: gzh-mzsf.png
 description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方评论区评论，也可以写出下周题目的解题思路哦～"
 ---
 
-![](https://imgkr.cn-bj.ufileos.com/5bd88efc-8ab4-4c59-a52c-c594f959527e.jpg)
+![](1.jpg)
 
 >本周我们继续做的依然是一道**滑块指针**的题目，巩固上周所学。这次的题目和上周题目大同小异，但是由于从遍历数组转换成了遍历字符串，便有了更多的解法！
 
@@ -84,7 +84,7 @@ var lengthOfLongestSubstring = function(s) {
 
 我画了这张动图向大家演示一下：
 
-![](https://imgkr.cn-bj.ufileos.com/d1b33e47-60a8-4609-bf57-b1d0f21826f4.gif)
+![](2.gif)
 
 ```JavaScript
 var lengthOfLongestSubstring = function(s) {

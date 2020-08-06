@@ -15,7 +15,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 如果还不知道怎么做？也没关系，这次我们会再做一遍，巩固加深对此类题目的印象，一题不行，咱就做两题，两题不行就做三题，努力总是会超越天才的！
 
-![](https://imgkr.cn-bj.ufileos.com/4ce7cf9a-0ce4-4f00-b08d-0cd0cb17df3d.jpeg)
+![](1.jpeg)
 
 ## 【每周算法】(双指针遍历篇)：最接近的三数之和
 
@@ -105,7 +105,7 @@ var threeSumClosest = function(nums, target) {
 
 到这里已经优化完成了，如果你们觉得本段代码还有改进空间或者有更好的优化方案，也欢迎点击下面的阅读原文在下面的评论给我留言～～
 
-![](https://imgkr.cn-bj.ufileos.com/e9c38534-9c1b-4d58-abc6-ed9a5a6a60e2.jpg)
+![](2.jpg)
 
 ## 下周题目
 

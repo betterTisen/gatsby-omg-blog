@@ -12,7 +12,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 链表是一种常见的数据结构，在地址中存储的方式和数组不同，数组是连续的内存地址、而链表则是在每一个节点中记录了下一个节点的内存地址，常见的单链表如下图所示：
 
-![](https://imgkr.cn-bj.ufileos.com/87d1d22d-04c9-4336-b273-ab07bf78277a.png)
+![](1.png)
 
 其中，Value是单个节点的值，每一个节点又有一个next ，这个属性用于找到该节点的子节点的内存地址，访问者可通过该方法访问子节点
 
@@ -22,7 +22,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 ### 单链表
 
-![](https://imgkr.cn-bj.ufileos.com/c970414b-7531-451e-8981-1766fac46dc0.png)
+![](2.png)
 
 ```javascript
 const ListNode = {
@@ -42,7 +42,7 @@ const ListNode = {
 
 ### 环链表
 
-![](https://imgkr.cn-bj.ufileos.com/08a04e72-08c7-4e37-a236-429c76e6d824.png)
+![](3.png)
 
 ```javascript
 const ListNode = {
@@ -62,7 +62,7 @@ const ListNode = {
 
 ### 双向链表
 
-![](https://imgkr.cn-bj.ufileos.com/4067ce37-1945-4a95-a3d1-029cd70a45fe.png) 
+![](4.png) 
 
 ```javascript
 const ListNode = {

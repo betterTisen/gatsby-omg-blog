@@ -8,11 +8,11 @@ topImg: gzh-mzsf.png
 description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方评论区评论，也可以写出下周题目的解题思路哦～"
 ---
 
-![](https://static01.imgkr.com/temp/19d08d7dc7e54c848b4116752afe74d4.png)
+![](1.png)
 
 本周是 双指针遍历篇 的第三题，注意：这道题目和我们之前的做法不大一样，之前的题目是逆向的双指针解法，而这道题目：是同向的双指针解法，又名**滑块窗口法**。那么滑块法和普通的双指针遍历有什么区别呢？大家请看图：
 
-![](https://static01.imgkr.com/temp/093c0df0175249b3ac83ccd21cef64ba.png)
+![](2.png)
 
 这里先来解释一下上面的图。
 
@@ -45,7 +45,7 @@ var minSubArrayLen = function (s, nums) {
 
 整个思路流程如图所示：
 
-![](https://imgkr.cn-bj.ufileos.com/6ff23fea-3cc3-4a3a-9465-ec3cc4776099.gif)
+![](2.gif)
 
 ```JavaScript
 var minSubArrayLen = function (s, nums) {

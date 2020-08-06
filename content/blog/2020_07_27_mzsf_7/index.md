@@ -8,7 +8,7 @@ topImg: gzh-mzsf.png
 description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方评论区评论，也可以写出下周题目的解题思路哦～"
 ---
 
-![](https://imgkr.cn-bj.ufileos.com/d7679e87-273e-4610-9b81-75f3eca3c485.jpg)
+![](1.jpg)
 
 双指针，顾名思义，就是利用两个指针去遍历 数组 & 链表 & 字符串，以达到所需实现的目标。
 
@@ -53,7 +53,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 
 ###  动图&代码
 
-![该图字体较小，建议在电脑查看～](https://imgkr.cn-bj.ufileos.com/e6efd35b-2d90-43dd-8ae0-4a8cdac1b800.gif)
+![该图字体较小，建议在电脑查看～](2.gif)
 
 ```javascript
 var threeSum = function(nums) {
