@@ -17,7 +17,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 ## 【动图算法】(链表篇)：旋转链表
 
 > leetcode 61 题：旋转链表  
-> https://leetcode-cn.com/problems/linked-list-cycle/
+> https://leetcode-cn.com/problems/rotate-list/
 
 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
 
