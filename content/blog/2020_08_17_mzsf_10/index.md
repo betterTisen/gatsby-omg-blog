@@ -15,7 +15,7 @@ description: "来自 一个歪卜 公众号文章，欢迎大家在文章下方�
 - 删除链表的节点
 - 删除链表的倒数第 N 个节点
 
-由于单链表的遍历方向不可逆，所以相似的两道题目解法却不尽相同
+由于单链表的遍历方向不可逆，所以相似的两道题目解法却不尽相同*（由于本次题目较为简单，故通过注释的形式解答，就偷懒不画图啦，因为类似的题型之前都有做过）*
 
 ## 【动图算法】(链表篇)：删除链表的节点
 
@@ -63,6 +63,9 @@ var deleteNode = function (head, val) {
 
 ```JavaScript
 var deleteNode = function (head, val) {
+    // 如果是需要删除的节点
+    // 则将需要删除节点的下一个节点返回
+    // 这样上一个节点的next指向的就是需要删除节点的下一项
     if (head.val === val) {
         return head.next
     }
@@ -91,7 +94,6 @@ var deleteNode = function (head, val) {
 
 ## 解答过程
 
-
 ### hash 法
 
 由于链表遍历不可逆，可以通过Map对遍历的每一项内容进行存储，然后查找需要删除的节点
@@ -107,8 +109,9 @@ var removeNthFromEnd = function (head, n) {
         hashMap.set(i, head)
         head = head.next
     }
-    
+    // 获取需要删除的节点
     let del = hashMap.get(i - n)
+    // 判断是否为头节点
     if (n == i) res = res.next
     else del.next = del.next.next
     return res
@@ -120,16 +123,24 @@ var removeNthFromEnd = function (head, n) {
 ```JavaScript
 var removeNthFromEnd = function (head, n) {
     let fast = head,slow = head
+    // 快指针先走n步
     while(n--) fast = fast.next
+    // 判断是否是第一项
     if(!fast) return head.next
+    // slow & fast同时位移
     while(fast && fast.next){
         slow = slow.next
         fast = fast.next
     }
+    // 删除目标项
     slow.next = slow.next.next
     return head
 }
 ```
+
+- 快节点先走需要删除的步数
+- 然后快慢节点同步位移
+- 当快节点完成遍历时，慢节点的next就是需要删除的节点
 
 ## 最后 🔚
 
@@ -137,7 +148,7 @@ var removeNthFromEnd = function (head, n) {
 
 - 单链表只能单向遍历，不可逆
 - 在js中链表是一个对象，修改其指针值实际是修改了指针所指的地址
-- 常见的链表题型考察的基本都是上面的两个点，大多题型可以通过快慢指针或者hash存储的方式来完成解答
+- 常见的链表题型考察的基本都是上面的两个点：大多题目可以通过快慢指针或者hash存储的方式来完成解答
 
 
 
