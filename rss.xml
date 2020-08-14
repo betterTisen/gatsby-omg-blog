@@ -1,4 +1,722 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jul 2020 02:46:14 GMT</lastBuildDate><item><title><![CDATA[【每周算法】(双指针遍历篇)：无重复字符的最长字串]]></title><description><![CDATA[…]]></description><link>https://www.byeguo.cn/post/2020_07_13_mzsf_5/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_13_mzsf_5/</guid><pubDate>Mon, 13 Jul 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://imgkr.cn-bj.ufileos.com/5bd88efc-8ab4-4c59-a52c-c594f959527e.jpg&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 14 Aug 2020 14:00:10 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><link>https://www.byeguo.cn/post/2020_08_24_mzsf_11/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_24_mzsf_11/</guid><content:encoded></content:encoded></item><item><title><![CDATA[【动图算法】(链表篇)：删除链表节点]]></title><description><![CDATA[做为链表篇的结尾：这次做两道可进行对比的经典题型： 删除链表的节点 删除链表的倒数第 N…]]></description><link>https://www.byeguo.cn/post/2020_08_17_mzsf_10/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_17_mzsf_10/</guid><pubDate>Mon, 17 Aug 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fa2d7d4472cb244b8f83537212122318/73963/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.166666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGQAAAQUAAAAAAAAAAAAAAAAAAAECAwQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAZjPfFQUr//EABoQAQEAAgMAAAAAAAAAAAAAAAIBAAMREiH/2gAIAQEAAQUC1Q9Rwmj7FZNysVz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAEAAgMBAAAAAAAAAAAAAAABABECEDFB/9oACAEBAAY/AiJytY09IU+a/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARIUFR/9oACAEBAAE/IfVlXnJhF8NkoZA1A0llhCVn/9oADAMBAAIAAwAAABCn7//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EKf/xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8QhX//xAAcEAEBAAMAAwEAAAAAAAAAAAABEQAhMUFRsfD/2gAIAQEAAT8Q2GFQg9uZ117Wv5Ml3BfuUKAF7txEWQu/NyxWr1z/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/fa2d7d4472cb244b8f83537212122318/88218/1.jpg&quot;
+        srcset=&quot;/static/fa2d7d4472cb244b8f83537212122318/7237a/1.jpg 148w,
+/static/fa2d7d4472cb244b8f83537212122318/0cfdf/1.jpg 295w,
+/static/fa2d7d4472cb244b8f83537212122318/88218/1.jpg 590w,
+/static/fa2d7d4472cb244b8f83537212122318/73963/1.jpg 600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;做为链表篇的结尾：这次做两道可进行对比的经典题型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;删除链表的节点&lt;/li&gt;
+&lt;li&gt;删除链表的倒数第 N 个节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由于单链表的遍历方向不可逆，所以相似的两道题目解法却不尽相同&lt;em&gt;（由于本次题目较为简单，故通过注释的形式解答，就偷懒不画图啦，因为类似的题型之前都有做过）&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;【动图算法】链表篇：删除链表的节点&quot;&gt;【动图算法】(链表篇)：删除链表的节点&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;剑指 Offer 18 题：删除链表的节点&lt;br&gt;
+&lt;a href=&quot;https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/&quot;&gt;https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。&lt;/p&gt;
+&lt;p&gt;返回删除后的链表的头节点。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;输入&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; val &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;
+输出&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+解释&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 给定你链表中值为 &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; 的第二个节点，那么在调用了你的函数之后，该链表应变为 &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解答过程&quot;&gt;解答过程&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;该题难度不高，通过正向遍历即可&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;直接遍历法&quot;&gt;直接遍历法&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;deleteNode&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; val&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 如果删除节点是头节点直接返回next&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; arrow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token comment&quot;&gt;// 循环得到需要删除的节点时改变指针的指向即可&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arrow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arrow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            arrow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; arrow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+            &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        arrow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; arrow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;递归法&quot;&gt;递归法&lt;/h3&gt;
+&lt;p&gt;对解法1的优化，利用了链表指针是修改内存地址指向的特点～&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;deleteNode&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; val&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 如果是需要删除的节点&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 则将需要删除节点的下一个节点返回&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 这样上一个节点的next指向的就是需要删除节点的下一项&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;deleteNode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;val&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;进入函数判断是否是需要删除的节点，若是，则返回下一个节点&lt;/li&gt;
+&lt;li&gt;进入递归，判断是否是需要删除的节点，若是，则将需要删除节点的下一个节点返回，这样上一个节点的next指向的就是需要删除节点的下一项，即完成了删除～&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;【动图算法】链表篇：删除链表的倒数第-n-个节点&quot;&gt;【动图算法】(链表篇)：删除链表的倒数第 N 个节点&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 19 题：删除链表的倒数第 N 个节点&lt;br&gt;
+&lt;a href=&quot;https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/&quot;&gt;https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说明：给定的 n 保证是有效的。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;给定一个链表&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 和 n &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2.&lt;/span&gt;
+
+当删除了倒数第二个节点后，链表变为 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解答过程-1&quot;&gt;解答过程&lt;/h2&gt;
+&lt;h3 id=&quot;hash-法&quot;&gt;hash 法&lt;/h3&gt;
+&lt;p&gt;由于链表遍历不可逆，可以通过Map对遍历的每一项内容进行存储，然后查找需要删除的节点&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;removeNthFromEnd&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; hashMap &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token comment&quot;&gt;// 遍历并存储&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        hashMap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 获取需要删除的节点&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; del &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; hashMap&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 判断是否为头节点&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; del&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; del&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;快慢指针&quot;&gt;快慢指针&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;removeNthFromEnd&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token comment&quot;&gt;// 快指针先走n步&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token comment&quot;&gt;// 判断是否是第一项&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fast&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token comment&quot;&gt;// slow &amp;amp; fast同时位移&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fast &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 删除目标项&lt;/span&gt;
+    slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;快节点先走需要删除的步数&lt;/li&gt;
+&lt;li&gt;然后快慢节点同步位移&lt;/li&gt;
+&lt;li&gt;当快节点完成遍历时，慢节点的next就是需要删除的节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;最后-&quot;&gt;最后 🔚&lt;/h2&gt;
+&lt;p&gt;链表篇的题目至此就结束了，在这里总结一下该类题型的特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单链表只能单向遍历，不可逆&lt;/li&gt;
+&lt;li&gt;在js中链表是一个对象，修改其指针值实际是修改了指针所指的地址&lt;/li&gt;
+&lt;li&gt;常见的链表题型考察的基本都是上面的两个点：大多题目可以通过快慢指针或者hash存储的方式来完成解答&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[【动图算法】(链表篇)：旋转链表]]></title><description><![CDATA[本周是链表篇的第二题，同样也是一道经典的题目。该题虽名为旋转链表，其实我觉得理解成平移链表会更好些～ 废话不多说，直接看题目： 【动图算法】(链表篇)：旋转链表 leetcode 61 题：旋转链表 https://leetcode-cn.com/problems/rotate…]]></description><link>https://www.byeguo.cn/post/2020_08_10_mzsf_9/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_10_mzsf_9/</guid><pubDate>Mon, 10 Aug 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/fed122a6d6325c4ad17b82e69561ed5e/73963/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHPcEQIr//EABgQAAMBAQAAAAAAAAAAAAAAAAEQEgIh/9oACAEBAAEFAsHpVGV//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFxABAQEBAAAAAAAAAAAAAAAAARBRYf/aAAgBAQAGPwI5Qy//xAAcEAACAgIDAAAAAAAAAAAAAAABEQAxECFBYYH/2gAIAQEAAT8hIzxADZI6EN8R2gqahrH/2gAMAwEAAgADAAAAEHzv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFBUXGR0f/aAAgBAQABPxAFxvYPzFl+cJBZ3439xujU8GLzpwAPr3zkIZLXDd95/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/fed122a6d6325c4ad17b82e69561ed5e/88218/1.jpg&quot;
+        srcset=&quot;/static/fed122a6d6325c4ad17b82e69561ed5e/7237a/1.jpg 148w,
+/static/fed122a6d6325c4ad17b82e69561ed5e/0cfdf/1.jpg 295w,
+/static/fed122a6d6325c4ad17b82e69561ed5e/88218/1.jpg 590w,
+/static/fed122a6d6325c4ad17b82e69561ed5e/73963/1.jpg 600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本周是链表篇的第二题，同样也是一道经典的题目。该题虽名为旋转链表，其实我觉得理解成平移链表会更好些～&lt;/p&gt;
+&lt;p&gt;废话不多说，直接看题目：&lt;/p&gt;
+&lt;h2 id=&quot;【动图算法】链表篇：旋转链表&quot;&gt;【动图算法】(链表篇)：旋转链表&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 61 题：旋转链表&lt;br&gt;
+&lt;a href=&quot;https://leetcode-cn.com/problems/rotate-list/&quot;&gt;https://leetcode-cn.com/problems/rotate-list/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;🌰
+输入&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+输出&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+解释&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+
+🌰🌰
+输入&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;
+输出&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+解释&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+向右旋转 &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; 步&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {ListNode}
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;rotateRight&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解答过程&quot;&gt;解答过程&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;该题解法超多，难度也不是很大，建议大家先自己写一写，然后再看解题过程。如果不思考直接看解题思路的话，学习算法的效率会大打折扣&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;穷举法-&quot;&gt;穷举法 💪&lt;/h3&gt;
+&lt;p&gt;算法题目万万千，一招穷举吃遍天。。。&lt;/p&gt;
+&lt;p&gt;这种解法没什么好说的，就是按照正常思维逻辑，一步步来。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;rotateRight&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 遍历链表计算其长度&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; k &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; n	&lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 链表右移&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+        &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        &lt;span class=&quot;token comment&quot;&gt;// 这里curr是链表的打断位置，即倒数第二项&lt;/span&gt;
+        curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head &lt;span class=&quot;token comment&quot;&gt;// 链表最后一项指向头部形成环&lt;/span&gt;
+        head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token comment&quot;&gt;// 定位新的头节点&lt;/span&gt;
+        curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 打断链表环&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;遍历链表，获取链表长度 &lt;code class=&quot;language-text&quot;&gt;n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;对 &lt;code class=&quot;language-text&quot;&gt;k&lt;/code&gt; 取余进行去重&lt;/li&gt;
+&lt;li&gt;循环 &lt;code class=&quot;language-text&quot;&gt;k&lt;/code&gt; 次，每次把最后一项移动到第一项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;哈希法-🪓&quot;&gt;哈希法 🪓&lt;/h3&gt;
+&lt;p&gt;算法题目万万千，哈希算法一招鲜。。。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在例子1中：k=2 ，head为 &lt;code class=&quot;language-text&quot;&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;链表第一步变成: &lt;code class=&quot;language-text&quot;&gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;第二步变成: &lt;code class=&quot;language-text&quot;&gt;4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;那我们是否可以直接简化其步骤：直接拆分倒数k项，再插入到head呢？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然是可以的，此时，步骤就变为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原链表：&lt;code class=&quot;language-text&quot;&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;拆分后k项，链表变为：&lt;code class=&quot;language-text&quot;&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL&lt;/code&gt; 和 &lt;code class=&quot;language-text&quot;&gt;4-&amp;gt;5-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;再合并：&lt;code class=&quot;language-text&quot;&gt;4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;rotateRight&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; hash &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 遍历并将数据存入map&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;curr &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        hash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; k &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; n &lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 通过查找map对链表进行操作&lt;/span&gt;
+    hash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head &lt;span class=&quot;token comment&quot;&gt;// 链表最后一项指向头部形成环&lt;/span&gt;
+    head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; hash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token comment&quot;&gt;// 定位新的头节点&lt;/span&gt;
+    hash&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; k&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 打断链表环&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;通过Map数据存储的特性，把第一次遍历的数据存储在Map中&lt;/li&gt;
+&lt;li&gt;而后直接通过 &lt;code class=&quot;language-text&quot;&gt;n-k&lt;/code&gt; 获取到链表右移的前一项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;该解法与穷举法思路类似，唯一的不同就是在第一次遍历链表时将每一项的数据存入了Map当中，省去了一次循环。&lt;/p&gt;
+&lt;h3 id=&quot;快慢指针️️&quot;&gt;快慢指针➡️➡️&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;快慢指针的题型我在之前已经写过啦，所以这里就不赘述其思想，不懂得同学可以看下我之前的&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI5NTc0NzM5Ng==&amp;#x26;mid=2247484714&amp;#x26;idx=1&amp;#x26;sn=e616a47a44d6d261a5d2aa32638e5d8f&amp;#x26;chksm=ec4faf01db3826176ad2b348109b11137e59cdc12145a7504eb973693cdda1767118e6298eaa&amp;#x26;token=182116423&amp;#x26;lang=zh_CN#rd&quot;&gt;文章&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;哈希法用了一个Map对遍历数据进行了存储，那么如果不存呢？我们可以直接通过快慢指针拿到需要拆除的第n-k项即可。&lt;/p&gt;
+&lt;p&gt;该解法的优点在于不用先遍历一次链表，但也因此失去了去重的功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果 k&amp;#x3C;链表长度 时，该解法性能较好，如果 k&gt;链表长度 时，该解法性能较差&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/12d92bcde2e53871d9313736f6fca216/2.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;rotateRight&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token comment&quot;&gt;// fast 先走k步&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;k&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fast &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// slow == fast说明k会被链表长度整除，故无需操作head直接返回即可&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;slow &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+    &lt;span class=&quot;token comment&quot;&gt;// 快慢指针start&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 对慢指针位置进行打断&lt;/span&gt;
+    fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;此处定义了fast和slow两个指针，fast先走k步&lt;/li&gt;
+&lt;li&gt;当slow == fast 时,说明k会被链表长度整除，直接返回head即可&lt;/li&gt;
+&lt;li&gt;快慢指针同时移动，当快指针到达链表最后一项时，慢指针正好在链表需要打断的位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;链表转环-️&quot;&gt;链表转环 ♻️&lt;/h3&gt;
+&lt;p&gt;在哈希法中，我们最后处理链表时，把单链表转成了环&lt;/p&gt;
+&lt;p&gt;那么，我们当然也可以直接把链表转成环，然后在环中找到k的位置将其打断～&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/1632c9d2e4b45eeabfcf69e6bebda6ac/3.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;rotateRight&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; k&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; n &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;n &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; curr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token comment&quot;&gt;// 形成环链表&lt;/span&gt;
+    curr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    k &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; k &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; n &lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;k &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; n&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token comment&quot;&gt;// 找到打断位置&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 对环链表打断再拼接得到答案&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; tmp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    tmp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;遍历链表，获得链表长度n&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;curr.next = head&lt;/code&gt; 形成环链表&lt;/li&gt;
+&lt;li&gt;去重&lt;/li&gt;
+&lt;li&gt;通过循环&lt;code class=&quot;language-text&quot;&gt;n-k&amp;gt;0&lt;/code&gt;找到打断环的位置并打断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;最后-&quot;&gt;最后 🔚&lt;/h2&gt;
+&lt;p&gt;这次的题目有四种解法，看似很多，实际上也就是解题思路一步步优化而得来的。所以遇到题目时无需一开始就去思考最优解，可以先尝试使用基础方法，当用基础的方式解出答案时，也会对该题目的理解更为深刻，从而发散思维，想到一些优化方案🍉～～&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【动图算法】(链表篇)：反转链表]]></title><description><![CDATA[…]]></description><link>https://www.byeguo.cn/post/2020_08_03_mzsf_8/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_03_mzsf_8/</guid><pubDate>Sun, 02 Aug 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d7880f3d5305062adff4660f8f1ff67c/f67cc/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.12499999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFbsrdSUYP/xAAbEAACAQUAAAAAAAAAAAAAAAABAgMAEBITMf/aAAgBAQABBQIHWsK4x0/Lf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABsQAAEEAwAAAAAAAAAAAAAAAAEAAhAhEjFR/9oACAEBAAY/Asgr2bMMHTP/xAAZEAEBAAMBAAAAAAAAAAAAAAABABEhMUH/2gAIAQEAAT8hy+x4TmSF2yXwDm8nt//aAAwDAQACAAMAAAAQRy//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRcYH/2gAIAQEAAT8QpUDQvFuJTDcpu2EE9xRuIH03qG8yXs//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/d7880f3d5305062adff4660f8f1ff67c/88218/1.jpg&quot;
+        srcset=&quot;/static/d7880f3d5305062adff4660f8f1ff67c/7237a/1.jpg 148w,
+/static/d7880f3d5305062adff4660f8f1ff67c/0cfdf/1.jpg 295w,
+/static/d7880f3d5305062adff4660f8f1ff67c/88218/1.jpg 590w,
+/static/d7880f3d5305062adff4660f8f1ff67c/f67cc/1.jpg 800w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;我们知道数组是一种通用的数据结构，能用来实现栈、队列等很多数据结构。而链表也是一种使用广泛的通用数据结构，它同样也可以用来作为实现栈、队列等数据结构，&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;除非需要频繁的通过下标来随机访问各个数据，否则很多使用数组的地方都可以用链表来代替。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本周我们会进入链表篇的学习，我将和大家一起学习常考的链表算法题型。第一道题，是一道经典的链表考法，同样也是阿里一面的笔试题目，我们一起来学习一下吧。&lt;/p&gt;
+&lt;h2 id=&quot;【动图算法】链表篇：反转链表&quot;&gt;【动图算法】(链表篇)：反转链表&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 206 题：反转链表&lt;br&gt;
+&lt;a href=&quot;https://leetcode-cn.com/problems/linked-list-cycle/&quot;&gt;https://leetcode-cn.com/problems/linked-list-cycle/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实现一个函数，用于反转一个单链表。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;输入&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+输出&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;NULL&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * @param {ListNode} head
+ * @return {ListNode} head
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;reverseList&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;进阶：你可以迭代或递归地反转链表。你能否用两种方法解决这道题？&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;解答过程&quot;&gt;解答过程&lt;/h2&gt;
+&lt;p&gt;本题的难点是指针的指向问题，要注意：链表中的next 指向的是下一段内存空间的地址！所以对链表的每一步操作都要小心仔细，防止内存指向修改导致结果错误的问题&lt;/p&gt;
+&lt;h3 id=&quot;迭代法-️&quot;&gt;迭代法 ♻️&lt;/h3&gt;
+&lt;p&gt;基础解法，很容易想到。通过一个循环，按部就班的对链表的每项依次进行反转～&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/45993bb254be76bc79c5659b96fcca53/2.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;reverseList&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; nxt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; pre &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nxt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nxt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        nxt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pre
+        pre &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nxt
+        nxt &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; cc
+        &lt;span class=&quot;token comment&quot;&gt;// 下面是上面4行代码的简写（es6的解构赋值，简化了多行的赋值代码）&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// [nxt.next, pre, nxt]=[pre, nxt, nxt.next]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; pre
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;首先用一个变量缓存原指针的下一个节点&lt;/li&gt;
+&lt;li&gt;然后将原指针的指向反转，赋值给pre指针&lt;/li&gt;
+&lt;li&gt;最后将缓存的变量赋值给原指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;递归法1-（尾递归）&quot;&gt;递归法1 🐢（尾递归）&lt;/h3&gt;
+&lt;p&gt;由于迭代每一步所做的工作都是重复性的，那么思考一下🤔是否可以找到一个规律，把上面的方法改造成递归呢？&lt;/p&gt;
+&lt;p&gt;然后便有了如下解法：&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;handleReverse&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;node&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 进行反转&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; list&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next 
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; pre &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; list
+    pre&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; node
+    &lt;span class=&quot;token comment&quot;&gt;// 如果链表遍历结束时return pre&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; pre
+    &lt;span class=&quot;token comment&quot;&gt;// 如果链表遍历未结束则继续反转链表的下一项&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;handleReverse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pre&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;reverseList&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;handleReverse&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里创建了一个&lt;code class=&quot;language-text&quot;&gt;handleReverse&lt;/code&gt;函数，因为原始函数只有一个变量，而只通过一个变量来进行链表反转不太方便，所以对原函数结构进行调整，通过传入&lt;code class=&quot;language-text&quot;&gt;反转过的节点pre&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;未反转的节点next&lt;/code&gt;来对链表结构进行递归操作。&lt;/p&gt;
+&lt;h3 id=&quot;递归法2-&quot;&gt;递归法2 🐢🐢&lt;/h3&gt;
+&lt;p&gt;既然尾递归可以实现反转链表，那么接下来就尝试通过递归自身来实现呢？&lt;/p&gt;
+&lt;p&gt;于是便有了这种的解法：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：该解法需要对链表的指针定义有一定的认知，但为了方便大家理解，这里也用一张动图来直观的描述一下。但是建议先看代码再看图片！&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;reverseList&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token comment&quot;&gt;// 这里的next传入的是地址，而非值&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reverseList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 进行反转&lt;/span&gt;
+    next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上所有的操作都是对链表的地址进行的，所以在递归中的链表操作，也会对外层函数存在影响，下面看这张图就会明白啦！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/03b8f73dfaab7a59d0bca1892fb3a6e9/3.gif&quot; alt=&quot;由于图片较长，手机上可能会字体模糊，建议在电脑查看～&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+&lt;p&gt;这次题目的三种解法中前面两种都很好理解，主要是第三种解法可能会有些绕，大家可以多熟悉一下～当这道题理解透时对js的变量存储机制应该也就掌握了。毕竟如果笔试时写出这样的解法面试官肯定会觉得：卧槽🐂🍺～&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【每周算法】双指针算法各类题型总结]]></title><description><![CDATA[…]]></description><link>https://www.byeguo.cn/post/2020_07_27_mzsf_7/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_27_mzsf_7/</guid><pubDate>Mon, 27 Jul 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7366216d1c21375e1a7241ad251a1ce8/f67cc/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBAwT/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAHM9aDkB//EABkQAAIDAQAAAAAAAAAAAAAAAAABAhAREv/aAAgBAQABBQLWcywd/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAWEAADAAAAAAAAAAAAAAAAAAAAESD/2gAIAQEABj8CHP8A/8QAGhAAAQUBAAAAAAAAAAAAAAAAAQAQEUFRcf/aAAgBAQABPyEaI1EdRkWwN//aAAwDAQACAAMAAAAQkA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAACAgIDAAAAAAAAAAAAAAABEQAhMXEQQZH/2gAIAQEAAT8QDwmjARK8NpW7qMIidEGdJl7x/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/7366216d1c21375e1a7241ad251a1ce8/88218/1.jpg&quot;
+        srcset=&quot;/static/7366216d1c21375e1a7241ad251a1ce8/7237a/1.jpg 148w,
+/static/7366216d1c21375e1a7241ad251a1ce8/0cfdf/1.jpg 295w,
+/static/7366216d1c21375e1a7241ad251a1ce8/88218/1.jpg 590w,
+/static/7366216d1c21375e1a7241ad251a1ce8/f67cc/1.jpg 800w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;双指针，顾名思义，就是利用两个指针去遍历 数组 &amp;#x26; 链表 &amp;#x26; 字符串，以达到所需实现的目标。&lt;/p&gt;
+&lt;p&gt;一般情况下，对于遍历数组只需要单个指针即可完成，但是在某些复杂情况下，用两个指针来操作数据会更为快捷、高效。以下我会详细介绍、对比三种常见的双指针题型算法，希望大家在阅读完之后对该类型的题目能有深刻的认识！&lt;/p&gt;
+&lt;h2 id=&quot;对撞指针&quot;&gt;对撞💥指针&lt;/h2&gt;
+&lt;p&gt;对撞指针用于解决已排序的数组问题，通过两条指针反方向遍历直至两条指针相交，同时操作数组中的两条数据，达到减少循环层数、降低时间复杂度的目的。&lt;/p&gt;
+&lt;p&gt;对撞指针遍历一般是在有序数组中使用，一个放首，一个放尾，同时向中间遍历，直到两个指针相交，完成遍历。&lt;/p&gt;
+&lt;h3 id=&quot;基本特点&quot;&gt;基本特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对撞指针从两端向中间迭代数组。一个指针从始端开始，另一个从末端开始。&lt;/li&gt;
+&lt;li&gt;对撞指针的终止条件是两个指针相遇。&lt;/li&gt;
+&lt;li&gt;对撞指针用于已排序的区间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;何时使用&quot;&gt;何时使用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可用于你要处理排序数组（或链接列表）并需要查找满足某些约束的一组元素的问题&lt;/li&gt;
+&lt;li&gt;数组中的元素集是配对、三元组甚至子数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;例题：三数之和&quot;&gt;例题：三数之和&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 15 题：三数之和
+&lt;a href=&quot;https://leetcode-cn.com/problems/minimum-size-subarray-sum/&quot;&gt;https://leetcode-cn.com/problems/minimum-size-subarray-sum/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：答案中不可以包含重复的三元组。&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//举个🌰&lt;/span&gt;
+给定数组 nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;，
+
+满足要求的三元组集合为：
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;动图代码&quot;&gt;动图&amp;#x26;代码&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/1077d6e9ffd63c5fe8bbe09e6973de20/2.gif&quot; alt=&quot;该图字体较小，建议在电脑查看～&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;threeSum&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 排序&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; sum &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 去重&lt;/span&gt;
+        &lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;        
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;根据对撞指针用于已排序的区间，首先对数组进行排序&lt;/li&gt;
+&lt;li&gt;进入循环&lt;/li&gt;
+&lt;li&gt;如果 &lt;code class=&quot;language-text&quot;&gt;nums[i] + nums[L] + nums[R] &amp;gt;0&lt;/code&gt;, 说明三数之和大于0， L向右移一位使三数之和变大&lt;/li&gt;
+&lt;li&gt;如果·&lt;code class=&quot;language-text&quot;&gt;nums[i] + nums[L] + nums[R] &amp;lt;0&lt;/code&gt;, 说明三数之和小于0， R向左移一位使三数之和变小&lt;/li&gt;
+&lt;li&gt;如果 &lt;code class=&quot;language-text&quot;&gt;nums[i] + nums[L] + nums[R] =0&lt;/code&gt;, 说明三数之和等于0，此时就是我们需要的答案，所以将这三个数push到res当中&lt;/li&gt;
+&lt;li&gt;如果 L&gt;=R，则证明双指针遍历完成，跳出while循环，进入第二层for循环&lt;/li&gt;
+&lt;li&gt;当for循环遍历完成后输出满足条件的数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;滑块🧊指针&quot;&gt;滑块🧊指针&lt;/h2&gt;
+&lt;p&gt;滑动指针算法思想可以用来解决数组&amp;#x26;字符串的子元素等问题。它将嵌套循环的问题，转换为单层循环问题，降低时间复杂度，提高效率。&lt;/p&gt;
+&lt;p&gt;它将两个指针的区间范围当作一个滑块，然后将这个窗口在数组上滑动。在窗口滑动的过程中，左边会出一个元素，右边会进一个元素，然后计算对比当前窗口内的元素即可。&lt;/p&gt;
+&lt;h3 id=&quot;基本特点-1&quot;&gt;基本特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;滑块指针从同一端开始，以相同的方向运动&lt;/li&gt;
+&lt;li&gt;用来解决一些查找满足一定条件的连续区间 或 长度 的问题&lt;/li&gt;
+&lt;li&gt;窗口只能由左向右滑动，不能逆过来滑动。就是说，窗口的左右边界，只能从左到右增加，不能减少&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;何时使用-1&quot;&gt;何时使用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;问题的输入是一种线性数据结构，比如链表、数组或字符串&lt;/li&gt;
+&lt;li&gt;你被要求查找最长/最短的子字符串、子数组或所需的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;例题：长度最小的子数组&quot;&gt;例题：长度最小的子数组&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 209 题：长度最小的子数组
+&lt;a href=&quot;https://leetcode-cn.com/problems/minimum-size-subarray-sum/&quot;&gt;https://leetcode-cn.com/problems/minimum-size-subarray-sum/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的连续子数组，返回 0。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 举个🌰&lt;/span&gt;
+输入&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+输出&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+解释&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 子数组 &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; 是该条件下的长度最小的连续子数组。
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;minSubArrayLen&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;动图代码-1&quot;&gt;动图&amp;#x26;代码&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic.leetcode-cn.com/778ebc6f0d1a8433b04c8ca78857a86e6e9a03f5993932440e1d6fdb6c76e595.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;minSubArrayLen&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; min &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; sum &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; len&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    sum &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      sum &lt;span class=&quot;token operator&quot;&gt;-=&lt;/span&gt; arr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      min &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; min&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; min &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; min
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;构造数组arr，然后用 min 来存储数组的长度，并对每次满足条件的数组长度进行比对 (满足数组之和sum ≥ s的while循环)，最终得到最小的min。&lt;/p&gt;
+&lt;h2 id=&quot;快慢指针&quot;&gt;快慢🐢🐰指针&lt;/h2&gt;
+&lt;p&gt;快慢指针常用于处理数据的追击问题，两个指针进行同向运动，但是运动速度一快一慢，如果处理的数据出现循环时，快速指针🐰必将与慢速指针🐢相遇。&lt;/p&gt;
+&lt;h3 id=&quot;基本特点-2&quot;&gt;基本特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;快慢指针在同一端开始、往相同方向运动、并以两指针相交 或 单指针遍历完成结束&lt;/li&gt;
+&lt;li&gt;快慢指针常用于处理链表或数组中的循环的问题、找链表中点或需要知道特定元素的位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;何时使用-2&quot;&gt;何时使用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;处理链表或数组中的循环的问题&lt;/li&gt;
+&lt;li&gt;当你需要知道特定元素的位置或链表的总长度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;例题：环形链表&quot;&gt;例题：环形链表&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 141 题：环形链表
+&lt;a href=&quot;https://leetcode-cn.com/problems/linked-list-cycle/&quot;&gt;https://leetcode-cn.com/problems/linked-list-cycle/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定一个链表，判断链表中是否有环。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;输入： &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+输出： &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;token parameter&quot;&gt;输入：&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;
+输出：&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;动图代码-2&quot;&gt;动图&amp;#x26;代码&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.byeguo.cn/gzh/blog/2020_07_20_mzsf_6/2.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;slow &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fast &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+        fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;定义两个变量（slow、fast指针）开始循环，快指针的速度是慢指针的两倍，所以当他们相遇时，则链表中存在环，或者快指针走到终点，说明链表无环。&lt;/p&gt;
+&lt;h2 id=&quot;参考文章&quot;&gt;参考文章&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;准备程序员面试？你需要了解这 14 种编程面试模式
+&lt;a href=&quot;https://zhuanlan.zhihu.com/p/68916567&quot;&gt;https://zhuanlan.zhihu.com/p/68916567&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[【每周算法】(双指针遍历篇)：环形链表]]></title><description><![CDATA[本周是双指针遍历篇的第三种（也是最后一种解题方法），快慢指针！ 什么是快慢指针呢？能解决什么样得到问题呢？ 假设在一个环形跑道上，小明和小红比赛跑步，假定小红的速度始终比小明快，那么小红早晚会超过小明一圈并在此相遇。  又或者，小红的速度是小明的…]]></description><link>https://www.byeguo.cn/post/2020_07_20_mzsf_6/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_20_mzsf_6/</guid><pubDate>Mon, 20 Jul 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本周是双指针遍历篇的第三种（也是最后一种解题方法），快慢指针！&lt;/p&gt;
+&lt;p&gt;什么是快慢指针呢？能解决什么样得到问题呢？&lt;/p&gt;
+&lt;p&gt;假设在一个环形跑道上，小明和小红比赛跑步，假定小红的速度始终比小明快，那么小红早晚会超过小明一圈并在此相遇。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.byeguo.cn/gzh/blog/2020_07_20_mzsf_6/1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;又或者，小红的速度是小明的2倍，他俩在直线跑道上跑，那当小红跑道重点时，小明正好在跑道中间&lt;/p&gt;
+&lt;p&gt;快慢指针，顾名思义，定义两个指针一快一慢，如果链表有环，则快慢两指针早晚会相遇，这样就能判断出链表中有环存在。如果链表无环，则快指针遍历完链表时，慢指针正好在链表的中间。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;所以，综上可知，快慢指针在处理链表、数组的追击问题时可以发挥出它的威力！&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;【每周算法】双指针遍历篇：环形链表&quot;&gt;【每周算法】(双指针遍历篇)：环形链表&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;leetcode 141 题：环形链表
+&lt;a href=&quot;https://leetcode-cn.com/problems/linked-list-cycle/&quot;&gt;https://leetcode-cn.com/problems/linked-list-cycle/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;给定一个链表，判断链表中是否有环。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;输入： &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+输出： &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;token parameter&quot;&gt;输入：&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;
+输出：&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * @param {ListNode} head
+ * @return {boolean}
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解答过程&quot;&gt;解答过程&lt;/h2&gt;
+&lt;h3 id=&quot;节点标记法&quot;&gt;节点标记法&lt;/h3&gt;
+&lt;p&gt;最先想到的基础方法，不需要任何前置知识：&lt;/p&gt;
+&lt;p&gt;我们只需要遍历这个链表，在遍历过的时候给节点打一个tag，这样，如果遍历到循环结束，那该链表自然不是环形链表。&lt;/p&gt;
+&lt;p&gt;反之，如果我们遍历的时候遇到了tag，则说明我们之前也遇到过它，所以我们已经进入了环中！故&lt;code class=&quot;language-text&quot;&gt;return true&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 链表长度小于2时直接return&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tag&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+        head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tag &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+        head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;执行用时：96 ms, 在所有 JavaScript 提交中击败了18.67%的用户&lt;/li&gt;
+&lt;li&gt;内存消耗：38.3 MB, 在所有 JavaScript 提交中击败了33.33%的用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;hashmap法&quot;&gt;hashMap法&lt;/h3&gt;
+&lt;p&gt;百用不厌的hash法（所以说Map真是个好东西💪）。在遍历链表时存储遍历过的节点，如果Map中该节点存在，则说明链表中有环&lt;/p&gt;
+&lt;p&gt;这种解法和节点标记法异曲同工。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; map &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;has&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+        map&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        head &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;执行用时：80 ms, 在所有 JavaScript 提交中击败了71.12%的用户&lt;/li&gt;
+&lt;li&gt;内存消耗：38.6 MB, 在所有 JavaScript 提交中击败了8.33%的用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;快慢指针&quot;&gt;快慢指针&lt;/h3&gt;
+&lt;p&gt;重点来了！别说话，看图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.byeguo.cn/gzh/blog/2020_07_20_mzsf_6/2.gif&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; head&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;slow &lt;span class=&quot;token operator&quot;&gt;!=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fast &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+        fast &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fast&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+        slow &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; slow&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;执行用时：76 ms, 在所有 JavaScript 提交中击败了85.77%的用户&lt;/li&gt;
+&lt;li&gt;内存消耗：38.3 MB, 在所有 JavaScript 提交中击败了33.33%的用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;首先定义两个变量（指针）开始循环，快指针的速度是慢指针的两倍，所以当他们相遇时，则链表中存在环，或者快指针走到终点，说明链表无环。&lt;/p&gt;
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+&lt;p&gt;这是双指针遍历篇的最后一篇文章了，至此这种解题方法的三种常见题型我们也都做过啦。后面我会对前面的文章中的对撞指针、滑块指针、快慢指针的题型做一篇总结，再复习一次，同时综合的再讲解一遍。&lt;/p&gt;
+&lt;p&gt;另外，自己在公众号的创作也有一个月了，最近在思考每周算法的写作模式是否有些枯燥，应该会做一次创作模式的有趣改变，但是依旧会保持每周至少一篇的算法内容输出，和大家共同学习前端的方方面面、拭目以待吧！&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【每周算法】(双指针遍历篇)：无重复字符的最长字串]]></title><description><![CDATA[…]]></description><link>https://www.byeguo.cn/post/2020_07_13_mzsf_5/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_13_mzsf_5/</guid><pubDate>Mon, 13 Jul 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8890ba27053704c437eb5c1f3f124ce1/f67cc/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAYMUOgWRQZv/xAAaEAACAwEBAAAAAAAAAAAAAAAAAQIDEhMR/9oACAEBAAEFAqtb2dJCbRG3w7yP/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BR//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAAEFAQAAAAAAAAAAAAAAAAEAEBEhMTP/2gAIAQEABj8CFihDcy2LAv/EABwQAAMAAgMBAAAAAAAAAAAAAAABESFBUWFxkf/aAAgBAQABPyFnw30Ihcnk6Mom0Om1ezUg/9oADAMBAAIAAwAAABB4/wD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8QjT//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8QrX//xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMUFRkcH/2gAIAQEAAT8Q2mGSihblOz5jDTZ0SvGNXZ2U2ecRFhsjxjJG3ND7yAQwhRXP/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/8890ba27053704c437eb5c1f3f124ce1/88218/1.jpg&quot;
+        srcset=&quot;/static/8890ba27053704c437eb5c1f3f124ce1/7237a/1.jpg 148w,
+/static/8890ba27053704c437eb5c1f3f124ce1/0cfdf/1.jpg 295w,
+/static/8890ba27053704c437eb5c1f3f124ce1/88218/1.jpg 590w,
+/static/8890ba27053704c437eb5c1f3f124ce1/f67cc/1.jpg 800w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本周我们继续做的依然是一道&lt;strong&gt;滑块指针&lt;/strong&gt;的题目，巩固上周所学。这次的题目和上周题目大同小异，但是由于从遍历数组转换成了遍历字符串，便有了更多的解法！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -61,7 +779,7 @@
 &lt;h3 id=&quot;维护map-的滑块遍历&quot;&gt;维护Map 的滑块遍历&lt;/h3&gt;
 &lt;p&gt;这里我们重点看第三种解法！&lt;/p&gt;
 &lt;p&gt;我画了这张动图向大家演示一下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgkr.cn-bj.ufileos.com/d1b33e47-60a8-4609-bf57-b1d0f21826f4.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/e5d34b25437e755f3f0df689ed174925/2.gif&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;lengthOfLongestSubstring&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length
     &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; idx &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; max &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
@@ -104,9 +822,234 @@
  * @param {ListNode} head
  * @return {boolean}
  */&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[【每周算法】(双指针遍历篇)：长度最小的子数组]]></title><description><![CDATA[本周是 双指针遍历篇 的第三题，注意：这道题目和我们之前的做法不大一样，之前的题目是逆向的双指针解法，而这道题目：是同向的双指针解法，又名滑块窗口法。那么滑块法和普通的双指针遍历有什么区别呢？大家请看图：  这里先来解释一下上面的图。 逆向双指针：由图可知，逆向双指针是在for…]]></description><link>https://www.byeguo.cn/post/2020_07_06_mzsf_4/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_06_mzsf_4/</guid><pubDate>Mon, 06 Jul 2020 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://static01.imgkr.com/temp/19d08d7dc7e54c848b4116752afe74d4.png&quot;&gt;&lt;/p&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;hasCycle&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[漫解链表]]></title><description><![CDATA[…]]></description><link>https://www.byeguo.cn/post/2020_07_20_lbjc/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_20_lbjc/</guid><pubDate>Mon, 13 Jul 2020 08:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;本文仅为让大家对链表有一个基本具象的认识，为我们后面算法学习进入链表的篇章做一个铺垫、因为链表题型是面试算法题中的半壁江山、嘿嘿逃不掉的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;链表基础定义&quot;&gt;链表基础定义&lt;/h2&gt;
+&lt;p&gt;链表是一种常见的数据结构，在地址中存储的方式和数组不同，数组是连续的内存地址、而链表则是在每一个节点中记录了下一个节点的内存地址，常见的单链表如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4b95496efc8c2bc12dddbefe94e855c4/8551f/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.901408450704224%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgElEQVQI1zWOPQoFIRCD9/5n8gZ2FoL/qLuFCFpZzyN5WEiS+WQyT+9dUkoCjTHyIY8xpLUmOWeqc46+lMK/d44MBkV+ANZaDHNOed+XUGstxhjZe5Oh4Ps+Fiql5JxDD621knnv/wuxAENcFkIggEcz5njwl6PoXokDrLXcgYIfBtTYqQxzzbwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/4b95496efc8c2bc12dddbefe94e855c4/799d3/1.png&quot;
+        srcset=&quot;/static/4b95496efc8c2bc12dddbefe94e855c4/00d96/1.png 148w,
+/static/4b95496efc8c2bc12dddbefe94e855c4/0b23c/1.png 295w,
+/static/4b95496efc8c2bc12dddbefe94e855c4/799d3/1.png 590w,
+/static/4b95496efc8c2bc12dddbefe94e855c4/8551f/1.png 710w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;其中，Value是单个节点的值，每一个节点又有一个next ，这个属性用于找到该节点的子节点的内存地址，访问者可通过该方法访问子节点&lt;/p&gt;
+&lt;h2 id=&quot;图解链表&quot;&gt;图解链表&lt;/h2&gt;
+&lt;p&gt;接下来我们看看常见的链表结构有哪些？&lt;/p&gt;
+&lt;h3 id=&quot;单链表&quot;&gt;单链表&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e0e99446b8eac9ab1cdd8d91737ad719/8551f/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.056338028169016%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABiElEQVQoz2WSyarCYAyF+/7P4kooiLgRBBEVrRbn2Tq0zsNCV0e+QOTKXfwkzXDOSZrgfD7rdDrpdrtps9loNpspyzLd73ddLhc9Hg8lSaLlcqnD4aDr9Wr19OFT4xjYAIfgYDBQPp9XGIYqFArq9XoGXK1WlcvlVKlUVC6XDRigNE21WCyM7Hg8fkENkAc7xXEcazQaqd/vazgcml+r1ayRGoBQH0WRSqWSkQPsygOXCguJyWTyXQHKsdPpVOPxWD4N9YBTO5/P7ftHIegkG42GttutAVMAWLfbVafTsfE9DihATMQEu93OYgboyIBS0G63DdQLyLNPQFEFCbXEW62WCfmn0AM+joP56Chjp66KFeA3m82fNXwVwsxIWPcdFJ8fwUmt12sDcp9RybN/rJ0NjMherVa2eJ5/uxJ8doWPWm4VS+9f9fgBSc5gv98bA6ycSL1etx/yfD4t5ydDY7FY1Ov1MqL3+21qUQhpACpK/DS4PY4cUMh45IjR4FPQh4WAn8ZU1H4AspolOV2nffYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/e0e99446b8eac9ab1cdd8d91737ad719/799d3/2.png&quot;
+        srcset=&quot;/static/e0e99446b8eac9ab1cdd8d91737ad719/00d96/2.png 148w,
+/static/e0e99446b8eac9ab1cdd8d91737ad719/0b23c/2.png 295w,
+/static/e0e99446b8eac9ab1cdd8d91737ad719/799d3/2.png 590w,
+/static/e0e99446b8eac9ab1cdd8d91737ad719/8551f/2.png 710w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ListNode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 一级节点&lt;/span&gt;
+	value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;// 二级节点&lt;/span&gt;
+		value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token comment&quot;&gt;// 三级节点&lt;/span&gt;
+			value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;环链表&quot;&gt;环链表&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/28e0de28159278f70cc3450722130baa/36e7e/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.014267185473415%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAAB2UlEQVQoz31S2W4CMQzM/39N3xASSEhIwAtHEfe5B3tml2WXVm2f3Bm3Qa1U9cGK49jj8Tjmer3K7XaTLMskjmOpqkqtLEs1vvu+L/v9XqIoery5PNbkea4YvBsWrNdrabVa0uv1ZDweK7gDOx6P0u12ZTgcymg0Es/ztJhA/X5f2u22dDodrUuS5AswCALZbrdqLCiK4tHRWqsMT6eTpGmqjeq61pMAbLjb7XQC5hoWEmQ+n2tXsj0cDgrORLKaTqf6tlwutdABrFYrGQwGcj6fH0QMOxGUIJPJ5KEPmTt9HRgZ/HxzPsmEYfiloRuBY89mMxXew4i+M8TV4Affp4vzTik2mKZpGiVjXDeLTQVMBH0f9JkcXi7qq7k4cjSOO30PZwwSbomGcyegXEGXBgUldLmho4WWGWIVuyNeQ/xysZAKZwhdG4DVACshBWuz52exADY+1h3hS7xhgw3ovyBIwARxD9/iFfoR7J3aotmVv+HpST6gbY3F3AF850IA6AHHJEBPsZAUjxkK481GUsRyiFySPQAyNOKpPlhZNGGdxpGvcYDGmMpcMG6KpAKfmYkWTC3+F/0cbJ2vp/Pd3eXjLLCDEN/LpOgSQYcYXcjul/0V+8ciMPwETp9pasr+qlEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/28e0de28159278f70cc3450722130baa/799d3/3.png&quot;
+        srcset=&quot;/static/28e0de28159278f70cc3450722130baa/00d96/3.png 148w,
+/static/28e0de28159278f70cc3450722130baa/0b23c/3.png 295w,
+/static/28e0de28159278f70cc3450722130baa/799d3/3.png 590w,
+/static/28e0de28159278f70cc3450722130baa/36e7e/3.png 771w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ListNode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 一级节点&lt;/span&gt;
+	value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;// 二级节点&lt;/span&gt;
+		value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token comment&quot;&gt;// 三级节点&lt;/span&gt;
+			value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ListNode
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;双向链表&quot;&gt;双向链表&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/51e1dc9ca1a4642e7a556a15ddd89e60/56fc4/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.85267857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABZklEQVQozz1S2Y7CQAzr//8YQoAWSqH0otODVjOdnss+Z+2s2AerIXEcJ0MwjqNM0yRt28r5fJYsy8Q5J8wTzN/vd0nTVLquE++98ouiUH6e5/9cImBxnmd5PB6y3++V1DSNbNumBIodj0cJw1CSJJFhGGRZFomiSA6Hg9xuN+VRQwU5sa5rdUYXZVlqozFGns+nxszTEXkcRi7zjD/cvu/VeUBVrtIDFDAUhNuMIliHqNDAQRSmAGOKk9tClGLW2j/BCVbndVV8Yosb1rhd83rJC2TGDquOqBsI8TfzrHf4LuzFGdgfOEwfMNkBI8gejgzuVeCW1fUqDeL860vqOBYL5wXiErUaeXO5SIrY4xzsd3AcOBBnNK5IrhD7xtpvEkD2wIoVf7DWu6pkQ9OMR7B4pAWPpXkY2iA0YQC1ggH2LYQ8ChFeLQZy/n1AiE8naUBq4Czc7TSfwmEC8EtHCpiwMDFgwC/rCEQ/ShjFjQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/51e1dc9ca1a4642e7a556a15ddd89e60/799d3/4.png&quot;
+        srcset=&quot;/static/51e1dc9ca1a4642e7a556a15ddd89e60/00d96/4.png 148w,
+/static/51e1dc9ca1a4642e7a556a15ddd89e60/0b23c/4.png 295w,
+/static/51e1dc9ca1a4642e7a556a15ddd89e60/799d3/4.png 590w,
+/static/51e1dc9ca1a4642e7a556a15ddd89e60/2a3d6/4.png 885w,
+/static/51e1dc9ca1a4642e7a556a15ddd89e60/56fc4/4.png 896w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt; &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ListNode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 一级节点&lt;/span&gt;
+	value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	prev&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;// 二级节点&lt;/span&gt;
+		value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		prev&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ListNode&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token comment&quot;&gt;// 三级节点&lt;/span&gt;
+			value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			prev&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ListNode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;next&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			next&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ListNode
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[【每周算法】(双指针遍历篇)：长度最小的子数组]]></title><description><![CDATA[本周是 双指针遍历篇 的第三题，注意：这道题目和我们之前的做法不大一样，之前的题目是逆向的双指针解法，而这道题目：是同向的双指针解法，又名滑块窗口法。那么滑块法和普通的双指针遍历有什么区别呢？大家请看图：  这里先来解释一下上面的图。 逆向双指针：由图可知，逆向双指针是在for…]]></description><link>https://www.byeguo.cn/post/2020_07_06_mzsf_4/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_07_06_mzsf_4/</guid><pubDate>Mon, 06 Jul 2020 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4469e4cad6eebe3609110994f49d1d40/3f01f/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACPElEQVQ4y3VSa2/bMAzM//85A4Zt/bQOxVZka4e1aR0vrtM0dmzHTizJb9nmjVKbPrKNAGHROlJH8iZd12G1WmF1f49NFEGVJdI0hRDCfkuO4ziGyAWULJBlmb0rigLGCC9GRJj0fY8wDJEy0HPnCO88+Msl0jzHwvNssuO4jAnwEC7h+z4/ECFJtoCWILkCqTUwDrboxFTVzFIPA2TwgPXZZxvvFnMMWmOkEWUtsVMbXPgfwSGapsEwMrf4AuS9Ay0/gLa/QJ3C5EBVc7KxVinUWYrg6ylKKSFUjvnmHHmVIBa+xWjd8UNcsAhBu1vQ3gUll6AqfixobGCGvXEewWiSGB9uNnZ+xGxo6LlQy97bx8dx/GuGtmVzYQbfNDWo1+iaCl1dPc/EWMdZJYf9UTKZ/tnJ+vC4FLPl2WyGG8fB1Atw8v0KJz+ucRPtsSo0fNHiS6IxzTTSqkPP7bac81+GplUlBTJZ4nKdoWpaBFEMWVZwfi+QCwnH8+HGOSqxxzoIkLMCjHx4UKBW2WWAnYaOC/JLIt8j2QucuWu4t3NchRkWqcTlXYC7TGG6jOAkEoXIWS6JLSgV63D782nLn0D+exAvyS5l5Hlpy1TBP/+G0HWZYY2O75JcYpsrblNzu9oupK5r2yqlM9D6FBRN+Xxt/1kdHrZMzLZnjfW8FDMrw9x4VRbo2tbOzajAYN/Ojw5betGh0ZVJOIA6ZhRzewUr4BnD9xbDZ3r698ZfMzzSw1FI/4CQxb0uaOI/b8fn71uZVM4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/4469e4cad6eebe3609110994f49d1d40/799d3/1.png&quot;
+        srcset=&quot;/static/4469e4cad6eebe3609110994f49d1d40/00d96/1.png 148w,
+/static/4469e4cad6eebe3609110994f49d1d40/0b23c/1.png 295w,
+/static/4469e4cad6eebe3609110994f49d1d40/799d3/1.png 590w,
+/static/4469e4cad6eebe3609110994f49d1d40/3f01f/1.png 600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;本周是 双指针遍历篇 的第三题，注意：这道题目和我们之前的做法不大一样，之前的题目是逆向的双指针解法，而这道题目：是同向的双指针解法，又名&lt;strong&gt;滑块窗口法&lt;/strong&gt;。那么滑块法和普通的双指针遍历有什么区别呢？大家请看图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://static01.imgkr.com/temp/093c0df0175249b3ac83ccd21cef64ba.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b70591eac282c809d05d92e1cf30bb7b/3f01f/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAAAsSAAALEgHS3X78AAAET0lEQVRIx42V55LrNgyF9/1fLpNs7uSubRWrN6s3qp0cQPaW/IpmMIRECgSF70BvwAGz7ki6Hc1g0Iy0fsSyLJimSc0Yg3Ecdfzuyyjr8jyD7/s0D2/HcWA/ACt9wLJteH6Ai+MjCDheLoiiiC/ksG0LnndHHMf6sjyXNXEccc6m70Cut33f1UkLB1c3gB+XuPkJsixnAF/Hum4QhiniJGXwAglHsSCM4Lp3XG9MxPtglF0y3MEk0fcRqspmgL94DDlm97Qe01ihLG8YhwKLGTDPLceeY6e+4bNhSLBty3nkg2de1wmzKdXWTb5Nj2Xt+Xzks5qbXfnNCs5NtOFrDTddlk59Oe0ZEOe1DlzUDzjWTWqFnaOY3j+vnUXYplnXHjt+XGdAOhsXdVGIPo3RJzGmR4EhS9EGHmrXRheHXGOwsuLN3UHt3FBef6MLfSbQ4UzqOANK5G1dMVUVTJnDFKku2uaJ2RgsXaOjXMe2YjMzTYITna79Cvi0Jzan5cOGqF1hhEGzYpwNpuUcRx5zMov6Mv+yvChwv7uKVMcNFBsJFsQJ/rk6eLcEnRQ318fFviNMc9yDGB+WA9cPcSFaYZIhS1NlMQxDWNaNwRpWeZMMwSo2sNwLd/Jh3QMkKXf1AtxsF/mjQsgNrpaLMErh+DE3SBBHMYF2aC5+/XondvkJtlRzmkpUTcgjzZRfi3bo0I09JUifY9k+1IrKR14FT057YtQog+NYMsZDedZvuK0zJ2rla/tuu4wjmsaiWq4MVGOeyOI6KHvrerJqjBx3Povykh5Vw8pK9WYsZEyZHAYd1cb5nGdDmKsaI/U9siAz6XiB/An2MvTKniAw1xWWkVLKU8xNpXiM4telrpH5IUvQ+ncyaStGL2Q0oFRYeBqLXAOORab38tJUPvTZQODFlzVzXVMEgUIvvvK5U02UzUZOP6UncK/cbWFGi/Q5qkLHT+PxhT1mKtnVZG/mxsdP9Z1KkVQl8P+5BHjZbBWFMAnJLEsT5JRqSjY/M5wnwxZVsn1l2lDFF8CjrEBEuD0ymJFJq5jgFS3SskHAphwXlTZkWWcoVwVbSh5FN3bfBB8fH2yeCSH38PvmqO+4LmzH0Q7tBSFVlVIdljZgWXe17gx6+TqyNNLHwyXtI2piUNH6vkdSMGNmklcd/Rplw2ePGlHRIKtazfDOLuVwk7SIWJzlDLgS7HFKCTZh3VodBeKVtiwNderxG/1BRaR6LyIwplL4y/JvtK3FRlt/VXnfdqLSYWIFR7ImZuSj4+Rr487SqRWR/xTp+PbkE+ydXaILAzRsQdn7n+rv63K+IPPSpdm6RADaC4mQaRuCX+sots1P6b0Y7Pk7lEDSub8jJB1cXhDFSAAJKveimp6AS2cX6Key0Fw/M5SJ2rGpAJ+ScjWQ3BsW52z/p7ZFaqKeqTo/z1Q91Jestduc0tmpkvOfsZIlVclTKS/of9jzW/6w59y/6qAb9DdwOfAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/b70591eac282c809d05d92e1cf30bb7b/799d3/2.png&quot;
+        srcset=&quot;/static/b70591eac282c809d05d92e1cf30bb7b/00d96/2.png 148w,
+/static/b70591eac282c809d05d92e1cf30bb7b/0b23c/2.png 295w,
+/static/b70591eac282c809d05d92e1cf30bb7b/799d3/2.png 590w,
+/static/b70591eac282c809d05d92e1cf30bb7b/3f01f/2.png 600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;这里先来解释一下上面的图。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;逆向双指针：由图可知，逆向双指针是在for循环中，通过 L和R&lt;strong&gt;两个指针&lt;/strong&gt;反方向遍历数组（while循环），最终L和R相遇进行第二次for循环，以此类推来操作数组的。&lt;/li&gt;
@@ -127,7 +1070,7 @@
 &lt;p&gt;这是我首先能想到的方法，因为题目是要找的是长度最小的子数组，所以索性就来构造这么一个数组arr，然后用 min 来存储数组的长度，并对每次满足条件的数组长度进行比对 &lt;em&gt;(满足数组之和sum ≥ s的while循环)&lt;/em&gt;，最终得到最小的min。&lt;/p&gt;
 &lt;p&gt;因为题目要求当不符合条件时返回0，但是如果直接把min设置为0的话，进行比对会有问题。所以将其初始值设为nums.length + 1，这样如果数组满足条件，则min一定会小于nums.length+1，故最后return结果时通过min是否等于nums.length+1进行判断即可。&lt;/p&gt;
 &lt;p&gt;整个思路流程如图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgkr.cn-bj.ufileos.com/6ff23fea-3cc3-4a3a-9465-ec3cc4776099.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/05de0861919acc82c78008304895e46c/2.gif&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;minSubArrayLen&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nums&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; len &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; nums&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length
   &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
@@ -198,7 +1141,35 @@
 &lt;p&gt;又是新的一周，这次的题目也是一道双指针遍历题，如果大家学会了上周题目的解法，那这次的题目应该也会做的很轻松吧？&lt;/p&gt;
 &lt;p&gt;当然，本题看题目标题就知道和我们上周的题目大致相同，所以，我们这周就不再赘述 多重·for·影分身 这种禁术解法了，直奔我们的主题，双指针遍历～&lt;/p&gt;
 &lt;p&gt;如果还不知道怎么做？也没关系，这次我们会再做一遍，巩固加深对此类题目的印象，一题不行，咱就做两题，两题不行就做三题，努力总是会超越天才的！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgkr.cn-bj.ufileos.com/4ce7cf9a-0ce4-4f00-b08d-0cd0cb17df3d.jpeg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1f22faba1d2aee2c3dafd6dc5680efe0/7459a/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABmuT1SzjBP//EABoQAAICAwAAAAAAAAAAAAAAAAACAQMRIjH/2gAIAQEAAQUCrjIy6yIW8P/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAAgUf/aAAgBAQAGPwIi/wD/xAAZEAADAQEBAAAAAAAAAAAAAAAAARExUYH/2gAIAQEAAT8hpia9wiziGjaFizo9P//aAAwDAQACAAMAAAAQwP8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAEDAQE/EByf/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAx/9oACAECAQE/EDV//8QAHBABAAICAwEAAAAAAAAAAAAAAQARITFBUYHh/9oACAEBAAE/EFG8Cw5o1TgLDKvyUXv2NKuyGSwKvM3z/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/1f22faba1d2aee2c3dafd6dc5680efe0/88218/1.jpg&quot;
+        srcset=&quot;/static/1f22faba1d2aee2c3dafd6dc5680efe0/7237a/1.jpg 148w,
+/static/1f22faba1d2aee2c3dafd6dc5680efe0/0cfdf/1.jpg 295w,
+/static/1f22faba1d2aee2c3dafd6dc5680efe0/88218/1.jpg 590w,
+/static/1f22faba1d2aee2c3dafd6dc5680efe0/7459a/1.jpg 640w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;【每周算法】双指针遍历篇：最接近的三数之和&quot;&gt;【每周算法】(双指针遍历篇)：最接近的三数之和&lt;/h2&gt;
 &lt;p&gt;给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意：假定每组输入只存在唯一答案。&lt;/strong&gt;&lt;/p&gt;
@@ -271,7 +1242,34 @@
 &lt;li&gt;内存消耗 :35.5 MB, 在所有 JavaScript 提交中击败了30.00%的用户&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;到这里已经优化完成了，如果你们觉得本段代码还有改进空间或者有更好的优化方案，也欢迎点击下面的阅读原文在下面的评论给我留言～～&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://imgkr.cn-bj.ufileos.com/e9c38534-9c1b-4d58-abc6-ed9a5a6a60e2.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 542px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b216abc1ec39d78decc04cd3f6070cd1/36b00/2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.78966789667896%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAQP/xAAWAQEBAQAAAAAAAAAAAAAAAAACAQP/2gAMAwEAAhADEAAAAU50INsICj//xAAcEAACAgIDAAAAAAAAAAAAAAABAgARAxIhIiP/2gAIAQEAAQUCFUejbCFfHOsflv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAERL/2gAIAQMBAT8BXC6v/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAECAQE/AYy//8QAGRAAAgMBAAAAAAAAAAAAAAAAAREAEDFh/9oACAEBAAY/AuRs0S8gdf/EABsQAQADAQADAAAAAAAAAAAAAAEAESExUWHh/9oACAEBAAE/IWFduNqICyPnlRT7kZ4CCpatcaoybfWT/9oADAMBAAIAAwAAABBQ3//EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAgBAwEBPxANNll//8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EFTIP//EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExQVFhgcH/2gAIAQEAAT8QSLTsB8Y8UbdMapI8OaHD9S5mi1x9s2NAIazl8sbrQwDoJ//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/b216abc1ec39d78decc04cd3f6070cd1/36b00/2.jpg&quot;
+        srcset=&quot;/static/b216abc1ec39d78decc04cd3f6070cd1/7237a/2.jpg 148w,
+/static/b216abc1ec39d78decc04cd3f6070cd1/0cfdf/2.jpg 295w,
+/static/b216abc1ec39d78decc04cd3f6070cd1/36b00/2.jpg 542w&quot;
+        sizes=&quot;(max-width: 542px) 100vw, 542px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;下周题目&quot;&gt;下周题目&lt;/h2&gt;
 &lt;p&gt;下周依然是一道双指针遍历题，不过该题可是有多种解法的，各位可以先看看自己能想出来几种呢？&lt;/p&gt;
 &lt;p&gt;给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的连续子数组，返回 0。&lt;/p&gt;
