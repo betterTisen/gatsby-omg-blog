@@ -206,7 +206,7 @@ export default {
 
 ## 最后
 
-chrome插件使用文档可在[我的github中查看](https://github.com/betterTisen/Tnshare_Doc)。
+chrome插件使用文档和下载地址可在[我的github中查看](https://github.com/betterTisen/Tnshare_Doc)。
 
 由于目前该服务在我自己的小霸王服务器上跑，故没有开源。大家可以体验一下～如果有开源需求的话，点赞这篇文章，如果多的话我会开源分享给大家，不过会停止本服务器上的线上服务。
 
