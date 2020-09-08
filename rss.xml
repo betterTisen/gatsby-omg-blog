@@ -1,4 +1,228 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 30 Aug 2020 10:37:23 GMT</lastBuildDate><item><title><![CDATA[【动图算法】：区间调度与区间合并]]></title><description><![CDATA[本周我们学习的是区间调度与区间合并的两道典型问题，该类问题虽然题目形式不多，但是也是经常考察的问题对象哦！这里就拿出两道最典型的题目来作为本周学习的内容吧～ 【动图算法】：区间合并 leetcode 56 题：合并区间 https://leetcode-cn.com…]]></description><link>https://www.byeguo.cn/post/2020_08_24_mzsf_11/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_24_mzsf_11/</guid><pubDate>Mon, 31 Aug 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本周我们学习的是区间调度与区间合并的两道典型问题，该类问题虽然题目形式不多，但是也是经常考察的问题对象哦！这里就拿出两道最典型的题目来作为本周学习的内容吧～&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby OMG Blog]]></title><description><![CDATA[A personal blog used by gatsby]]></description><link>https://www.byeguo.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Sep 2020 16:58:20 GMT</lastBuildDate><item><title><![CDATA[React + TypeScript 写一个Chrome书签共享平台]]></title><description><![CDATA[本拓展程序灵感来自于政采云前端团队的 这篇文章 不同于其知识分享系统，本系统是用于解决不同团队对不同网站的依赖，而开发的一套书签协同管理OA系统，方便多个公用平台的管理。 不多bb…]]></description><link>https://www.byeguo.cn/post/2020_09_08_chrome_extention/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_09_08_chrome_extention/</guid><pubDate>Tue, 08 Sep 2020 18:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;本拓展程序灵感来自于政采云前端团队的 &lt;a href=&quot;https://juejin.im/post/6854573219895050247&quot;&gt;这篇文章&lt;/a&gt;&lt;br&gt;
+不同于其知识分享系统，本系统是用于解决不同团队对不同网站的依赖，而开发的一套书签协同管理OA系统，方便多个公用平台的管理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不多bb，说下开发思路+实践：&lt;/p&gt;
+&lt;h2 id=&quot;共享系统设计思路&quot;&gt;共享系统设计思路&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/70ca37f318001c7ddfadf46be3bd7806/2629a/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.752913752913756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACHUlEQVQ4y21T2XLaQBDU//9PXlJ5SOKHVAU7JsHIHA7mEAh0IHQgaS+1Z3YBg5OtGh17zHRP93qtECirCvssw7GuoY2B0vqfaFpJ6wZ5qVG3GsdGozzSvDCQ6n2fx8mGvo9v3++wXAXgwUlN191EUSm8Bhq93xLzQGG2kBhOBBZrgarW9hzv8xhVuN2ibho7IZVy1S5IDRXQyAqJVahwKCXtVdjnCvFeIMuPYJZSu/3eIc/h+8+W9vX4iJBRTF41JeICHeLMEOUOt6NzlKM4sbQf+30MnoZI9xl4K1dk+oywqqXrHcUq1FjvlC1w11NEW8OfakKs4DFcph2sN3j5O8PrfIGiLC2qM3VOmBPV5EDvSiOld5xphBEl3zrUq9AgyTpHeTSe4OHXIynZnoDfUmaKNEMFOkznCi8LjfFMIaBkgxGHOp0CPE7ComzCkJA2F9s4quby3wiFWhCaQlnrsCis/DZVSPYSxbGFIPt4Qko8j0b42eshSVNbxSl7GzFRDguDjHynCU1DyBeFxo68Kek/aw09T6Iwul0UIS+K995ZG7hkbFxtHK2E1M0ocZQarGNKmGjMltRXmudvj28IK8wod1F8sUx36oqLDlGisIs7PAwUBmONT18E7v84pX/cS9tXf0oq8+Hr8fGWnAXpP7X4/LW1KheVwXKjSERzU9b6kEUZjcdYBev/3uMzZeqsTWzIQqYz9pvtxGvX8Qa3MOprvrY+9gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/70ca37f318001c7ddfadf46be3bd7806/799d3/1.png&quot;
+        srcset=&quot;/static/70ca37f318001c7ddfadf46be3bd7806/00d96/1.png 148w,
+/static/70ca37f318001c7ddfadf46be3bd7806/0b23c/1.png 295w,
+/static/70ca37f318001c7ddfadf46be3bd7806/799d3/1.png 590w,
+/static/70ca37f318001c7ddfadf46be3bd7806/2629a/1.png 858w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;像笔者本身团队中就有很多网站需要存储（还有很多没有截图到…），如果有新同学入职的话，还需要将这些网站一个个分享。非常不方便，该系统可以将需要的网站进行分类存储，将自己团队的同学拉入一个组中，达到共享书签的目的。&lt;/p&gt;
+&lt;p&gt;明确了此思路，来整理一下需求：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户关系：管理员、普通用户。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;管理员权限：添加文章、查看文章、删除文章、添加分类标签、删除分类标签、移除组成员、解散组&lt;/li&gt;
+&lt;li&gt;普通用户权限：添加文章、查看文章、退出组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI形式：chrome插件、后台管理系统&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;chrome插件：注册登陆、创建/加入组、文章添加、退出登录&lt;/li&gt;
+&lt;li&gt;后台管理系统：查看文章、退出/解散组、添加/删除标签、移除组成员、解散组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9a5f7118d480923312d346545ce7c0e5/1a1b4/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.83547557840616%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAABYlAAAWJQFJUiTwAAACPElEQVQoz31Sa2/aMBTt//81+zZpmrZuhKo8UkJDKhiQJ7FJ4hC/bZwQZqBVp6nb1fXRsZxzz/V17k7/jrON/tz3/RUv/La9hf3gzq6u6254Izb6U2+Mqei+pKCmqGTgwhkoKWzo4WCT1KY17+I/q9jCUqtgPwpKZ5Osg3qwhE+L0nnZP+YpyDMQp7E+qo/Ftj2hRYK2u0OcoWhXx1kdXTPMLEdhUkbqP2IuRSjd7DRd0dGauis8/oXHcfe4VZMAOVGzUlp/cOfuZMW90HLVjJeNs+Huhs62bBbJ+aL+viGTRM0TvFb6zfmvsHfmyjpP03a8FW4kvFh6sfIi8xDpyZo9xvjN+Tr583te3uQslNhiPxZ+SP2IBiHxQ/IcMs/ipvHCevXqzBgmFBFSY4IorTGuGGvarrXHQmhCGGMSIcy5UqqV8qiUkVraBq34DKG3233J8yEhQwi/E/KzKGZdez52KmTPIfYT+ZIqi34qF7kJgN601+lcxGUZVNUQ5C5CY5APiuK+LOZ2atYmYbMd94FeQDNPuWsTGg+qpWnbi9i+C8ZB103KasT5AwCfIfwEwJBSSXlDyUgJT3KX06nkU8FdyZ8Ym5mufXWua9+2CuEIoUGW3afZVwhnx2NrfwNAQcH3iMOKQ8TyioILZ/t358Ph2ZgHCB2Mv2XZDwAcuLdtn6QxQyanTEZUDJjcMOVgthQaC62MuTn3GIOm2SIUEWIxq2u7LewwbfGC85JzqvVBK6JUoxTRmmp1G9hvFvhGmKRPay4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;大致关系如图所示&quot;
+        title=&quot;大致关系如图所示&quot;
+        src=&quot;/static/9a5f7118d480923312d346545ce7c0e5/799d3/2.png&quot;
+        srcset=&quot;/static/9a5f7118d480923312d346545ce7c0e5/00d96/2.png 148w,
+/static/9a5f7118d480923312d346545ce7c0e5/0b23c/2.png 295w,
+/static/9a5f7118d480923312d346545ce7c0e5/799d3/2.png 590w,
+/static/9a5f7118d480923312d346545ce7c0e5/2a3d6/2.png 885w,
+/static/9a5f7118d480923312d346545ce7c0e5/ae92f/2.png 1180w,
+/static/9a5f7118d480923312d346545ce7c0e5/1a1b4/2.png 1556w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;项目构建&quot;&gt;项目构建&lt;/h2&gt;
+&lt;p&gt;别问为什么用React+Ts，问就是React learn once, write anywhere，Ts大法真香。这里直接跑命令构建。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx create-react-app my-app --template typescript&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;完成后我们创建一下自己需要的目录结构。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;├── config  					&lt;span class=&quot;token comment&quot;&gt;# ts path配置&lt;/span&gt;
+├── public  					&lt;span class=&quot;token comment&quot;&gt;# 存放 manifest.json 注意：该文件用于chrome拓展的信息识别&lt;/span&gt;
+├── script						&lt;span class=&quot;token comment&quot;&gt;# 需要的bash脚本（后面会说）	&lt;/span&gt;
+├── src	
+│   ├── apis						&lt;span class=&quot;token comment&quot;&gt;# 接口&lt;/span&gt;
+│   ├── components			&lt;span class=&quot;token comment&quot;&gt;# 组件&lt;/span&gt;
+│   ├── configs					&lt;span class=&quot;token comment&quot;&gt;# 开发/生产环境区分&lt;/span&gt;
+│   ├── contentScripts	&lt;span class=&quot;token comment&quot;&gt;# 用于 chrome&lt;/span&gt;
+│   ├── pages						&lt;span class=&quot;token comment&quot;&gt;# 页面&lt;/span&gt;
+│   ├── router					&lt;span class=&quot;token comment&quot;&gt;# 路由&lt;/span&gt;
+│   ├── stores					&lt;span class=&quot;token comment&quot;&gt;# mbox仓库&lt;/span&gt;
+│   ├── utils						&lt;span class=&quot;token comment&quot;&gt;# 工具函数&lt;/span&gt;
+│   ├── App.tsx					
+│   └── index.tsx				
+├── craco.config.js		&lt;span class=&quot;token comment&quot;&gt;# 不想eject故通过craco修改配置项&lt;/span&gt;
+├── tsconfig.json			&lt;span class=&quot;token comment&quot;&gt;# 一些ts的配置&lt;/span&gt;
+└── package.json&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;chrome拓展打开，就相当于一个网页打开，关闭就是一个网页的关闭。所以我们的拓展需要两个功能。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保存用户点击tab栏的位置（不能用户每次打开的时候都在第一页，要记录用户的点击信息）&lt;/li&gt;
+&lt;li&gt;保存当前浏览器的网页信息（方便用户添加书签）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/1eadd5b152a61a260250397e35d28a1e/3.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里不再去重复普通页面的写法，没有必要。所以着重说一下作为chrome拓展程序和一般web项目不同的地方。&lt;/p&gt;
+&lt;h3 id=&quot;chrome拓展需要识别拓展信息：故需要manifestjson文件。&quot;&gt;chrome拓展需要识别拓展信息：故需要manifest.json文件。&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;manifest_version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Tnshare&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;A plugin for sharing knowledge and common tools&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1.0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+  &lt;span class=&quot;token property&quot;&gt;&quot;permissions&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;tabs&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;storage&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;icons&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;322&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;icon.png&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;browser_action&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;default_icon&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;icon.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;default_popup&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;index.html&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content_scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;matches&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&amp;lt;all_urls&gt;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;js&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./contentScripts/get_data.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;run_at&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;document_start&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;content_security_policy&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;script-src &apos;self&apos; &apos;sha256-hrABjXgkmzJSAYJz7Tb8+vCZlVwt6UMWGfHKxDlE+2k=&apos;; object-src &apos;self&apos;&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里主要看一下 &lt;code class=&quot;language-text&quot;&gt;permissions&lt;/code&gt; 、 &lt;code class=&quot;language-text&quot;&gt;content_scripts&lt;/code&gt; 和 &lt;code class=&quot;language-text&quot;&gt;content_security_policy&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;permissions&lt;/code&gt;：我们开发所需要用到的权限。tabs为拓展与用户页面的信息交互、strong类似于localstorage用于存储用户点击信息&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;content_scripts&lt;/code&gt; ：这个是chrome的规定写法，要想获取用户信息，必须创建一个js脚本，Chrome会自动将该脚本注入用户页面，以获取用户网页信息。（注意：content_scripts中js只能获取用户页面的html/css，无法获取其js内容）&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;content_security_policy&lt;/code&gt;：因为webpack打包后html会有内联js，chrome插件默认禁止使用内联js，需要这里添加上js的解释形式即可（或者在craco中注入webpack全局配置取消内联注入亦可）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;srcipt中的code-classlanguage-textbashcode&quot;&gt;srcipt中的&lt;code class=&quot;language-text&quot;&gt;bash&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;细心的同学可以看到，我们在&lt;code class=&quot;language-text&quot;&gt;content_scripts&lt;/code&gt;中指定了需要注入的js文件位置，打包的时候我们也需要保证该文件位置的一致性。由于不想eject，所以需要来写一个bash srcipt，在打包完成后将该文件夹下的内容注入到build目录下。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 注意需要加下权限：chmod +x script/build.sh&lt;/span&gt;
+&lt;span class=&quot;token function-name function&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p build/contentScripts
+  &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; -r src/contentScripts/* build/contentScripts
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;code-classlanguage-textutilschrome_methodstscode下，规避开发环境没有chrome全局变量的问题&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;utils/chrome_methods.ts&lt;/code&gt;下，规避开发环境没有chrome全局变量的问题&lt;/h3&gt;
+&lt;p&gt;还有一个问题，由于chrome拓展中的功能使用到的是Chrome注入的全局变量。但是在本地开发的时候，没有这个变量，导致页面报错，如果我们直接注释代码又太不优雅。。。故需要将生产环境与开发环境的变量分离。&lt;/p&gt;
+&lt;p&gt;为了减少行数，代码内容把tab选项卡点击类型做了删减、减少一下重复度，一大坨代码要我我也看不下去🥕&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; stores &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@/stores/index&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IChromeMethodsProps&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeTabsQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;cb&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 获取外部链接&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeSetTabIdx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;key&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; cb&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 设置tab选项卡点击位置&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeGetTabIdx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tab&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 获取tab选项卡点击位置&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;token&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; Promise&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;string&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 设置token&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeGetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; Promise&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;string&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 获取token&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; dev_methods&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; IChromeMethodsProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeTabsQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;cb&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;i m title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      link&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;i m link&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      description&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;im description&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;token&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      stores&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stateStore&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;handleSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeGetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; localStorage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;token&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
+      stores&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stateStore&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;handleSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; prod_methods&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; IChromeMethodsProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;ChromeTabsQuery&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tabs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; active&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; currentWindow&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;tabs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;tabs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sendMessage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tabs&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; number&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; action&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;GET_PAGE_DATA&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;token&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;storage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;local&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; token &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        stores&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stateStore&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;handleSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;ChromeGetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      chrome&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;storage&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;local&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;token&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;token &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
+        stores&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;stateStore&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;handleSetToken&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Methods &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;REACT_APP_ENV&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;dev&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; dev_methods &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; prod_methods
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;Methods&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里有个地方要注意：&lt;code class=&quot;language-text&quot;&gt;chrome.storage&lt;/code&gt;是异步存储（为了提高本地io速度），&lt;code class=&quot;language-text&quot;&gt;localstorage&lt;/code&gt;是同步存储。所以我们这里需要用promise包一层才能保证调用方式的一致性。&lt;/p&gt;
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在ts环境中，我们直接使用chrome全局变量是会报错的，下载一个&lt;code class=&quot;language-text&quot;&gt;@types/chrome&lt;/code&gt;即可获取其类型构造。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;后台页面&quot;&gt;后台页面&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/b614613989c44f67938add3b2b090149/4.gif&quot; alt=&quot;这张gif比较大。。压缩后的渲染问题大家当没看见哈...&quot;&gt;&lt;/p&gt;
+&lt;p&gt;后台本身没有什么复杂的难点，即常规的页面开发。这里的gif就放上图片演示，作为一个完整项目的功能展示🤫。。。&lt;/p&gt;
+&lt;h2 id=&quot;最后&quot;&gt;最后&lt;/h2&gt;
+&lt;p&gt;chrome插件使用文档和下载地址可在&lt;a href=&quot;https://github.com/betterTisen/Tnshare_Doc&quot;&gt;我的github中查看&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;由于目前该服务在我自己的小霸王服务器上跑，故没有开源。大家可以体验一下～如果有开源需求的话，点赞这篇文章，如果多的话我会开源分享给大家，不过会停止本服务器上的线上服务。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【动图算法】：区间调度与区间合并]]></title><description><![CDATA[本周我们学习的是区间调度与区间合并的两道典型问题，该类问题虽然题目形式不多，但是也是经常考察的问题对象哦！这里就拿出两道最典型的题目来作为本周学习的内容吧～ 【动图算法】：区间合并 leetcode 56 题：合并区间 https://leetcode-cn.com…]]></description><link>https://www.byeguo.cn/post/2020_08_24_mzsf_11/</link><guid isPermaLink="false">https://www.byeguo.cn/post/2020_08_24_mzsf_11/</guid><pubDate>Mon, 31 Aug 2020 08:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本周我们学习的是区间调度与区间合并的两道典型问题，该类问题虽然题目形式不多，但是也是经常考察的问题对象哦！这里就拿出两道最典型的题目来作为本周学习的内容吧～&lt;/p&gt;
 &lt;h2 id=&quot;【动图算法】：区间合并&quot;&gt;【动图算法】：区间合并&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;leetcode 56 题：合并区间&lt;br&gt;
