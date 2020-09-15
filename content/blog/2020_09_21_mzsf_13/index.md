@@ -53,7 +53,14 @@ var longestPalindrome = function(s) {
 
 ![](./2.gif)
 
+由动图可以很清楚的看到：
 
+- 首先初始化了一个n\*n的二维数组
+- 而后在循环中进行判断：
+	- 这里着重看 `dp[i][j] = s[i] == s[j] && (j - i < 2 || dp[i+1][j-1])`这里。
+	- `dp[i][j] = s[i] == s[j]`判断为当前项是否为回文。
+	- `j - i < 2` 判断其是否为最小奇偶字符串，即长度小于2
+	- 若前一条不满足，则判断`dp[i+1][j-1]` 即其前一项是否依然为回文。
 
 ### 动态规划-中心扩展
 
@@ -73,10 +80,9 @@ var longestPalindrome = function(s) {
     for(let i = 0;i < n;i++){
         let len1 = centerExpend(i,i)
         let len2 = centerExpend(i,i+1)
-        // 两种组合取最大回文串的长度
         let maxLen = Math.max(len1,len2)
         if(maxLen > end - start){
-            // 更新最大回文串的首尾字符索引
+            // 这里的(maxLen - 1) >> 1即为对(maxLen-1)/2而后向下取整
             start = i - ((maxLen - 1) >> 1)
             end = i + (maxLen >> 1)
         }
@@ -84,3 +90,10 @@ var longestPalindrome = function(s) {
     return s.substring(start,end+1)
 };
 ```
+
+- 这里以i作为中心点，在for循环中`len1`与`len2`分别判断了奇偶字符串是否为回文。
+- 而后判断长度，截取字符串
+
+相较于前一种方法，该方法则更为简单直观：通过中心点向数组的两端发散计算出回文的长度。最终得到正确的结果。
+
+
