@@ -30,9 +30,9 @@ export default () => {
   const { author } = data.site.siteMetadata
 
   return (
-    <div className={`Bio-class`}>
+    <div className="Bio-class">
       <div
-        className={`head-img`}
+        className="head-img"
         onClick={() => {}}
         onKeyDown={() => {}}
         role="button"
