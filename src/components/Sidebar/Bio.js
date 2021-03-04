@@ -14,7 +14,7 @@ export default () => {
     query BioQuery {
       avatar: file(relativePath: { eq: "avatar.png" }) {
         childImageSharp {
-          fixed(width: 60, height: 60) {
+          fixed(width: 65, height: 65) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -31,14 +31,20 @@ export default () => {
 
   return (
     <div className="Bio-class">
-      <div
-        className="head-img"
-        onClick={() => {}}
-        onKeyDown={() => {}}
-        role="button"
-        tabIndex={0}
-      >
-        <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+      <div className="head-box">
+        <div
+          className="head-img"
+          onClick={() => {}}
+          onKeyDown={() => {}}
+          role="button"
+          tabIndex={0}
+        >
+          <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
+        </div>
+        <div className="head-ctx">
+          <span>Byeguo</span>
+          <span>Blog</span>
+        </div>
       </div>
     </div>
   )

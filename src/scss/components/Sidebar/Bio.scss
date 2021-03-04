@@ -3,18 +3,42 @@
   flex-direction: column;
   align-items: center;
   padding: 25px 0;
-  .head-img {
-    width: 60px;
-    height: 60px;
+  .head-box {
+    position: relative;
     box-shadow: 0px 1px 2px 2px #f0f0f0;
     border-radius: 50%;
-    overflow: hidden;
-    transition: 0.3s all ease;
     &:hover {
-      transform: scale(1.15);
+      .head-img {
+        transform: scaleX(-1);
+      }
     }
-    &:focus {
-      outline: none;
+    .head-img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: 0.3s all ease;
+      transform-origin: 0 50%;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .head-ctx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 65px;
+      height: 65px;
+      background-color: #333;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 50%;
+      z-index: -1;
     }
   }
 }
