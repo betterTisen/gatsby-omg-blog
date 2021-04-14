@@ -24,7 +24,6 @@ $sidebarFootHeight: 60px;
     height: $sidebarFootHeight;
     list-style: none;
     background-color: #fcfcfc;
-    font-family: $iconfont;
     li {
       display: flex;
       justify-content: center;
@@ -32,6 +31,7 @@ $sidebarFootHeight: 60px;
       margin: 0;
       font-size: 22px;
       a {
+        font-family: $iconfont;
         color: #777;
         transition: 0.3s color ease;
         &:hover {

@@ -8,8 +8,13 @@
   url('https://at.alicdn.com/t/font_1589053_x3fwr3k6cvb.svg#iconfont') format('svg');
 }
 
-body {
-  font-family: "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei";
+@font-face {
+  font-family: ZpixReviewOnline;
+  src: url(https://zpix.now.sh/zpix.woff2?v2021-03-21) format('woff2');
+}
+
+body,.omg-markdown {
+  font-family:"ZpixReviewOnline", "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei" !important;
 }
 
 input,
@@ -47,6 +52,7 @@ fieldset,
 table,
 th,
 td {
+  font-family:"ZpixReviewOnline", "Source Sans Pro", "Hiragino Sans GB", "Microsoft Yahei";
   border: none;
   outline: none;
   font-size: 14px;
