@@ -11,6 +11,7 @@ const Main = async (graphql, createPage) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
+          filter: { frontmatter: { top: { ne: true } } }
           limit: 2048
         ) {
           edges {

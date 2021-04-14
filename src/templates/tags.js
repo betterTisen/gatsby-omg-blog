@@ -1,8 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import PostItem from '../components/PostItem';
 import Pagination from "../components/Pagination"
 
 // 同main页面的区别
@@ -16,60 +17,13 @@ class BlogTagsTemplate extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
-    let newPosts = [] //置顶排序
-    posts.forEach(({ node }) => {
-      if (node.frontmatter.top) {
-        newPosts.unshift(node)
-      } else {
-        newPosts.push(node)
-      }
-    })
-
     return (
       <Layout location={this.props.location} title={siteTitle} mainHeadTitle="">
         <SEO title={`${pageContext.tag}`} />
         <div className="Main-list-class">
-          {newPosts.map(node => {
-            const title = node.frontmatter.title || node.fields.slug
-
+          {posts.map(({node}) => {
             return (
-              <Link
-                className={`main-img-left-layout fade-in-ani${
-                  node.frontmatter.topImg ? " main-have-img" : " main-no-img"
-                }`}
-                to={node.fields.slug}
-                key={node.fields.slug}
-              >
-                {node.frontmatter.topImg ? (
-                  <div className="left-img">
-                    <img
-                      src={require(`../../content/assets/top_image/${node.frontmatter.topImg}`)}
-                      alt=""
-                    />
-                  </div>
-                ) : (
-                  ""
-                )}
-                <header>
-                  <span>{title}</span>
-                  {node.frontmatter.top && (
-                    <div className="top-badge">置顶</div>
-                  )}
-                </header>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-                <div className="main-nav">
-                  <span>
-                    {node.frontmatter.tags.map(tag => {
-                      return <i key={tag}>{tag}</i>
-                    })}
-                  </span>
-                  <small>{node.frontmatter.date}</small>
-                </div>
-              </Link>
+              <PostItem node={node} key={node.fields.slug}/>
             )
           })}
           <Pagination
