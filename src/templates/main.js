@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import TopPost from '../components/TopPost';
-import PostItem from '../components/PostItem';
+import TopPost from "../components/TopPost"
+import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
 
 class BlogIndex extends React.Component {
@@ -17,11 +17,9 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <div className="Main-list-class">
-          <TopPost />
-          {posts.map(({node}) => {
-            return (
-              <PostItem node={node} key={node.fields.slug}/>
-            )
+          {pageContext.currentPage === 1 && <TopPost />}
+          {posts.map(({ node }) => {
+            return <PostItem node={node} key={node.fields.slug} />
           })}
           <Pagination path="/" pageContext={pageContext} />
         </div>
