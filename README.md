@@ -1,8 +1,8 @@
+## GATSBY-OMG-BLOG
+
 ![gatsby](https://img.shields.io/badge/gatsby-v2.18.12-663399.svg?style=plastic) ![gatsby-omg-blog](https://img.shields.io/badge/gatsby_omg_blog-v1.1-5FCF80.svg?style=plastic)
 
 点击[传送门](https://omg.byeguo.cn/)查看效果
-
-## GATSBY-OMG-BLOG
 
 一套基于 gatsby-starter-blog 的个人博客主题
 
