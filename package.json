@@ -65,6 +65,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "gh-deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "gh-deploy": "gatsby build --prefix-paths && node ./script/cname.js && gh-pages -d public"
   }
 }
