@@ -29,7 +29,7 @@
     "gatsby-transformer-sharp": "^2.3.7",
     "gh-pages": "^2.2.0",
     "leancloud-storage": "^4.2.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
